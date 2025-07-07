@@ -1,0 +1,35 @@
+﻿{
+  "$schema": "https://raw.githubusercontent.com/Outer-Wilds-New-Horizons/new-horizons/main/NewHorizons/Schemas/body_schema.json",
+  "name": "WW_TERRARIUM_Sun",
+  "starSystem": "Jam5",
+  "removeChildren": [
+    "Sector/Star/Audio_Star/SurfaceAudio_Sun",
+    "Sector/Star/HeatVolume",
+    "Sector/Star/DestructionFluidVolume",
+    "Sector/Star/PlanetDestructionVolume"
+  ],
+  "Base": {
+    "gravityFallOff": "inverseSquared",
+    "surfaceSize": 50,
+    "surfaceGravity": 10
+  },
+  "Orbit": {
+    "primaryBody": "WW_TERRARIUM_Planet",
+    "semiMajorAxis": 600
+  },
+  "Star": {
+    "stellarDeathType": "none",
+    "size": 50,
+    "solarLuminosity": 1,
+    "lightTint": {
+      "r": 255,
+      "g": 250,
+      "b": 240
+    },
+    "tint": {
+      "r": 190,
+      "g": 140,
+      "b": 80
+    }
+  }
+}

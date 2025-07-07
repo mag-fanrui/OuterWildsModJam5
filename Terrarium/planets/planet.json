@@ -1,0 +1,111 @@
+﻿{
+  "$schema": "https://raw.githubusercontent.com/Outer-Wilds-New-Horizons/new-horizons/main/NewHorizons/Schemas/body_schema.json",
+  "name": "WW_TERRARIUM_Planet",
+  "starSystem": "Jam5",
+  "Base": {
+    "gravityFallOff": "linear",
+    "surfaceSize": 900,
+    "groundSize": 800,
+    "surfaceGravity": 6,
+    "centerOfSolarSystem": true,
+    "hasFluidDetector": false
+  },
+  "AmbientLights": [
+    {
+      "innerRadius": 750,
+      "isShell": true
+    }
+  ],
+  "Orbit": {
+    "staticPosition": {
+      "x": 1000,
+      "y": 2000,
+      "z": 5000
+    }
+  },
+  "Atmosphere": {
+    "size": 100,
+    "atmosphereSunIntensity": 0.8,
+    "hasTrees": true,
+    "hasOxygen": true,
+    "hasRain": true,
+    "useAtmosphereShader": true
+  },
+  "ShipLog": {
+    "xmlFile": "planets/shiplog/WW_TERRARIUM_Planet.xml",
+    "spriteFolder": "planets/shiplog/sprites"
+  },
+  "Water": {
+    "size": 100,
+    "density": 50.0,
+    "tint": {
+      "r": 0,
+      "g": 47,
+      "b": 63
+    }
+  },
+  "Props": {
+    "rafts": [
+      {
+        "alignRadial": true,
+        "position": {
+          "x": 0,
+          "y": 100,
+          "z": 0
+        },
+        "pristine": true,
+        "acceleration": 0.0,
+        "isRelativeToParent": true
+      }
+    ],
+    "warpTransmitters": [
+      {
+        "rename": "WarpTransmitter",
+        "alignmentWindow": -1,
+        "frequency": "WW_TERRARIUM_WARP",
+        "alignRadial": true,
+        "position": {
+          "x": 10,
+          "y": 800,
+          "z": 0
+        }
+      }
+    ],
+    "warpReceivers": [
+      {
+        "rename": "WarpReceiver",
+        "detailed": false,
+        "frequency": "WW_TERRARIUM_WARP",
+        "alignRadial": true,
+        "position": {
+          "x": 0,
+          "y": 125,
+          "z": 0
+        }
+      }
+    ],
+    "details": [
+      {
+        "assetBundle": "planets/assetbundles/terrarium",
+        "path": "Assets/Terrarium/Objects/TerrariumInterface.prefab",
+        "position": {
+          "x": 0,
+          "y": 800,
+          "z": 0
+        }
+      },
+      {
+        "assetBundle": "planets/assetbundles/terrarium",
+        "path": "Assets/Terrarium/Objects/TerrariumItem_ResearchLab.prefab",
+        "position": {
+          "x": 0,
+          "y": 800,
+          "z": 5
+        }
+      }
+    ]
+  },
+  "Volumes": {
+
+  }
+}

@@ -1,0 +1,33 @@
+﻿{
+  "$schema": "https://raw.githubusercontent.com/xen-42/outer-wilds-new-horizons/main/NewHorizons/Schemas/star_system_schema.json",
+  "name": "Jam5",
+  "initialReveal": [
+    "WW_TERRARIUM_EXPLORE_FACT"
+  ],
+  "curiosities": [
+    {
+      "id": "WW_TERRARIUM_CURIOSITY",
+      "color": {
+        "r": 240,
+        "g": 150,
+        "b": 150,
+        "a": 255
+      },
+      "highlightColor": {
+        "r": 240,
+        "g": 180,
+        "b": 180,
+        "a": 255
+      }
+    }
+  ],
+  "entryPositions": [
+    {
+      "id": "WW_TERRARIUM_ROOT",
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    }
+  ]
+}
