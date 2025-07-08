@@ -14,7 +14,7 @@
     "surfaceGravity": 10
   },
   "Orbit": {
-    "primaryBody": "WW_TERRARIUM_Planet",
+    "primaryBody": "WW_TERRARIUM_Terrarium",
     "semiMajorAxis": 600
   },
   "Star": {

@@ -1,16 +1,14 @@
 ﻿<AstroObjectEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                  xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/Outer-Wilds-New-Horizons/new-horizons/main/NewHorizons/Schemas/shiplog_schema.xsd">
-  <ID>WW_TERRARIUM_Planet</ID>
+  <ID>WW_TERRARIUM_Terrarium</ID>
 
   <Entry>
-    <ID>WW_TERRARIUM_ROOT</ID>
+    <ID>WW_TERRARIUM_DISCOVERY</ID>
     <Name>Example</Name>
     <Curiosity>WW_TERRARIUM_ROOT</Curiosity>
-    <IsCuriosity/>
-    <IgnoreMoreToExplore/>
 
     <ExploreFact>
-      <ID>WW_TERRARIUM_EXPLORE_FACT</ID>
+      <ID>WW_TERRARIUM_EXPLORE_FACT_2</ID>
       <Text>Example!</Text>
     </ExploreFact>
 

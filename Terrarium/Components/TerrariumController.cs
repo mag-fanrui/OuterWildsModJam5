@@ -25,6 +25,14 @@ namespace Terrarium.Components
         public ChaseValue Humidity;
         [HideInInspector]
         public ChaseValue Atmosphere;
+        [HideInInspector]
+        public ToggleValue SunDistanceEnabled;
+        [HideInInspector]
+        public ToggleValue SunAngleEnabled;
+        [HideInInspector]
+        public ToggleValue HumidityEnabled;
+        [HideInInspector]
+        public ToggleValue AtmosphereEnabled;
 
         public readonly StateChangeEvent OnStateChanged = new();
 
@@ -37,6 +45,10 @@ namespace Terrarium.Components
             SunAngle = ChaseValue.Create(this, 0.5f, OnSunAngleChanged);
             Humidity = ChaseValue.Create(this, 0.5f, OnHumidityChanged);
             Atmosphere = ChaseValue.Create(this, 0.5f, OnAtmosphereChanged);
+            SunDistanceEnabled = ToggleValue.Create(this, false, OnSunDistanceEnabledChanged);
+            SunAngleEnabled = ToggleValue.Create(this, false, OnSunAngleEnabledChanged);
+            HumidityEnabled = ToggleValue.Create(this, false, OnHumidityEnabledChanged);
+            AtmosphereEnabled = ToggleValue.Create(this, false, OnAtmosphereEnabledChanged);
         }
 
         public Vector3 GetSunRelativePosition()
@@ -89,6 +101,26 @@ namespace Terrarium.Components
         }
 
         void OnAtmosphereChanged(float value)
+        {
+
+        }
+
+        void OnSunDistanceEnabledChanged(bool value)
+        {
+
+        }
+
+        void OnSunAngleEnabledChanged(bool value)
+        {
+
+        }
+
+        void OnHumidityEnabledChanged(bool value)
+        {
+
+        }
+
+        void OnAtmosphereEnabledChanged(bool value)
         {
 
         }

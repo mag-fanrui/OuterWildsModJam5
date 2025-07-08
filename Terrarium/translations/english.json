@@ -1,3 +1,21 @@
 {
-	"$schema": "https://raw.githubusercontent.com/outer-wilds-new-horizons/new-horizons/main/NewHorizons/Schemas/translation_schema.json"
+	"$schema": "https://raw.githubusercontent.com/outer-wilds-new-horizons/new-horizons/main/NewHorizons/Schemas/translation_schema.json",
+	"UIDictionary": {
+		"WW_TERRARIUM_Planet": "Lonely Lump",
+		"WW_TERRARIUM_Sun": "Heat Lamp",
+		"WW_TERRARIUM_Terrarium": "Terrarium",
+		"WW_TERRARIUM_ITEM_ResearchLab": "Ruined Terrarium",
+		"WW_TERRARIUM_ITEM_ReplacementPart_SunDistance": "Dimmer Switch",
+		"WW_TERRARIUM_ITEM_ReplacementPart_SunAngle": "Lamp Angle Adjuster",
+		"WW_TERRARIUM_ITEM_ReplacementPart_Humidity": "Humidifier",
+    "WW_TERRARIUM_ITEM_ReplacementPart_Atmosphere": "Atmosphere Regulator",
+		"WW_TERRARIUM_IncreaseSunDistance": "Increase Lamp Distance",
+		"WW_TERRARIUM_DecreaseSunDistance": "Decrease Lamp Distance",
+		"WW_TERRARIUM_IncreaseSunAngle": "Increase Lamp Angle",
+		"WW_TERRARIUM_DecreaseSunAngle": "Decrease Lamp Angle",
+		"WW_TERRARIUM_IncreaseHumidity": "Increase Humidity",
+		"WW_TERRARIUM_DecreaseHumidity": "Decrease Humidity",
+		"WW_TERRARIUM_IncreaseAtmosphere": "Increase Atmosphere Density",
+		"WW_TERRARIUM_DecreaseAtmosphere": "Decrease Atmosphere Density"
+	}
 }

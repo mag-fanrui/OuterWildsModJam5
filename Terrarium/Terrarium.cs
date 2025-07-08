@@ -34,6 +34,10 @@ namespace Terrarium
 
                 if (bodyName == "WW_TERRARIUM_Planet")
                 {
+                    SetUpPlanetBody(body);
+                }
+                else if (bodyName == "WW_TERRARIUM_Terrarium")
+                {
                     SetUpTerrariumBody(body);
                 }
                 else if (bodyName == "WW_TERRARIUM_Sun")
@@ -55,6 +59,19 @@ namespace Terrarium
 
         }
 
+        void SetUpPlanetBody(GameObject body)
+        {
+            var warpGO = body.transform.Find("Sector/WarpTransmitter").gameObject;
+            warpGO.AddComponent<TerrariumWarpController>();
+            foreach (Transform child in warpGO.transform)
+            {
+                if (child.name is not "WarpTransmitter_Streaming" and not "BlackHole" and not "WhiteHole")
+                {
+                    child.gameObject.SetActive(false);
+                }
+            }
+        }
+
         void SetUpTerrariumBody(GameObject body)
         {
             body.AddComponent<TerrariumController>();
@@ -68,16 +85,6 @@ namespace Terrarium
                     if (child.name != "collider_base") child.gameObject.SetActive(false);
                 }
                 raft.transform.Find("LightSensorRoot").gameObject.SetActive(false);
-            }
-
-            var warpGO = body.transform.Find("Sector/WarpTransmitter").gameObject;
-            warpGO.AddComponent<TerrariumWarpController>();
-            foreach (Transform child in warpGO.transform)
-            {
-                if (child.name is not "WarpTransmitter_Streaming" and not "BlackHole" and not "WhiteHole")
-                {
-                    child.gameObject.SetActive(false);
-                }
             }
         }
 
