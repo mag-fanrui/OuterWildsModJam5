@@ -8,7 +8,7 @@ using UnityEngine;
 
 namespace Terrarium.Components
 {
-    public class WaterLevelController : MonoBehaviour
+    public class WaterLayerController : MonoBehaviour
     {
         [HideInInspector]
         public ChaseValue WaterLevel;
@@ -51,6 +51,7 @@ namespace Terrarium.Components
         {
             TerrariumController.Instance.Humidity.On(OnHumidityChanged);
             TerrariumController.Instance.OnStateChanged.AddListener(OnStateChanged);
+            TerrariumController.Instance.OnPlayerInside.AddListener(OnPlayerInside);
         }
 
         void OnWaterLevelChanged(float value)
@@ -74,6 +75,11 @@ namespace Terrarium.Components
                 maxRadius = stateData.WaterMaxRadius;
                 OnWaterLevelChanged(WaterLevel);
             }
+        }
+
+        void OnPlayerInside(bool inside)
+        {
+            gameObject.SetActive(inside);
         }
     }
 }

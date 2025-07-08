@@ -62,12 +62,11 @@ namespace Terrarium
         void SetUpPlanetBody(GameObject body)
         {
             var warpGO = body.transform.Find("Sector/WarpTransmitter").gameObject;
-            warpGO.AddComponent<TerrariumWarpController>();
             foreach (Transform child in warpGO.transform)
             {
                 if (child.name is not "WarpTransmitter_Streaming" and not "BlackHole" and not "WhiteHole")
                 {
-                    child.gameObject.SetActive(false);
+                    //child.gameObject.SetActive(false);
                 }
             }
         }
@@ -76,15 +75,37 @@ namespace Terrarium
         {
             body.AddComponent<TerrariumController>();
 
-            body.transform.Find("Sector/Water").gameObject.AddComponent<WaterLevelController>();
+            body.transform.Find("GravityWell").gameObject.AddComponent<TerrariumVisibilityController>();
+            body.transform.Find("Sector/Atmosphere").gameObject.AddComponent<AtmosphereLayerController>();
+            body.transform.Find("Sector/Air").gameObject.AddComponent<OxygenLayerController>();
+            body.transform.Find("Sector/Water").gameObject.AddComponent<WaterLayerController>();
+            body.transform.Find("Sector/Clouds").gameObject.AddComponent<CloudLayerController>();
+            body.transform.Find("Sector/Effects/RainEmitter").gameObject.AddComponent<RainLayerController>();
+
+            var warpGO = body.transform.Find("Sector/WarpReceiver").gameObject;
+            warpGO.AddComponent<TerrariumWarpController>();
+            foreach (Transform child in warpGO.transform)
+            {
+                if (child.name is not "WarpReceiver_Streaming" and not "BlackHole" and not "WhiteHole" and not "Effects_NOM_ReverseWarpParticles" and not "ReturnActivationTrigger")
+                {
+                    child.gameObject.SetActive(false);
+                }
+            }
 
             foreach (var raft in body.GetComponentsInChildren<RaftController>())
             {
+                foreach (Transform child in raft.transform)
+                {
+                    if (child.name is "LightSensorRoot" or "Structure_IP_DreamRaft" or "Proxy_IP_Structure_Raft" or "Effects_IP_SIM_Raft" or "AchievementVolume")
+                    {
+                        child.gameObject.SetActive(false);
+                    }
+                }
                 foreach (Transform child in raft.transform.Find("Colliders"))
                 {
-                    if (child.name != "collider_base") child.gameObject.SetActive(false);
+                    if (child.name is not "collider_base") child.gameObject.SetActive(false);
                 }
-                raft.transform.Find("LightSensorRoot").gameObject.SetActive(false);
+                // TODO: Spawn in new raft visuals
             }
         }
 

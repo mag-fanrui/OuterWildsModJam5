@@ -7,11 +7,19 @@
     "surfaceSize": 300,
     "groundSize": 0,
     "surfaceGravity": 20,
-    "hasFluidDetector": false
+    "hasFluidDetector": false,
+    "hideProxy": true
   },
   "Orbit": {
     "primaryBody": "WW_TERRARIUM_Planet",
-    "semiMajorAxis": 1800
+    "semiMajorAxis": 1800,
+    "showOrbitLine": false
+  },
+  "ReferenceFrame": {
+    "enabled": false
+  },
+  "MapMarker": {
+    "enabled": false
   },
   "AmbientLights": [],
   "Atmosphere": {
@@ -20,7 +28,15 @@
     "hasTrees": true,
     "hasOxygen": true,
     "hasRain": true,
-    "useAtmosphereShader": true
+    "useAtmosphereShader": true,
+    "hasShockLayer": false,
+    "clouds": {
+      "texturePath": "planets/assets/clouds.png",
+      "cloudsPrefab": "giantsDeep",
+      "hasLightning": true,
+      "innerCloudRadius": 280,
+      "outerCloudRadius": 300
+    }
   },
   "ShipLog": {
     "xmlFile": "planets/shiplog/WW_TERRARIUM_Terrarium.xml",

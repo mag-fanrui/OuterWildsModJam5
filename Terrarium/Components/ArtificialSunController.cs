@@ -29,9 +29,20 @@ namespace Terrarium.Components
             return exitPoint;
         }
 
+        protected void Start()
+        {
+            TerrariumController.Instance.OnPlayerInside.AddListener(OnPlayerInside);
+            gameObject.SetActive(false);
+        }
+
         protected void LateUpdate()
         {
             transform.position = TerrariumController.Instance.GetSunWorldPosition();
+        }
+
+        void OnPlayerInside(bool inside)
+        {
+            gameObject.SetActive(inside);
         }
 
         Vector3 FindRaySphereExitPoint(Vector3 start, Vector3 dir, Vector3 center, float radius)

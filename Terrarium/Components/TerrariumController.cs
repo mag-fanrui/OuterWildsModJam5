@@ -12,6 +12,7 @@ namespace Terrarium.Components
     public class TerrariumController : MonoBehaviour
     {
         public class StateChangeEvent : UnityEvent<TerrariumStateData> { }
+        public class PlayerInsideEvent : UnityEvent<bool> { }
 
         static TerrariumController instance;
 
@@ -35,8 +36,10 @@ namespace Terrarium.Components
         public ToggleValue AtmosphereEnabled;
 
         public readonly StateChangeEvent OnStateChanged = new();
+        public readonly PlayerInsideEvent OnPlayerInside = new();
 
         TerrariumStateData currentStateData;
+        bool wasInside;
 
         protected void Awake()
         {
@@ -74,6 +77,9 @@ namespace Terrarium.Components
 
         public float GetTerrariumRadius() => 350f;
 
+        public bool IsPlayerInside() =>
+            Vector3.Distance(Locator.GetPlayerTransform().position, GetTerrariumWorldPosition()) < GetTerrariumRadius();
+
         public TerrariumStateData GetState() => currentStateData;
 
         public void SetState(TerrariumStateData stateData)
@@ -82,6 +88,15 @@ namespace Terrarium.Components
             {
                 currentStateData = stateData;
                 OnStateChanged.Invoke(stateData);
+            }
+        }
+
+        protected void Update()
+        {
+            if (IsPlayerInside() != wasInside)
+            {
+                wasInside = !wasInside;
+                OnPlayerInside.Invoke(wasInside);
             }
         }
 

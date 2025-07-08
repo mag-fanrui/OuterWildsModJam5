@@ -3,22 +3,22 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Terrarium.Data;
 using UnityEngine;
 
 namespace Terrarium.Components
 {
-    public class TerrariumWarpController : MonoBehaviour
+    public class TerrariumVisibilityController : MonoBehaviour
     {
+
         protected void Start()
         {
-            TerrariumController.Instance.OnStateChanged.AddListener(OnStateChanged);
+            TerrariumController.Instance.OnPlayerInside.AddListener(OnPlayerInside);
             gameObject.SetActive(false);
         }
 
-        void OnStateChanged(TerrariumStateData stateData)
+        void OnPlayerInside(bool inside)
         {
-            gameObject.SetActive(stateData != null);
+            gameObject.SetActive(inside);
         }
     }
 }

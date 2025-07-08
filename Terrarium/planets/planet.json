@@ -4,14 +4,16 @@
   "starSystem": "Jam5",
   "Base": {
     "gravityFallOff": "linear",
-    "surfaceSize": 800,
-    "groundSize": 800,
+    "surfaceSize": 500,
+    "groundSize": 500,
     "surfaceGravity": 6,
     "centerOfSolarSystem": true,
     "hasFluidDetector": false
   },
   "AmbientLights": [
-    {}
+    {
+      "intensity": 0.5
+    }
   ],
   "Atmosphere": {
     "size": 800
@@ -24,12 +26,12 @@
     "warpTransmitters": [
       {
         "rename": "WarpTransmitter",
-        "alignmentWindow": -1,
+        "alignmentWindow": 360,
         "frequency": "WW_TERRARIUM_WARP",
         "alignRadial": true,
         "position": {
-          "x": 10,
-          "y": 800,
+          "x": 20,
+          "y": 500,
           "z": 0
         }
       }
@@ -40,7 +42,7 @@
         "path": "Assets/Terrarium/Objects/TerrariumInterface.prefab",
         "position": {
           "x": 0,
-          "y": 800,
+          "y": 500,
           "z": 0
         }
       },
@@ -49,7 +51,7 @@
         "path": "Assets/Terrarium/Objects/TerrariumItem_ResearchLab.prefab",
         "position": {
           "x": 0,
-          "y": 800,
+          "y": 500,
           "z": 5
         }
       }

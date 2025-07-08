@@ -12,16 +12,21 @@ namespace Terrarium.Components
     {
         public TerrariumStateData StateData;
 
-        protected void Awake()
+        protected void Start()
         {
-            gameObject.SetActive(false);
-
             TerrariumController.Instance.OnStateChanged.AddListener(OnStateChanged);
+            TerrariumController.Instance.OnPlayerInside.AddListener(OnPlayerInside);
+            gameObject.SetActive(false);
         }
 
         void OnStateChanged(TerrariumStateData stateData)
         {
-            gameObject.SetActive(stateData == StateData);
+            gameObject.SetActive(TerrariumController.Instance.IsPlayerInside() && TerrariumController.Instance.GetState() == StateData);
+        }
+
+        private void OnPlayerInside(bool inside)
+        {
+            gameObject.SetActive(TerrariumController.Instance.IsPlayerInside() && TerrariumController.Instance.GetState() == StateData);
         }
     }
 }
