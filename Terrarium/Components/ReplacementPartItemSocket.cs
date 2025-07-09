@@ -51,6 +51,9 @@ namespace Terrarium.Components
                 case TerrariumParamType.Atmosphere:
                     tc.AtmosphereEnabled.Value = enabled;
                     break;
+                case TerrariumParamType.EnclosureAngle:
+                    tc.EnclosureAngleEnabled.Value = enabled;
+                    break;
             }
         }
     }

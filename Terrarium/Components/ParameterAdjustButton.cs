@@ -49,6 +49,9 @@ namespace Terrarium.Components
                 case TerrariumParamType.Atmosphere:
                     AdjustParameter(tc.Atmosphere, tc.AtmosphereEnabled);
                     break;
+                case TerrariumParamType.EnclosureAngle:
+                    AdjustParameter(tc.EnclosureAngle, tc.EnclosureAngleEnabled);
+                    break;
             }
         }
 
@@ -64,6 +67,8 @@ namespace Terrarium.Components
             {
                 Locator.GetPlayerAudioController()._oneShotExternalSource.PlayOneShot(AudioType.GearRotate_Fail);
             }
+            interactReceiver.ResetInteraction();
+            interactReceiver.UpdatePromptVisibility();
         }
     }
 }

@@ -17,7 +17,7 @@ namespace Terrarium.Components
         [SerializeField]
         float target = 0f;
         [SerializeField]
-        float rate = 0.1f;
+        float rate = 0.25f;
         [SerializeField]
         readonly ChaseValueChangedEvent onChanged = new();
 

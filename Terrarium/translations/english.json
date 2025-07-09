@@ -8,7 +8,8 @@
 		"WW_TERRARIUM_ITEM_ReplacementPart_SunDistance": "Dimmer Switch",
 		"WW_TERRARIUM_ITEM_ReplacementPart_SunAngle": "Lamp Angle Adjuster",
 		"WW_TERRARIUM_ITEM_ReplacementPart_Humidity": "Humidifier",
-    "WW_TERRARIUM_ITEM_ReplacementPart_Atmosphere": "Atmosphere Regulator",
+		"WW_TERRARIUM_ITEM_ReplacementPart_Atmosphere": "Atmosphere Regulator",
+    "WW_TERRARIUM_ITEM_ReplacementPart_EnclosureAngle": "Enclosure Gear",
 		"WW_TERRARIUM_IncreaseSunDistance": "Increase Lamp Distance",
 		"WW_TERRARIUM_DecreaseSunDistance": "Decrease Lamp Distance",
 		"WW_TERRARIUM_IncreaseSunAngle": "Increase Lamp Angle",
@@ -16,6 +17,8 @@
 		"WW_TERRARIUM_IncreaseHumidity": "Increase Humidity",
 		"WW_TERRARIUM_DecreaseHumidity": "Decrease Humidity",
 		"WW_TERRARIUM_IncreaseAtmosphere": "Increase Atmosphere Density",
-		"WW_TERRARIUM_DecreaseAtmosphere": "Decrease Atmosphere Density"
+		"WW_TERRARIUM_DecreaseAtmosphere": "Decrease Atmosphere Density",
+		"WW_TERRARIUM_IncreaseEnclosureAngle": "Rotate Enclosure Right",
+    "WW_TERRARIUM_DecreaseEnclosureAngle": "Rotate Enclosure Left"
 	}
 }

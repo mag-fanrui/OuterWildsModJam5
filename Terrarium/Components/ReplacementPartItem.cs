@@ -17,6 +17,7 @@ namespace Terrarium.Components
             { TerrariumParamType.SunAngle, EnumUtils.Create<ItemType>("ReplacementPart_SunAngle") },
             { TerrariumParamType.Humidity, EnumUtils.Create<ItemType>("ReplacementPart_Humidity") },
             { TerrariumParamType.Atmosphere, EnumUtils.Create<ItemType>("ReplacementPart_Atmosphere") },
+            { TerrariumParamType.EnclosureAngle, EnumUtils.Create<ItemType>("ReplacementPart_EnclosureAngle") },
         };
 
         public TerrariumParamType Parameter;

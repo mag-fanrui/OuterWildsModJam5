@@ -27,6 +27,8 @@ namespace Terrarium.Components
         [HideInInspector]
         public ChaseValue Atmosphere;
         [HideInInspector]
+        public ChaseValue EnclosureAngle;
+        [HideInInspector]
         public ToggleValue SunDistanceEnabled;
         [HideInInspector]
         public ToggleValue SunAngleEnabled;
@@ -34,6 +36,8 @@ namespace Terrarium.Components
         public ToggleValue HumidityEnabled;
         [HideInInspector]
         public ToggleValue AtmosphereEnabled;
+        [HideInInspector]
+        public ToggleValue EnclosureAngleEnabled;
 
         public readonly StateChangeEvent OnStateChanged = new();
         public readonly PlayerInsideEvent OnPlayerInside = new();
@@ -48,17 +52,25 @@ namespace Terrarium.Components
             SunAngle = ChaseValue.Create(this, 0.5f, OnSunAngleChanged);
             Humidity = ChaseValue.Create(this, 0.5f, OnHumidityChanged);
             Atmosphere = ChaseValue.Create(this, 0.5f, OnAtmosphereChanged);
+            EnclosureAngle = ChaseValue.Create(this, 0.5f, OnEnclosureAngleChanged);
             SunDistanceEnabled = ToggleValue.Create(this, false, OnSunDistanceEnabledChanged);
             SunAngleEnabled = ToggleValue.Create(this, false, OnSunAngleEnabledChanged);
             HumidityEnabled = ToggleValue.Create(this, false, OnHumidityEnabledChanged);
             AtmosphereEnabled = ToggleValue.Create(this, false, OnAtmosphereEnabledChanged);
+            EnclosureAngleEnabled = ToggleValue.Create(this, false, OnEnclosureAngleEnabledChanged);
         }
 
         public Vector3 GetSunRelativePosition()
         {
-            var angle = 180f * SunAngle.Current;
+            var angleZ = 180f * SunAngle.Current;
+            var angleY = 180f * EnclosureAngle.Current;
             var dist = SunDistance.Current;
-            return new Vector3(Mathf.Cos(angle), Mathf.Sin(angle), 0f) * dist;
+
+            var dir = Vector3.up;
+            dir = Quaternion.AngleAxis(angleZ, Vector3.forward) * dir;
+            dir = Quaternion.AngleAxis(angleY, Vector3.up) * dir;
+
+            return dir * dist;
         }
 
         public Vector3 GetSunWorldPosition()
@@ -78,6 +90,7 @@ namespace Terrarium.Components
         public float GetTerrariumRadius() => 350f;
 
         public bool IsPlayerInside() =>
+            GetState() != null && 
             Vector3.Distance(Locator.GetPlayerTransform().position, GetTerrariumWorldPosition()) < GetTerrariumRadius();
 
         public TerrariumStateData GetState() => currentStateData;
@@ -120,6 +133,11 @@ namespace Terrarium.Components
 
         }
 
+        void OnEnclosureAngleChanged(float value)
+        {
+
+        }
+
         void OnSunDistanceEnabledChanged(bool value)
         {
 
@@ -136,6 +154,11 @@ namespace Terrarium.Components
         }
 
         void OnAtmosphereEnabledChanged(bool value)
+        {
+
+        }
+
+        void OnEnclosureAngleEnabledChanged(bool value)
         {
 
         }

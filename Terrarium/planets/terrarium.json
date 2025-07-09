@@ -72,8 +72,8 @@
         "frequency": "WW_TERRARIUM_WARP",
         "alignRadial": true,
         "position": {
-          "x": 0,
-          "y": 125,
+          "x": 100,
+          "y": 0,
           "z": 0
         }
       }

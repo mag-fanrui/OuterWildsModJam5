@@ -12,5 +12,6 @@ namespace Terrarium.Enums
         SunAngle,
         Humidity,
         Atmosphere,
+        EnclosureAngle,
     }
 }
