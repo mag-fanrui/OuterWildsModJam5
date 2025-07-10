@@ -14,9 +14,15 @@ namespace Terrarium.Components
 
         protected void Start()
         {
+            TerrariumController.Instance.EnclosureAngle.On(OnEnclosureAngleChanged);
             TerrariumController.Instance.OnStateChanged.AddListener(OnStateChanged);
             TerrariumController.Instance.OnPlayerInside.AddListener(OnPlayerInside);
             gameObject.SetActive(false);
+        }
+
+        void OnEnclosureAngleChanged(float value)
+        {
+            transform.localEulerAngles = Vector3.up * value * 360f;
         }
 
         void OnStateChanged(TerrariumStateData stateData)

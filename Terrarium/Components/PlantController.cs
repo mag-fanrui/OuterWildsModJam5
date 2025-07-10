@@ -34,7 +34,7 @@ namespace Terrarium.Components
 
         protected virtual float CalculateHealth()
         {
-            var sunPos = TerrariumController.Instance.GetSunRelativePosition();
+            var sunPos = transform.root.InverseTransformPoint(TerrariumController.Instance.GetSunWorldPosition());
             var selfPos = transform.root.InverseTransformPoint(transform.position);
             var angle = Vector3.Angle(sunPos.normalized, selfPos.normalized);
             var sunBrightness = 1f - TerrariumController.Instance.SunDistance.Current;

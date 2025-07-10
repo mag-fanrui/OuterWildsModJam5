@@ -52,6 +52,7 @@ namespace Terrarium.Components
             TerrariumController.Instance.Humidity.On(OnHumidityChanged);
             TerrariumController.Instance.OnStateChanged.AddListener(OnStateChanged);
             TerrariumController.Instance.OnPlayerInside.AddListener(OnPlayerInside);
+            gameObject.SetActive(false);
         }
 
         void OnWaterLevelChanged(float value)

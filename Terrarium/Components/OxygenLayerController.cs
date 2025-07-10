@@ -10,10 +10,12 @@ namespace Terrarium.Components
     public class OxygenLayerController : MonoBehaviour
     {
         VisorRainEffectVolume rainEffect;
+        OWTriggerVolume triggerVolume;
 
         protected void Awake()
         {
             rainEffect = GetComponent<VisorRainEffectVolume>();
+            triggerVolume = GetComponent<OWTriggerVolume>();
         }
 
         protected void Start()
@@ -27,6 +29,11 @@ namespace Terrarium.Components
         void OnPlayerInside(bool inside)
         {
             UpdateActiveState();
+            if (gameObject.activeSelf)
+            {
+                triggerVolume.AddObjectToVolume(Locator.GetPlayerDetector());
+                triggerVolume.AddObjectToVolume(Locator.GetPlayerCameraDetector());
+            }
         }
 
         void OnHumidityChanged(float value)

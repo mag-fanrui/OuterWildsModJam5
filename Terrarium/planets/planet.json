@@ -4,8 +4,8 @@
   "starSystem": "Jam5",
   "Base": {
     "gravityFallOff": "linear",
-    "surfaceSize": 500,
-    "groundSize": 500,
+    "surfaceSize": 400,
+    "groundSize": 400,
     "surfaceGravity": 6,
     "centerOfSolarSystem": true,
     "hasFluidDetector": false
@@ -16,7 +16,7 @@
     }
   ],
   "Atmosphere": {
-    "size": 800
+    "size": 600
   },
   "ShipLog": {
     "xmlFile": "planets/shiplog/WW_TERRARIUM_Planet.xml",
@@ -31,7 +31,7 @@
         "alignRadial": true,
         "position": {
           "x": 20,
-          "y": 500,
+          "y": 400,
           "z": 0
         }
       }
@@ -42,7 +42,7 @@
         "path": "Assets/Terrarium/Objects/TerrariumInterface.prefab",
         "position": {
           "x": 0,
-          "y": 500,
+          "y": 400,
           "z": 0
         }
       },
@@ -51,7 +51,7 @@
         "path": "Assets/Terrarium/Objects/TerrariumItem_ResearchLab.prefab",
         "position": {
           "x": 0,
-          "y": 500,
+          "y": 400,
           "z": 5
         }
       }

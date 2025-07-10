@@ -17,7 +17,7 @@ namespace Terrarium.Components
         [SerializeField]
         readonly ToggleValueChangedEvent onChanged = new();
 
-        public static ToggleValue Create(MonoBehaviour parent, bool value, UnityAction<bool> onChange)
+        public static ToggleValue Create(MonoBehaviour parent, bool value, UnityAction<bool> onChange = null)
         {
             var tv = parent.gameObject.AddComponent<ToggleValue>();
             tv.value = value;

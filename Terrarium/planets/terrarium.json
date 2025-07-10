@@ -21,10 +21,14 @@
   "MapMarker": {
     "enabled": false
   },
-  "AmbientLights": [],
+  "AmbientLights": [
+    {
+      "intensity": 0.5
+    }
+  ],
   "Atmosphere": {
     "size": 300,
-    "atmosphereSunIntensity": 0.8,
+    "atmosphereSunIntensity": 1.0,
     "hasTrees": true,
     "hasOxygen": true,
     "hasRain": true,
@@ -43,7 +47,7 @@
     "spriteFolder": "planets/shiplog/sprites"
   },
   "Water": {
-    "size": 100,
+    "size": 50,
     "density": 50.0,
     "tint": {
       "r": 0,
@@ -57,7 +61,7 @@
         "alignRadial": true,
         "position": {
           "x": 0,
-          "y": 100,
+          "y": 50,
           "z": 0
         },
         "pristine": true,
@@ -72,7 +76,7 @@
         "frequency": "WW_TERRARIUM_WARP",
         "alignRadial": true,
         "position": {
-          "x": 100,
+          "x": 50,
           "y": 0,
           "z": 0
         }
