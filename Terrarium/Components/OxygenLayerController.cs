@@ -29,10 +29,22 @@ namespace Terrarium.Components
         void OnPlayerInside(bool inside)
         {
             UpdateActiveState();
-            if (gameObject.activeSelf)
+
+            if (inside)
             {
-                triggerVolume.AddObjectToVolume(Locator.GetPlayerDetector());
-                triggerVolume.AddObjectToVolume(Locator.GetPlayerCameraDetector());
+                if (!triggerVolume._active) triggerVolume.SetTriggerActivation(true);
+                if (!triggerVolume.IsTrackingObject(Locator.GetPlayerDetector()))
+                {
+                    triggerVolume.AddObjectToVolume(Locator.GetPlayerDetector());
+                }
+            }
+            else
+            {
+                if (triggerVolume.IsTrackingObject(Locator.GetPlayerDetector()))
+                {
+                    triggerVolume.RemoveObjectFromVolume(Locator.GetPlayerDetector());
+                }
+                if (triggerVolume._active) triggerVolume.SetTriggerActivation(false);
             }
         }
 

@@ -28,7 +28,7 @@ namespace Terrarium.Components
         {
             base.Awake();
             _type = PARAM_ITEM_TYPES[Parameter];
-            displayName = Terrarium.Instance.NewHorizons.GetTranslationForUI($"WW_TERRARIUM_ITEM_ReplacementPart_{Parameter}");
+            displayName = Terrarium.NewHorizons.GetTranslationForUI($"WW_TERRARIUM_ITEM_ReplacementPart_{Parameter}");
         }
 
         public override string GetDisplayName() => displayName;

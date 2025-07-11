@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Terrarium.Data;
+using Terrarium.Enums;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -12,6 +13,7 @@ namespace Terrarium.Components
     public class TerrariumController : MonoBehaviour
     {
         public class StateChangeEvent : UnityEvent<TerrariumStateData> { }
+        public class ParameterChangeEvent : UnityEvent<TerrariumParamType, float> { }
         public class PlayerInsideEvent : UnityEvent<bool> { }
 
         static TerrariumController instance;
@@ -40,6 +42,7 @@ namespace Terrarium.Components
         public ToggleValue EnclosureAngleEnabled;
 
         public readonly StateChangeEvent OnStateChanged = new();
+        public readonly ParameterChangeEvent OnParameterChanged = new();
         public readonly PlayerInsideEvent OnPlayerInside = new();
 
         TerrariumStateData currentStateData;
@@ -48,11 +51,11 @@ namespace Terrarium.Components
         protected void Awake()
         {
             instance = this;
-            SunDistance = ChaseValue.Create(this, 0.5f);
-            SunAngle = ChaseValue.Create(this, 0.5f);
-            Humidity = ChaseValue.Create(this, 0.5f);
-            Atmosphere = ChaseValue.Create(this, 0.5f);
-            EnclosureAngle = ChaseValue.Create(this, 0.5f);
+            SunDistance = ChaseValue.Create(this, 0.5f, OnSunDistanceChanged);
+            SunAngle = ChaseValue.Create(this, 0.5f, OnSunAngleChanged);
+            Humidity = ChaseValue.Create(this, 0.5f, OnHumidityChanged);
+            Atmosphere = ChaseValue.Create(this, 0.5f, OnAtmosphereChanged);
+            EnclosureAngle = ChaseValue.Create(this, 0.5f, OnEnclosureAngleChanged);
             SunDistanceEnabled = ToggleValue.Create(this, false);
             SunAngleEnabled = ToggleValue.Create(this, false);
             HumidityEnabled = ToggleValue.Create(this, false);
@@ -62,7 +65,7 @@ namespace Terrarium.Components
 
         public Vector3 GetSunWorldPosition()
         {
-            var angleX = 180f * SunAngle.Current;
+            var angleX = 90f * (1f - SunAngle.Current);
 
             var rotation = Quaternion.Euler(angleX, 0f, 0f);
             var dir = rotation * Vector3.up;
@@ -103,6 +106,31 @@ namespace Terrarium.Components
                 wasInside = !wasInside;
                 OnPlayerInside.Invoke(wasInside);
             }
+        }
+
+        void OnSunDistanceChanged(float value)
+        {
+            OnParameterChanged.Invoke(TerrariumParamType.SunDistance, value);
+        }
+
+        void OnSunAngleChanged(float value)
+        {
+            OnParameterChanged.Invoke(TerrariumParamType.SunAngle, value);
+        }
+
+        void OnHumidityChanged(float value)
+        {
+            OnParameterChanged.Invoke(TerrariumParamType.Humidity, value);
+        }
+
+        void OnAtmosphereChanged(float value)
+        {
+            OnParameterChanged.Invoke(TerrariumParamType.Atmosphere, value);
+        }
+
+        void OnEnclosureAngleChanged(float value)
+        {
+            OnParameterChanged.Invoke(TerrariumParamType.EnclosureAngle, value);
         }
     }
 }

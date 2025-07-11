@@ -28,7 +28,7 @@ namespace Terrarium.Components
 
         protected void Start()
         {
-            var text = Terrarium.Instance.NewHorizons.GetTranslationForUI($"WW_TERRARIUM_{(Amount >= 0 ? "Increase" : "Decrease")}{Parameter}");
+            var text = Terrarium.NewHorizons.GetTranslationForUI($"WW_TERRARIUM_{(Amount >= 0 ? "Increase" : "Decrease")}{Parameter}");
             interactReceiver.ChangePrompt(text);
         }
 

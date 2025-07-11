@@ -16,7 +16,7 @@ namespace Terrarium.Components
 
         protected void Awake()
         {
-            var obj = Terrarium.Instance.NewHorizons.SpawnObject(Terrarium.Instance, transform.root.gameObject, GetComponentInParent<Sector>(), path, Vector3.zero, Vector3.zero, 1f, false);
+            var obj = Terrarium.NewHorizons.SpawnObject(Terrarium.Instance, transform.root.gameObject, GetComponentInParent<Sector>(), path, Vector3.zero, Vector3.zero, 1f, false);
             foreach (Transform child in obj.transform)
             {
                 if (childrenToRemove.Contains(child.name))
@@ -28,6 +28,16 @@ namespace Terrarium.Components
             obj.transform.localPosition = Vector3.zero;
             obj.transform.localRotation = Quaternion.identity;
             obj.transform.localScale = Vector3.one;
+        }
+
+        protected void OnDrawGizmos()
+        {
+            Gizmos.color = Color.red;
+            Gizmos.DrawLine(transform.position, transform.position + Vector3.right);
+            Gizmos.color = Color.green;
+            Gizmos.DrawLine(transform.position, transform.position + Vector3.up);
+            Gizmos.color = Color.blue;
+            Gizmos.DrawLine(transform.position, transform.position + Vector3.forward);
         }
     }
 }

@@ -23,6 +23,19 @@
     "spriteFolder": "planets/shiplog/sprites"
   },
   "Props": {
+    "warpReceivers": [
+      {
+        "rename": "ShortcutWarpReceiver",
+        "detailed": false,
+        "frequency": "WW_TERRARIUM_SHORTCUT",
+        "alignRadial": true,
+        "position": {
+          "x": 0,
+          "y": 0,
+          "z": -400
+        }
+      }
+    ],
     "warpTransmitters": [
       {
         "rename": "WarpTransmitter",
@@ -30,8 +43,8 @@
         "frequency": "WW_TERRARIUM_WARP",
         "alignRadial": true,
         "position": {
-          "x": 20,
-          "y": 400,
+          "x": 9.3,
+          "y": 399.5,
           "z": 0
         }
       }
@@ -51,7 +64,20 @@
         "path": "Assets/Terrarium/Objects/TerrariumItem_ResearchLab.prefab",
         "position": {
           "x": 0,
-          "y": 400,
+          "y": 400.5,
+          "z": 5
+        }
+      }
+    ],
+    "translatorText": [
+      {
+        "rename": "TerrariumComputer",
+        "type": "preCrashComputer",
+        "xmlFile": "planets/text/TERRARIUM_COMPUTER.xml",
+        "alignRadial": true,
+        "position": {
+          "x": 5,
+          "y": 399.7,
           "z": 5
         }
       }

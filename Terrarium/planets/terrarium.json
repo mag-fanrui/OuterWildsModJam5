@@ -6,7 +6,7 @@
     "gravityFallOff": "linear",
     "surfaceSize": 300,
     "groundSize": 0,
-    "surfaceGravity": 20,
+    "surfaceGravity": 24,
     "hasFluidDetector": false,
     "hideProxy": true
   },
@@ -23,7 +23,7 @@
   },
   "AmbientLights": [
     {
-      "intensity": 0.5
+      "intensity": 0.2
     }
   ],
   "Atmosphere": {
@@ -90,6 +90,13 @@
     ]
   },
   "Volumes": {
-
+    "rulesets": {
+      "thrustRulesets": [
+        {
+          "radius": 300,
+          "thrustLimit": 50
+        }
+      ]
+    }
   }
 }

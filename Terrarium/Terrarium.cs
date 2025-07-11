@@ -12,23 +12,26 @@ namespace Terrarium
         static Terrarium instance;
 
         public static Terrarium Instance => instance;
+        public static INewHorizons NewHorizons => instance.newHorizons;
+        public static bool DebugMode => instance.debugMode;
 
-        public INewHorizons NewHorizons;
+        INewHorizons newHorizons;
+        bool debugMode;
 
-        public void Awake()
+        protected void Awake()
         {
             instance = this;
         }
 
-        public void Start()
+        protected void Start()
         {
             ModHelper.Console.WriteLine($"My mod {nameof(Terrarium)} is loaded!", MessageType.Success);
 
             // Get the New Horizons API and load configs
-            NewHorizons = ModHelper.Interaction.TryGetModApi<INewHorizons>("xen.NewHorizons");
-            NewHorizons.LoadConfigs(this);
+            newHorizons = ModHelper.Interaction.TryGetModApi<INewHorizons>("xen.NewHorizons");
+            newHorizons.LoadConfigs(this);
 
-            NewHorizons.GetBodyLoadedEvent().AddListener(bodyName =>
+            newHorizons.GetBodyLoadedEvent().AddListener(bodyName =>
             {
                 var body = GameObject.Find(bodyName.Replace(" ", "") + "_Body");
 
@@ -52,6 +55,25 @@ namespace Terrarium
             LoadManager.OnCompleteSceneLoad += OnCompleteSceneLoad;
         }
 
+        protected void OnGUI()
+        {
+            if (!DebugMode) return;
+
+            var tc = TerrariumController.Instance;
+            if (tc == null) return;
+
+            GUILayout.Label($"Sun Angle: {tc.SunAngle:F2} {(tc.SunAngleEnabled.Value ? "" : "(Locked)")}");
+            GUILayout.Label($"Sun Distance: {tc.SunDistance:F2} {(tc.SunDistanceEnabled.Value ? "" : "(Locked)")}");
+            GUILayout.Label($"Humidity: {tc.Humidity:F2} {(tc.HumidityEnabled.Value ? "" : "(Locked)")}");
+            GUILayout.Label($"Atmosphere: {tc.Atmosphere:F2} { (tc.AtmosphereEnabled.Value ? "" : "(Locked)")}");
+            GUILayout.Label($"Enclosure Angle: {tc.EnclosureAngle:F2} {(tc.EnclosureAngleEnabled.Value ? "" : "(Locked)")}");
+        }
+
+        public override void Configure(IModConfig config)
+        {
+            debugMode = config.GetSettingsValue<bool>("Debug Mode");
+        }
+
         public void OnCompleteSceneLoad(OWScene previousScene, OWScene newScene)
         {
             if (newScene != OWScene.SolarSystem) return;
@@ -61,6 +83,8 @@ namespace Terrarium
 
         void SetUpPlanetBody(GameObject body)
         {
+            body.transform.Find("Sector/TerrariumComputer").gameObject.AddComponent<TerrariumComputerController>();
+
             var warpGO = body.transform.Find("Sector/WarpTransmitter").gameObject;
             foreach (Transform child in warpGO.transform)
             {

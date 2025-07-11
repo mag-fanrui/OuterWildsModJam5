@@ -21,7 +21,7 @@ namespace Terrarium.Components
         {
             base.Awake();
             _type = ITEM_TYPE;
-            displayName = StateData ? Terrarium.Instance.NewHorizons.GetTranslationForUI($"WW_TERRARIUM_ITEM_{StateData.name}") : "ERROR";
+            displayName = StateData ? Terrarium.NewHorizons.GetTranslationForUI($"WW_TERRARIUM_ITEM_{StateData.name}") : "ERROR";
         }
 
         public override string GetDisplayName() => displayName;
