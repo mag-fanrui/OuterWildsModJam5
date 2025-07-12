@@ -4,7 +4,7 @@
   "starSystem": "Jam5",
   "Base": {
     "gravityFallOff": "linear",
-    "surfaceSize": 300,
+    "surfaceSize": 150,
     "groundSize": 0,
     "surfaceGravity": 24,
     "hasFluidDetector": false,

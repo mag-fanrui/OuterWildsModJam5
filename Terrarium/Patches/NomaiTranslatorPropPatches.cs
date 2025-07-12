@@ -15,7 +15,6 @@ namespace Terrarium.Patches
         public static void SetNomaiText(NomaiTranslatorProp __instance)
         {
             var text = __instance._textNodeToDisplay;
-            Terrarium.Instance.ModHelper.Console.WriteLine($"Setting Nomai text: {text}");
             if (text.Contains("$WW_TERRARIUM_"))
             {
                 text = text.Replace("$WW_TERRARIUM_SYSTEM_COUNT$", TerrariumComputerController.Instance.GetSystemCountString());

@@ -1,4 +1,5 @@
-﻿using System.Reflection;
+﻿using System.Linq;
+using System.Reflection;
 using HarmonyLib;
 using OWML.Common;
 using OWML.ModHelper;
@@ -62,11 +63,11 @@ namespace Terrarium
             var tc = TerrariumController.Instance;
             if (tc == null) return;
 
-            GUILayout.Label($"Sun Angle: {tc.SunAngle:F2} {(tc.SunAngleEnabled.Value ? "" : "(Locked)")}");
-            GUILayout.Label($"Sun Distance: {tc.SunDistance:F2} {(tc.SunDistanceEnabled.Value ? "" : "(Locked)")}");
-            GUILayout.Label($"Humidity: {tc.Humidity:F2} {(tc.HumidityEnabled.Value ? "" : "(Locked)")}");
-            GUILayout.Label($"Atmosphere: {tc.Atmosphere:F2} { (tc.AtmosphereEnabled.Value ? "" : "(Locked)")}");
-            GUILayout.Label($"Enclosure Angle: {tc.EnclosureAngle:F2} {(tc.EnclosureAngleEnabled.Value ? "" : "(Locked)")}");
+            GUILayout.Label($"Sun Angle: {tc.SunAngle.Target:F2} {(tc.SunAngleEnabled.Value ? "" : "(Locked)")}");
+            GUILayout.Label($"Sun Distance: {tc.SunDistance.Target:F2} {(tc.SunDistanceEnabled.Value ? "" : "(Locked)")}");
+            GUILayout.Label($"Humidity: {tc.Humidity.Target:F2} {(tc.HumidityEnabled.Value ? "" : "(Locked)")}");
+            GUILayout.Label($"Atmosphere: {tc.Atmosphere.Target:F2} { (tc.AtmosphereEnabled.Value ? "" : "(Locked)")}");
+            GUILayout.Label($"Enclosure Angle: {tc.EnclosureAngle.Target:F2} {(tc.EnclosureAngleEnabled.Value ? "" : "(Locked)")}");
         }
 
         public override void Configure(IModConfig config)
@@ -93,6 +94,8 @@ namespace Terrarium
                     //child.gameObject.SetActive(false);
                 }
             }
+
+            SetUpNomaiCharacter(body);
         }
 
         void SetUpTerrariumBody(GameObject body)
@@ -131,6 +134,8 @@ namespace Terrarium
                 }
                 // TODO: Spawn in new raft visuals
             }
+
+            SetUpNomaiCharacter(body);
         }
 
         void SetUpSunBody(GameObject body)
@@ -139,6 +144,28 @@ namespace Terrarium
 
             var lightSourceVolume = body.transform.Find("Volumes/Ruleset").gameObject.AddComponent<SingleLightSourceVolume>();
             lightSourceVolume.LinkLightSource(artificialSun);
+        }
+
+        void SetUpNomaiCharacter(GameObject body)
+        {
+            var jam5Mod = ModHelper.Interaction.TryGetMod("xen-42.ModJam5");
+            var nomaiSuitTex = jam5Mod.ModHelper.Assets.GetTexture("planets/assets/Character_NOM_Nomai_v2_d 1.png");
+
+            foreach (var solanumController in body.GetComponentsInChildren<SolanumAnimController>())
+            {
+                foreach (var renderer in solanumController.gameObject.GetComponentsInChildren<Renderer>())
+                {
+                    renderer.materials = renderer.materials.Select(m =>
+                    {
+                        if (m.name.Contains("Character_NOM_Nomai_v2_mat"))
+                        {
+                            m.mainTexture = nomaiSuitTex;
+                        }
+                        return m;
+                    }).ToArray();
+                }
+            }
+
         }
     }
 }

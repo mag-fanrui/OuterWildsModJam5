@@ -1,0 +1,60 @@
+﻿<DialogueTree xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/Outer-Wilds-New-Horizons/new-horizons/main/NewHorizons/Schemas/dialogue_schema.xsd">
+  <NameField>WW_TERRARIUM_ERNESTO</NameField>
+
+  <DialogueNode>
+    <Name>START</Name>
+    <EntryCondition>DEFAULT</EntryCondition>
+    <Dialogue>
+      <Page>WW_TERRARIUM_ERNESTO_START_1</Page>
+    </Dialogue>
+
+    <DialogueOptionsList>
+      <DialogueOption>
+        <Text>WW_TERRARIUM_ERNESTO_START_OPTION_1</Text>
+        <DialogueTarget>1</DialogueTarget>
+      </DialogueOption>
+      <DialogueOption>
+        <Text>WW_TERRARIUM_ERNESTO_START_OPTION_2</Text>
+        <DialogueTarget>2</DialogueTarget>
+      </DialogueOption>
+      <DialogueOption>
+        <Text>WW_TERRARIUM_ERNESTO_START_OPTION_3</Text>
+        <DialogueTarget>3</DialogueTarget>
+      </DialogueOption>
+    </DialogueOptionsList>
+  </DialogueNode>
+
+  <DialogueNode>
+    <Name>1</Name>
+    <Dialogue>
+      <Page>WW_TERRARIUM_ERNESTO_1_1</Page>
+    </Dialogue>
+    <DialogueOptionsList>
+      <DialogueOption>
+        <Text>WW_TERRARIUM_ERNESTO_1_OPTION_1</Text>
+        <DialogueTarget>START</DialogueTarget>
+      </DialogueOption>
+    </DialogueOptionsList>
+  </DialogueNode>
+
+  <DialogueNode>
+    <Name>2</Name>
+    <Dialogue>
+      <Page>WW_TERRARIUM_ERNESTO_2_1</Page>
+    </Dialogue>
+    <DialogueOptionsList>
+      <DialogueOption>
+        <Text>WW_TERRARIUM_ERNESTO_2_OPTION_1</Text>
+        <DialogueTarget>START</DialogueTarget>
+      </DialogueOption>
+    </DialogueOptionsList>
+  </DialogueNode>
+
+  <DialogueNode>
+    <Name>3</Name>
+    <Dialogue>
+      <Page>WW_TERRARIUM_ERNESTO_3_1</Page>
+    </Dialogue>
+  </DialogueNode>
+
+</DialogueTree>

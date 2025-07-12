@@ -1,5 +1,22 @@
 {
 	"$schema": "https://raw.githubusercontent.com/outer-wilds-new-horizons/new-horizons/main/NewHorizons/Schemas/translation_schema.json",
+	"ShipLogDictionary": {},
+	"DialogueDictionary": {
+		"WW_TERRARIUM_COMPUTER_1": "$WW_TERRARIUM_SYSTEM_COUNT$ systems catalogued.",
+		"WW_TERRARIUM_COMPUTER_2": "Identifying candidate systems by current criteria...",
+		"WW_TERRARIUM_COMPUTER_3": "$WW_TERRARIUM_CANDIDATE_COUNT$ candidates found.",
+		"WW_TERRARIUM_COMPUTER_4": "Payload loaded. Miniaturization system active. Please step onto the platform.",
+		"WW_TERRARIUM_ERNESTO": "Ernesto",
+		"WW_TERRARIUM_ERNESTO_START_1": "Hey it's me Ernesto the miniature talking anglerfish.",
+		"WW_TERRARIUM_ERNESTO_START_OPTION_1": "Miniature? You're massive!",
+		"WW_TERRARIUM_ERNESTO_START_OPTION_2": "Hey Ernesto! How's the husband?",
+		"WW_TERRARIUM_ERNESTO_START_OPTION_3": "Cool. Well, uh, good to see you.",
+		"WW_TERRARIUM_ERNESTO_1_1": "No, I'm tiny just like everything else in here. You're just smaller-er. You should really work on that.",
+		"WW_TERRARIUM_ERNESTO_1_OPTION_1": "Uhh, sure.",
+		"WW_TERRARIUM_ERNESTO_2_1": "Geswaldo is doing well, thank you. He's on a business trip right now but he should be back in 23 minutes or so.",
+		"WW_TERRARIUM_ERNESTO_2_OPTION_1": "Tell him I said hi!",
+		"WW_TERRARIUM_ERNESTO_3_1": "Bye bye."
+	},
 	"UIDictionary": {
 		"WW_TERRARIUM_Planet": "Lonely Lump",
 		"WW_TERRARIUM_Sun": "Heat Lamp",

@@ -1,0 +1,121 @@
+﻿<DialogueTree xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/Outer-Wilds-New-Horizons/new-horizons/main/NewHorizons/Schemas/dialogue_schema.xsd">
+  <NameField>Botanist</NameField>
+
+  <DialogueNode>
+    <Name>START</Name>
+    <EntryCondition>DEFAULT</EntryCondition>
+    <Dialogue>
+      <Page>...</Page>
+      <Page>...</Page>
+      <Page>...</Page>
+      <Page>Ah, here we are! Testing, testing! Can you understand me, my wonderful four-eyed fellow being?</Page>
+    </Dialogue>
+
+    <DialogueOptionsList>
+      <DialogueOption>
+        <Text>Woah! Your staff can translate my language?</Text>
+        <DialogueTarget>GEEK</DialogueTarget>
+      </DialogueOption>
+      <DialogueOption>
+        <RequiredPersistentCondition>WW_TERRARIUM_MET_BOTANIST</RequiredPersistentCondition>
+        <Text>Listen, I'm trapped in a time loop and heard all of this already. Let's skip to the part where we save your clan.</Text>
+        <DialogueTarget>SKIP</DialogueTarget>
+      </DialogueOption>
+    </DialogueOptionsList>
+  </DialogueNode>
+
+  <DialogueNode>
+    <Name>GEEK</Name>
+    <Dialogue>
+      <Page>Quite so, quite so! The universal translator was the keynote presentation at one of our Festivals many many years ago! It's quite useful, I do say!</Page>
+      <Page>But enough about that, I find your own technology quite intriguing! That device at your side is for identifying audible frequencies, yes?</Page>
+      <Page>And that imaging device you have... is that an antiquated version of our warp technology embedded in it?</Page>
+      <Page>And that third device-- Oh! For translating our language! How specific! Have you encountered other Nomai before, then?</Page>
+    </Dialogue>
+    <SetPersistentCondition>WW_TERRARIUM_MET_BOTANIST</SetPersistentCondition>
+    <DialogueOptionsList>
+      <DialogueOption>
+        <RequiredPersistentCondition>MET_SOLANUM</RequiredPersistentCondition>
+        <Text>I've met one living Nomai before, sort-of. It's complicated. But mostly just ruins from some long-dead clan.</Text>
+        <DialogueTarget>MISSION</DialogueTarget>
+      </DialogueOption>
+      <DialogueOption>
+        <CancelledPersistentCondition>MET_SOLANUM</CancelledPersistentCondition>
+        <Text>Mostly just ruins from some long-dead clan. You're the first I've met who's still alive.</Text>
+        <DialogueTarget>MISSION</DialogueTarget>
+      </DialogueOption>
+    </DialogueOptionsList>
+  </DialogueNode>
+
+  <DialogueNode>
+    <Name>MISSION</Name>
+    <Dialogue>
+      <Page>Then well met, my friend! Well met! Allow me to introduce myself! I am Hawthorn, of Sorrel's clan. I have so many questions, but I am afraid I must dampen my curiosity and focus on the matter at hand.</Page>
+      <Page>If you've found your way in here then you've discovered our miniaturization system, yes? At least, I assume you're not some manner of intelligent microscopic life! Although I have yet to actually rule out that hypothesis--</Page>
+      <Page>Ahem. Right. The mission.</Page>
+      <Page>You see, my clan's specialization is xenobotany. We cultivate many unique flora that we rescued from extinction and can no longer be found elsewhere in the universe.</Page>
+      <Page>A normal vessel would be an insufficient environment for growing so many strains with a need for deep soil, of course! So we converted a barren world into a living one, sending our vessel out on expeditions to gather new specimens to cultivate while most of our clan stayed on world to tend to our collection.</Page>
+      <Page>However, two harvests ago, we realized that a neighboring system's star was becoming unstable. It was not a question of if it would go supernova, but when.</Page>
+      <Page>With the help of other clans, we outfitted our world with its own warp drive, likely one of the largest the Nomai have ever designed! The power required is immense, but viable with the latest dark matter reactor technologies.</Page>
+      <Page>The only unknown was the destination. You see, our world was selected specifically for its ideal environmental conditions. Statistically there must be other suitable star sytems out there, but we didn't have enough data yet.</Page>
+      <Page>With no other choice, I volunteered to stay here at this outpost with some enclosed terrariums and our seed banks to preserve them, and my clan set out on a journey to find an ideal location for our world.</Page>
+      <Page>Unfortunately, it is inevitable that much of our flora will not survive. With each cycle that passes without the right solar conditions, more will wither and die. It is likely that the healthy seeds kept here are now the only remaining specimens of our most vulnerable species.</Page>
+    </Dialogue>
+    <DialogueOptionsList>
+      <DialogueOption>
+        <Text>I see. So where does the miniaturization system come in?</Text>
+        <DialogueTarget>MINI</DialogueTarget>
+      </DialogueOption>
+    </DialogueOptionsList>
+  </DialogueNode>
+
+  <DialogueNode>
+    <Name>MINI</Name>
+    <Dialogue>
+      <Page>Ah, yes! That piece of technology changes everything! You see, while the minute spatiotemporal shifting induced by warp drives is common knowledge among the clans, research into warp-based time travel or spatial resizing has long been considered a scientific and literal dead end.</Page>
+      <Page>However, not long before last harvest, I was contacted by a very strange group of Nomai, who claimed to be survivors of Escall's clan!</Page>
+      <Page>They had found an exceptional plant which naturally produced pockets of spatiotemporal distortion within itself, and exploited this to create a miniature society which could meet all of its needs with a fraction of the materials and energy normally required.</Page>
+      <Page>For example, by scaling themselves down, an average tree could produce enough oxygen to serve the whole community, rather than a single home.</Page>
+      <Page>What's more, they discovered they no longer experienced time at the same rate as the outside universe! By the time they emerged, tens of thousands of harvests had already passed since Escall's vessel was lost.</Page>
+      <Page>But, and this is key, the inverse effect was also achievable! By adjusting the spacetime fields, they could experience hundreds of harvests in the time the outer universe experienced one. They could prolong their lives almost indefinitely!</Page>
+      <Page>By applying their research, I was able to develop this miniaturization system to reduce the size of my terrariums and seed banks to a portable size.</Page>
+      <Page>With this technology, my clan can restore our world, and allow it to live and flourish longer than its natural lifespan would normally permit. Nothing would make me happier.</Page>
+      <Page>The warp drive here is powerful enough to send the seeds there, thanks to the reduced energy costs. But to lock on to their receiving pad, I need the coordinates for the system they found.</Page>
+      <Page>I hypothesize that the ideal candidate world they will have eventually settled at is in the stellar catalogue I've been given. If we can find the ideal environmental parameters for the flora I have preserved here, we'll find my clan.</Page>
+      <Page>You do not owe me anything, but my clan and I would be immensely greatful for your assistance.</Page>
+    </Dialogue>
+
+    <DialogueOptionsList>
+      <DialogueOption>
+        <Text>Of course I'll help.</Text>
+        <DialogueTarget>END</DialogueTarget>
+      </DialogueOption>
+      <DialogueOption>
+        <Text>Eh, I'll think about it.</Text>
+        <DialogueTarget>MAYBE</DialogueTarget>
+      </DialogueOption>
+    </DialogueOptionsList>
+  </DialogueNode>
+
+  <DialogueNode>
+    <Name>SKIP</Name>
+    <Dialogue>
+      <Page>Ah! Time travel, just as I hypothesized! I have so many questions, but I suppose I should not trouble you with them! I will meet you outside!</Page>
+    </Dialogue>
+  </DialogueNode>
+
+  <DialogueNode>
+    <Name>MAYBE</Name>
+    <Dialogue>
+      <Page>Oh, I see. Well, if you do decide to help, I will be outside!</Page>
+    </Dialogue>
+  </DialogueNode>
+
+  <DialogueNode>
+    <Name>END</Name>
+    <Dialogue>
+      <Page>Right then, I will meet you outside!</Page>
+    </Dialogue>
+  </DialogueNode>
+
+</DialogueTree>
