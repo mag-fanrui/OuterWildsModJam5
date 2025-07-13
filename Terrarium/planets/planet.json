@@ -5,14 +5,21 @@
   "Base": {
     "gravityFallOff": "linear",
     "surfaceSize": 400,
-    "groundSize": 400,
+    "groundSize": 0,
     "surfaceGravity": 6,
     "centerOfSolarSystem": true,
     "hasFluidDetector": false
   },
+  "HeightMap": {
+    "resolution": 1024,
+    "minHeight": 375,
+    "maxHeight": 425,
+    "textureMap": "planets/assets/texturemap.png",
+    "heightMap": "planets/assets/heightmap.png"
+  },
   "AmbientLights": [
     {
-      "intensity": 0.5
+      "intensity": 0.8
     }
   ],
   "Atmosphere": {
@@ -31,8 +38,8 @@
         "alignRadial": true,
         "position": {
           "x": 0,
-          "y": 0,
-          "z": -400
+          "y": 392.9,
+          "z": -57.8
         }
       }
     ],

@@ -96,6 +96,8 @@ namespace Terrarium
             }
 
             SetUpNomaiCharacter(body);
+
+            ReplaceMaterials(body);
         }
 
         void SetUpTerrariumBody(GameObject body)
@@ -118,6 +120,10 @@ namespace Terrarium
                     child.gameObject.SetActive(false);
                 }
             }
+            var stopgapCollider = GameObject.CreatePrimitive(PrimitiveType.Cube);
+            stopgapCollider.transform.SetParent(warpGO.transform, false);
+            stopgapCollider.transform.localScale = Vector3.one * 2f;
+            stopgapCollider.transform.localPosition = Vector3.down * 2f * 0.5f;
 
             foreach (var raft in body.GetComponentsInChildren<RaftController>())
             {
@@ -136,6 +142,8 @@ namespace Terrarium
             }
 
             SetUpNomaiCharacter(body);
+
+            ReplaceMaterials(body);
         }
 
         void SetUpSunBody(GameObject body)
@@ -155,17 +163,37 @@ namespace Terrarium
             {
                 foreach (var renderer in solanumController.gameObject.GetComponentsInChildren<Renderer>())
                 {
-                    renderer.materials = renderer.materials.Select(m =>
+                    renderer.materials = [.. renderer.materials.Select(m =>
                     {
                         if (m.name.Contains("Character_NOM_Nomai_v2_mat"))
                         {
                             m.mainTexture = nomaiSuitTex;
                         }
                         return m;
-                    }).ToArray();
+                    })];
                 }
             }
+        }
 
+        static readonly string[] MATERIALS_TO_REPLACE = [
+            "Terrain_TH_CraterFloor_mat",
+        ];
+
+        void ReplaceMaterials(GameObject body)
+        {
+            foreach (var renderer in body.GetComponentsInChildren<Renderer>(true))
+            {
+                if (renderer.sharedMaterials.Length > 0 && renderer.sharedMaterials.Any(m => m != null && MATERIALS_TO_REPLACE.Contains(m.name)))
+                {
+                    renderer.sharedMaterials = [.. renderer.sharedMaterials.Select(m =>
+                    {
+                        if (m == null) return null;
+                        var originalMat = Resources.FindObjectsOfTypeAll<Material>().FirstOrDefault(o => o.name == m.name);
+                        if (originalMat != null) return originalMat;
+                        return m;
+                    })];
+                }
+            }
         }
     }
 }

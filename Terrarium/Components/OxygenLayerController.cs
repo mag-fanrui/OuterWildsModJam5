@@ -10,12 +10,12 @@ namespace Terrarium.Components
     public class OxygenLayerController : MonoBehaviour
     {
         VisorRainEffectVolume rainEffect;
-        OWTriggerVolume triggerVolume;
+        OWAudioSource audioSource;
 
         protected void Awake()
         {
             rainEffect = GetComponent<VisorRainEffectVolume>();
-            triggerVolume = GetComponent<OWTriggerVolume>();
+            audioSource = GetComponent<OWAudioSource>();
         }
 
         protected void Start()
@@ -29,23 +29,6 @@ namespace Terrarium.Components
         void OnPlayerInside(bool inside)
         {
             UpdateActiveState();
-
-            if (inside)
-            {
-                if (!triggerVolume._active) triggerVolume.SetTriggerActivation(true);
-                if (!triggerVolume.IsTrackingObject(Locator.GetPlayerDetector()))
-                {
-                    triggerVolume.AddObjectToVolume(Locator.GetPlayerDetector());
-                }
-            }
-            else
-            {
-                if (triggerVolume.IsTrackingObject(Locator.GetPlayerDetector()))
-                {
-                    triggerVolume.RemoveObjectFromVolume(Locator.GetPlayerDetector());
-                }
-                if (triggerVolume._active) triggerVolume.SetTriggerActivation(false);
-            }
         }
 
         void OnHumidityChanged(float value)
@@ -60,13 +43,24 @@ namespace Terrarium.Components
 
         void UpdateActiveState()
         {
-            var atmosphere = TerrariumController.Instance.Atmosphere.Current;
-            var isActive = TerrariumController.Instance.IsPlayerInside() &&
-                            atmosphere >= 0.25f;
-            gameObject.SetActive(isActive);
-
             var humidity = TerrariumController.Instance.Humidity.Current;
-            rainEffect.SetVolumeActivation(humidity >= 0.75f);
+            var atmosphere = TerrariumController.Instance.Atmosphere.Current;
+
+            var hasAir = atmosphere >= 0.25f;
+            var hasRain = hasAir && humidity >= 0.75f;
+
+            rainEffect._dropletRate = hasRain ? 10f : 0f;
+            rainEffect._streakRate = hasRain ? 1f : 0f;
+
+            var ambientAudio = hasRain ? AudioType.GD_RainAmbient_LP : AudioType.TH_CanyonAmbienceDay_LP;
+
+            if (audioSource.audioLibraryClip != ambientAudio)
+            {
+                audioSource.AssignAudioLibraryClip(ambientAudio);
+            }
+
+            var isActive = TerrariumController.Instance.IsPlayerInside() && hasAir;
+            gameObject.SetActive(isActive);
         }
     }
 }
