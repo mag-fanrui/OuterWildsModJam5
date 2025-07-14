@@ -85,7 +85,11 @@
     "details": [
       {
         "assetBundle": "planets/assetbundles/terrarium",
-        "path": "Assets/Terrarium/Objects/TerrariumState_ResearchLab.prefab"
+        "path": "Assets/Terrarium/Objects/TerrariumState_Cliffs.prefab"
+      },
+      {
+        "assetBundle": "planets/assetbundles/terrarium",
+        "path": "Assets/Terrarium/Objects/TerrariumState_Caves.prefab"
       },
       {
         "rename": "LillypadModel",

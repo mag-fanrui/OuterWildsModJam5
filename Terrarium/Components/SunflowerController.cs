@@ -21,13 +21,10 @@ namespace Terrarium.Components
             var upDir = (transform.position - transform.root.position).normalized;
             var sunPos = TerrariumController.Instance.GetSunWorldPosition();
             var sunDir = (sunPos - transform.root.position).normalized;
-            var perpDir = Vector3.Cross(upDir, sunDir);
 
-            var angleDiff = Vector3.Angle(upDir, sunDir);
-
-            stemMiddle.localRotation = Quaternion.identity;
-            stemMiddle.LookAt(sunPos, upDir);
-            stemMiddle.localEulerAngles += Vector3.right * 90f;
+            var lookDir = (sunPos - transform.position).normalized;
+            
+            stemMiddle.up = lookDir;
         }
     }
 }

@@ -73,11 +73,20 @@
       },
       {
         "assetBundle": "planets/assetbundles/terrarium",
-        "path": "Assets/Terrarium/Objects/TerrariumItem_ResearchLab.prefab",
+        "path": "Assets/Terrarium/Objects/TerrariumItem_Cliffs.prefab",
         "position": {
           "x": 0,
           "y": 400.5,
           "z": 5
+        }
+      },
+      {
+        "assetBundle": "planets/assetbundles/terrarium",
+        "path": "Assets/Terrarium/Objects/TerrariumItem_Caves.prefab",
+        "position": {
+          "x": 0,
+          "y": 400.5,
+          "z": 7
         }
       },
       {
