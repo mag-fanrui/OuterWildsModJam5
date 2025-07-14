@@ -53,7 +53,7 @@ namespace Terrarium.Components
 
         protected virtual void ExtraDebugGUI() { }
 
-        protected float CalculateSize() => 0.1f + CalculateHealth() * 0.9f;
+        protected float CalculateSize() => PlantData.MinScale + CalculateHealth() * (1f - PlantData.MinScale);
 
         protected float CalculateHealth()
         {
@@ -99,9 +99,12 @@ namespace Terrarium.Components
         {
             var targetSize = CalculateSize();
             Size.Target = targetSize;
-            foreach (var renderer in renderers)
+            if (PlantData.UseHealthColors)
             {
-                renderer.material.color = Color.Lerp(PlantData.SickColor, PlantData.HealthyColor, CalculateHealth());
+                foreach (var renderer in renderers)
+                {
+                    renderer.material.color = Color.Lerp(PlantData.SickColor, PlantData.HealthyColor, CalculateHealth());
+                }
             }
         }
     }
