@@ -35,24 +35,7 @@ namespace Terrarium.Components
         private void OnPressInteract()
         {
             var tc = TerrariumController.Instance;
-            switch (Parameter)
-            {
-                case TerrariumParamType.SunDistance:
-                    AdjustParameter(tc.SunDistance, tc.SunDistanceEnabled);
-                    break;
-                case TerrariumParamType.SunAngle:
-                    AdjustParameter(tc.SunAngle, tc.SunAngleEnabled);
-                    break;
-                case TerrariumParamType.Humidity:
-                    AdjustParameter(tc.Humidity, tc.HumidityEnabled);
-                    break;
-                case TerrariumParamType.Atmosphere:
-                    AdjustParameter(tc.Atmosphere, tc.AtmosphereEnabled);
-                    break;
-                case TerrariumParamType.EnclosureAngle:
-                    AdjustParameter(tc.EnclosureAngle, tc.EnclosureAngleEnabled);
-                    break;
-            }
+            AdjustParameter(tc.GetParameter(Parameter), tc.GetParameterEnabled(Parameter));
         }
 
         private void AdjustParameter(ChaseValue value, ToggleValue enabledValue)

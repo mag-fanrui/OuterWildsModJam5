@@ -37,24 +37,7 @@ namespace Terrarium.Components
         void SetParameterEnable(bool enabled)
         {
             var tc = TerrariumController.Instance;
-            switch (Parameter)
-            {
-                case TerrariumParamType.SunDistance:
-                    tc.SunDistanceEnabled.Value = enabled;
-                    break;
-                case TerrariumParamType.SunAngle:
-                    tc.SunAngleEnabled.Value = enabled;
-                    break;
-                case TerrariumParamType.Humidity:
-                    tc.HumidityEnabled.Value = enabled;
-                    break;
-                case TerrariumParamType.Atmosphere:
-                    tc.AtmosphereEnabled.Value = enabled;
-                    break;
-                case TerrariumParamType.EnclosureAngle:
-                    tc.EnclosureAngleEnabled.Value = enabled;
-                    break;
-            }
+            tc.GetParameterEnabled(Parameter).Value = enabled;
         }
     }
 }

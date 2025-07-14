@@ -101,6 +101,26 @@ namespace Terrarium.Components
             }
         }
 
+        public ChaseValue GetParameter(TerrariumParamType paramType) => paramType switch
+        {
+            TerrariumParamType.SunDistance => SunDistance,
+            TerrariumParamType.SunAngle => SunAngle,
+            TerrariumParamType.Humidity => Humidity,
+            TerrariumParamType.Atmosphere => Atmosphere,
+            TerrariumParamType.EnclosureAngle => EnclosureAngle,
+            _ => throw new ArgumentOutOfRangeException(nameof(paramType)),
+        };
+
+        public ToggleValue GetParameterEnabled(TerrariumParamType paramType) => paramType switch
+        {
+            TerrariumParamType.SunDistance => SunDistanceEnabled,
+            TerrariumParamType.SunAngle => SunAngleEnabled,
+            TerrariumParamType.Humidity => HumidityEnabled,
+            TerrariumParamType.Atmosphere => AtmosphereEnabled,
+            TerrariumParamType.EnclosureAngle => EnclosureAngleEnabled,
+            _ => throw new ArgumentOutOfRangeException(nameof(paramType)),
+        };
+
         protected void Update()
         {
             if (IsPlayerInside() != wasInside)
