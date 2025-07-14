@@ -27,10 +27,15 @@ namespace Terrarium.Components
 
         void OnStateChanged(TerrariumStateData stateData)
         {
-            gameObject.SetActive(TerrariumController.Instance.IsPlayerInside() && TerrariumController.Instance.GetState() == StateData);
+            UpdateState();
         }
 
         private void OnPlayerInside(bool inside)
+        {
+            UpdateState();
+        }
+
+        void UpdateState()
         {
             gameObject.SetActive(TerrariumController.Instance.IsPlayerInside() && TerrariumController.Instance.GetState() == StateData);
         }
