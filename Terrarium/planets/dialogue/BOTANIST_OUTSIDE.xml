@@ -9,18 +9,16 @@
     </Dialogue>
     <DialogueOptionsList>
       <DialogueOption>
-        <Text>Why is everything here so worn down?</Text>
-        <DialogueTarget>RUINS</DialogueTarget>
+        <Text></Text>
+        <DialogueTarget></DialogueTarget>
       </DialogueOption>
     </DialogueOptionsList>
   </DialogueNode>
 
   <DialogueNode>
-    <Name>RUINS</Name>
+    <Name></Name>
     <Dialogue>
-      <Page>An excellent question! The answer is simple: my clan uses exclusively biodegradable materials for non-essential structures!</Page>
-      <Page>What looks like sandstone here is actually a highly compacted nutrient mix held together with organic binding agents. It is carefully formulated to break down under exposure and enrich the soil over time.</Page>
-      <Page>...It can be a bit inconvenient having to constantly rebuild everything, though.</Page>
+      <Page></Page>
     </Dialogue>
     <DialogueTarget>START</DialogueTarget>
   </DialogueNode>

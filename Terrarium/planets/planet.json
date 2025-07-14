@@ -92,7 +92,7 @@
       {
         "rename": "Botanist_Outside",
         "path": "QuantumMoon_Body/Sector_QuantumMoon/State_EYE/Interactables_EYEState/ConversationPivot/Character_NOM_Solanum/Nomai_ANIM_SkyWatching_Idle",
-        //"activationCondition": "WW_TERRARIUM_MET_BOTANIST",
+        "activationCondition": "WW_TERRARIUM_MET_BOTANIST",
         "alignRadial": true,
         "position": {
           "x": 2,
@@ -108,7 +108,7 @@
     ],
     "dialogue": [
       {
-        "xmlFile": "planets/dialogue/BOTANIST_INTRO.xml",
+        "xmlFile": "planets/dialogue/BOTANIST_OUTSIDE.xml",
         "pathToAnimController": "Sector/Botanist_Outside",
         "parentPath": "Sector/Botanist_Outside",
         "isRelativeToParent": true,
