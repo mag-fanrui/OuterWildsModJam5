@@ -23,7 +23,7 @@
   },
   "AmbientLights": [
     {
-      "intensity": 0.2
+      "intensity": 0.4
     }
   ],
   "Atmosphere": {
@@ -76,9 +76,9 @@
         "frequency": "WW_TERRARIUM_WARP",
         "alignRadial": true,
         "position": {
-          "x": 50,
+          "x": 0,
           "y": 0,
-          "z": 0
+          "z": 50
         }
       }
     ],
@@ -86,6 +86,12 @@
       {
         "assetBundle": "planets/assetbundles/terrarium",
         "path": "Assets/Terrarium/Objects/TerrariumState_ResearchLab.prefab"
+      },
+      {
+        "rename": "LillypadModel",
+        "assetBundle": "planets/assetbundles/terrarium",
+        "path": "Assets/Terrarium/Objects/LillypadModel.prefab",
+        "keepLoaded": true
       }
     ]
   },

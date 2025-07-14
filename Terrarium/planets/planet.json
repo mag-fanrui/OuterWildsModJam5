@@ -12,8 +12,8 @@
   },
   "HeightMap": {
     "resolution": 1024,
-    "minHeight": 375,
-    "maxHeight": 425,
+    "minHeight": 353,
+    "maxHeight": 453,
     "textureMap": "planets/assets/texturemap.png",
     "heightMap": "planets/assets/heightmap.png"
   },
@@ -49,10 +49,15 @@
         "alignmentWindow": 360,
         "frequency": "WW_TERRARIUM_WARP",
         "alignRadial": true,
-        "position": {
-          "x": 9.3,
-          "y": 399.5,
+        "rotation": {
+          "x": 0,
+          "y": 61.25,
           "z": 0
+        },
+        "position": {
+          "x": 12,
+          "y": 399,
+          "z": 6.5
         }
       }
     ],
@@ -112,9 +117,9 @@
         "xmlFile": "planets/text/TERRARIUM_COMPUTER.xml",
         "alignRadial": true,
         "position": {
-          "x": 5,
+          "x": 4,
           "y": 399.7,
-          "z": 5
+          "z": 4.75
         }
       }
     ]

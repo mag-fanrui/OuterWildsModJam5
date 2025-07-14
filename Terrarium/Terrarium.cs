@@ -124,6 +124,13 @@ namespace Terrarium
             stopgapCollider.transform.SetParent(warpGO.transform, false);
             stopgapCollider.transform.localScale = Vector3.one * 2f;
             stopgapCollider.transform.localPosition = Vector3.down * 2f * 0.5f;
+            Destroy(stopgapCollider.GetComponent<MeshRenderer>());
+            Destroy(stopgapCollider.GetComponent<MeshFilter>());
+
+            var lilypadPrefab = body.transform.Find("Sector/LillypadModel").gameObject;
+            var lilypadData = lilypadPrefab.GetComponent<LilypadController>().PlantData;
+            Destroy(lilypadPrefab.GetComponent<LilypadController>());
+            lilypadPrefab.SetActive(false);
 
             foreach (var raft in body.GetComponentsInChildren<RaftController>())
             {
@@ -136,9 +143,19 @@ namespace Terrarium
                 }
                 foreach (Transform child in raft.transform.Find("Colliders"))
                 {
-                    if (child.name is not "collider_base") child.gameObject.SetActive(false);
+                    child.gameObject.SetActive(false);
+                    //if (child.name is not "collider_base") child.gameObject.SetActive(false);
                 }
-                // TODO: Spawn in new raft visuals
+
+                var lilypad = Instantiate(lilypadPrefab);
+                lilypad.transform.SetParent(raft.transform, false);
+                lilypad.transform.localPosition = Vector3.zero;
+                lilypad.transform.localRotation = Quaternion.identity;
+                lilypad.transform.localScale = Vector3.one;
+                lilypad.gameObject.SetActive(true);
+
+                var lilypadController = raft.gameObject.AddComponent<LilypadController>();
+                lilypadController.PlantData = lilypadData;
             }
 
             SetUpNomaiCharacter(body);

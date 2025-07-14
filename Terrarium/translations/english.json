@@ -26,7 +26,7 @@
 		"WW_TERRARIUM_ITEM_ReplacementPart_SunAngle": "Locking Pin",
 		"WW_TERRARIUM_ITEM_ReplacementPart_Humidity": "Fluid Valve",
 		"WW_TERRARIUM_ITEM_ReplacementPart_Atmosphere": "Oxygen Regulator",
-    "WW_TERRARIUM_ITEM_ReplacementPart_EnclosureAngle": "Fine Gear",
+		"WW_TERRARIUM_ITEM_ReplacementPart_EnclosureAngle": "Fine Gear",
 		"WW_TERRARIUM_IncreaseSunDistance": "Raise Lamp",
 		"WW_TERRARIUM_DecreaseSunDistance": "Lower Lamp",
 		"WW_TERRARIUM_IncreaseSunAngle": "Rotate Lamp Up",
@@ -36,6 +36,7 @@
 		"WW_TERRARIUM_IncreaseAtmosphere": "Increase Atmospheric Density",
 		"WW_TERRARIUM_DecreaseAtmosphere": "Decrease Atmospheric Density",
 		"WW_TERRARIUM_IncreaseEnclosureAngle": "Rotate Enclosure Right",
-    "WW_TERRARIUM_DecreaseEnclosureAngle": "Rotate Enclosure Left"
+		"WW_TERRARIUM_DecreaseEnclosureAngle": "Rotate Enclosure Left",
+		"WW_TERRARIUM_EmergencyWarp": "Use Emergency Warp"
 	}
 }

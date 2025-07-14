@@ -17,14 +17,14 @@ namespace Terrarium.Components
         Vector3 initialScale;
         MeshRenderer[] renderers;
 
-        protected void Awake()
+        protected virtual void Awake()
         {
             initialScale = transform.localScale;
             renderers = GetComponentsInChildren<MeshRenderer>();
             Size = ChaseValue.Create(this, 0.5f, OnSizeChanged, 0.02f);
         }
 
-        protected void Start()
+        protected virtual void Start()
         {
             TerrariumController.Instance.SunDistance.On(OnEnvironmentChanged);
             TerrariumController.Instance.SunAngle.On(OnEnvironmentChanged);
@@ -47,8 +47,11 @@ namespace Terrarium.Components
             GUILayout.Label($"Sunlight: {CalculateSunlightFactor():F2}");
             GUILayout.Label($"Humidity: {CalculateHumidityFactor():F2}");
             GUILayout.Label($"Atmosphere: {CalculateAtmosphereFactor():F2}");
+            ExtraDebugGUI();
             GUILayout.EndArea();
         }
+
+        protected virtual void ExtraDebugGUI() { }
 
         protected float CalculateSize() => 0.1f + CalculateHealth() * 0.9f;
 
@@ -92,7 +95,7 @@ namespace Terrarium.Components
             transform.localScale = initialScale * currentSize;
         }
 
-        protected void OnEnvironmentChanged(float _)
+        protected virtual void OnEnvironmentChanged(float _)
         {
             var targetSize = CalculateSize();
             Size.Target = targetSize;

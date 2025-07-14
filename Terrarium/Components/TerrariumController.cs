@@ -15,6 +15,7 @@ namespace Terrarium.Components
         public class StateChangeEvent : UnityEvent<TerrariumStateData> { }
         public class ParameterChangeEvent : UnityEvent<TerrariumParamType, float> { }
         public class PlayerInsideEvent : UnityEvent<bool> { }
+        public class EmergencyWarpEvent : UnityEvent<Transform> { }
 
         static TerrariumController instance;
 
@@ -44,6 +45,7 @@ namespace Terrarium.Components
         public readonly StateChangeEvent OnStateChanged = new();
         public readonly ParameterChangeEvent OnParameterChanged = new();
         public readonly PlayerInsideEvent OnPlayerInside = new();
+        public readonly EmergencyWarpEvent OnEmergencyWarp = new();
 
         TerrariumStateData currentStateData;
         bool wasInside;

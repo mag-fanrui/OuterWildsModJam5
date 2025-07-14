@@ -26,6 +26,8 @@ namespace Terrarium.Data
         Color healthyColor = Color.white;
         [SerializeField]
         Color sickColor = Color.gray;
+        [SerializeField]
+        float bloomThreshold = -1f;
 
         public float SunlightPreference => sunlightPreference;
         public float SunlightTolerance => sunlightTolerance;
@@ -35,5 +37,6 @@ namespace Terrarium.Data
         public float AtmosphereTolerance => atmosphereTolerance;
         public Color HealthyColor => healthyColor;
         public Color SickColor => sickColor;
+        public float BloomThreshold => bloomThreshold;
     }
 }

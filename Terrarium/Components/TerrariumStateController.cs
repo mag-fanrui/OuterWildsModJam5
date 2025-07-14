@@ -22,7 +22,7 @@ namespace Terrarium.Components
 
         void OnEnclosureAngleChanged(float value)
         {
-            transform.localEulerAngles = Vector3.up * value * 360f;
+            transform.localEulerAngles = Vector3.up * (0f + value * 360f);
         }
 
         void OnStateChanged(TerrariumStateData stateData)
