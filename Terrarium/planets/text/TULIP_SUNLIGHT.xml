@@ -1,24 +1,16 @@
 ﻿<NomaiObject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/Outer-Wilds-New-Horizons/new-horizons/main/NewHorizons/Schemas/text_schema.xsd">
   <TextBlock>
     <ID>1</ID>
-    <Text>WW_TERRARIUM_COMPUTER_1</Text>
+    <Text>Tulipa nomaii has very particular conditions under which it will bloom. Namely, it requires intense sunlight directly overhead.</Text>
   </TextBlock>
   <TextBlock>
     <ID>2</ID>
-    <Text>WW_TERRARIUM_COMPUTER_2</Text>
-  </TextBlock>
-  <TextBlock>
-    <ID>3</ID>
-    <Text>WW_TERRARIUM_COMPUTER_3</Text>
-  </TextBlock>
-  <TextBlock>
-    <ID>4</ID>
-    <Text>WW_TERRARIUM_COMPUTER_4</Text>
+    <Text>Also of note: while adult specimens can be artificially relocated, it was originally exclusive to the northern hemisphere of its native planet.</Text>
   </TextBlock>
   <ShipLogConditions>
     <RevealFact>
-      <FactID>WW_TERRARIUM_COMPUTER_READ</FactID>
-      <Condition>3</Condition>
+      <FactID>WW_TERRARIUM_TULIP_SUNLIGHT</FactID>
+      <Condition>1,2</Condition>
     </RevealFact>
   </ShipLogConditions>
 </NomaiObject>

@@ -9,16 +9,32 @@
     </Dialogue>
     <DialogueOptionsList>
       <DialogueOption>
-        <Text></Text>
-        <DialogueTarget></DialogueTarget>
+        <Text>Run the plan by me again.</Text>
+        <DialogueTarget>MISSION</DialogueTarget>
+      </DialogueOption>
+      <DialogueOption>
+        <Text>How did you end up trapped in there?</Text>
+        <DialogueTarget>TRAPPED</DialogueTarget>
       </DialogueOption>
     </DialogueOptionsList>
   </DialogueNode>
 
   <DialogueNode>
-    <Name></Name>
+    <Name>MISSION</Name>
     <Dialogue>
-      <Page></Page>
+      <Page>Of course! To condense a lengthy tale, my clan left on a worldship seeking a solar system with optimal conditions for growing our selection of plants.</Page>
+      <Page>If we can use the mechanisms here to recreate the same conditions as that theoretical optimal solar system, the computer can pinpoint the worldship's location and set up a warp transit.</Page>
+      <Page>The seed vaults I keep here and the potent theoretical applications of the miniaturization technology will allow my clan's botanical collection to be preserved almost indefinitely, if we can warp it all straight to them.</Page>
+      <Page>I think that covered all of the key points!</Page>
+    </Dialogue>
+  </DialogueNode>
+
+  <DialogueNode>
+    <Name>TRAPPED</Name>
+    <Dialogue>
+      <Page>An interesting query! I am not entirely certain myself, but I hypothesize that some type of meteor shower impacted the planet, damaging the structure and knocking components out of their intended positions while I was within one of the terrariums.</Page>
+      <Page>I did prepare some replacement parts for the most vulnerable mechanisms as part of my regular duties, but I did not anticipate losing access to the outside world entirely. That was an unfortunate turn of events.</Page>
+      <Page>Fortunately, you came along to rescue me not long after!</Page>
     </Dialogue>
     <DialogueTarget>START</DialogueTarget>
   </DialogueNode>

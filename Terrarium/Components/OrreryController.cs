@@ -25,7 +25,7 @@ namespace Terrarium.Components
 
         void OnSunDistanceChanged(float value)
         {
-            lampArm.transform.localPosition = Vector3.up * Mathf.Lerp(0.63f, 0.9708f, value);
+            lampArm.transform.localPosition = Vector3.up * Mathf.Lerp(0.96f, 1.577397f, value);
         }
 
         void OnSunAngleChanged(float value)

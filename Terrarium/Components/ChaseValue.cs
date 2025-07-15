@@ -21,7 +21,7 @@ namespace Terrarium.Components
         [SerializeField]
         readonly ChaseValueChangedEvent onChanged = new();
 
-        public static ChaseValue Create(MonoBehaviour parent, float value, UnityAction<float> onChange = null, float rate = 0.1f)
+        public static ChaseValue Create(MonoBehaviour parent, float value, UnityAction<float> onChange = null, float rate = 0.25f)
         {
             var cv = parent.gameObject.AddComponent<ChaseValue>();
             cv.current = value;

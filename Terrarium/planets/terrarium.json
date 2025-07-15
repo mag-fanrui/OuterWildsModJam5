@@ -49,8 +49,9 @@
     }
   },
   "ShipLog": {
-    "xmlFile": "planets/shiplog/WW_TERRARIUM_Terrarium.xml",
-    "spriteFolder": "planets/shiplog/sprites"
+    "mapMode": {
+      "remove": true
+    }
   },
   "Water": {
     "size": 50,
@@ -108,7 +109,8 @@
         "parentPath": "Sector/TerrariumState_Cliffs/NomaiSpawn",
         "path": "QuantumMoon_Body/Sector_QuantumMoon/State_EYE/Interactables_EYEState/ConversationPivot/Character_NOM_Solanum/Nomai_ANIM_SkyWatching_Idle",
         "deactivationCondition": "WW_TERRARIUM_MET_BOTANIST",
-        "alignRadial": true,
+        "position": {},
+        "rotation": {},
         "isRelativeToParent": true
       }
     ],

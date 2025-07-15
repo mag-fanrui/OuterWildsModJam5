@@ -22,11 +22,13 @@ namespace Terrarium.Components
             initialPosition = transform.localPosition;
             initialRotation = transform.localRotation;
             warpReceiver._blackHole.OnCollapse += OnCollapse;
+            warpReceiver.OnReceivePlayerBody += OnReceivePlayerBody;
         }
 
         protected void OnDestroy()
         {
             warpReceiver._blackHole.OnCollapse -= OnCollapse;
+            warpReceiver.OnReceivePlayerBody -= OnReceivePlayerBody;
         }
 
         protected void Start()
@@ -57,6 +59,11 @@ namespace Terrarium.Components
             emergencyWarp = false;
             transform.localPosition = initialPosition;
             transform.localRotation = initialRotation;
+        }
+
+        void OnReceivePlayerBody()
+        {
+            Locator.GetShipLogManager().RevealFact("WW_TERRARIUM_MINI_WARP");
         }
     }
 }

@@ -134,6 +134,18 @@
     ]
   },
   "Volumes": {
-
+    "revealVolumes": [
+      {
+        "rename": "RevealVolume_Discover",
+        "parentPath": "Sector/TerrariumInterface",
+        "isRelativeToParent": true,
+        "radius": 12,
+        "reveals": [
+          "WW_TERRARIUM_DISCOVER"
+        ],
+        "revealOn": "enter",
+        "revealFor": "player"
+      }
+    ]
   }
 }

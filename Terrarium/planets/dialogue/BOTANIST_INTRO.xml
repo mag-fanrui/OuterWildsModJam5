@@ -10,6 +10,9 @@
       <Page>...</Page>
       <Page>Ah, here we are! Testing, testing! Can you understand me, my wonderful four-eyed fellow being?</Page>
     </Dialogue>
+    <RevealFacts>
+      <FactID>WW_TERRARIUM_BOTANIST_MET</FactID>
+    </RevealFacts>
     <SetPersistentCondition>WW_TERRARIUM_MET_BOTANIST</SetPersistentCondition>
 
     <DialogueOptionsList>
@@ -50,17 +53,21 @@
   <DialogueNode>
     <Name>MISSION</Name>
     <Dialogue>
-      <Page>Then well met, my friend! Well met! Allow me to introduce myself! I am Hawthorn, of Sorrel's clan. I have so many questions, but I am afraid I must dampen my curiosity and focus on the matter at hand.</Page>
+      <Page>Then well met, my friend! Well met! Allow me to introduce myself! I am Hawthorn. I have so many questions, but I am afraid I must dampen my curiosity and focus on the matter at hand.</Page>
       <Page>If you've found your way in here then you've discovered our miniaturization system, yes? At least, I assume you're not some manner of intelligent microscopic life! Although I have yet to actually rule out that hypothesis--</Page>
       <Page>Ahem. Right. The mission.</Page>
       <Page>You see, my clan's specialization is xenobotany. We cultivate many unique flora that we rescued from extinction and can no longer be found elsewhere in the universe.</Page>
       <Page>A normal vessel would be an insufficient environment for growing so many strains with a need for deep soil, of course! So we converted a barren world into a living one, sending our vessel out on expeditions to gather new specimens to cultivate while most of our clan stayed on world to tend to our collection.</Page>
       <Page>However, two harvests ago, we realized that a neighboring system's star was becoming unstable. It was not a question of if it would go supernova, but when.</Page>
       <Page>With the help of other clans, we outfitted our world with its own warp drive, likely one of the largest the Nomai have ever designed! The power required is immense, but viable with the latest dark matter reactor technologies.</Page>
-      <Page>The only unknown was the destination. You see, our world was selected specifically for its ideal environmental conditions. Statistically there must be other suitable star sytems out there, but we didn't have enough data yet.</Page>
+      <Page>The only unknown was the destination. You see, our world was selected specifically for its ideal environmental conditions. Statistically there must be other suitable star sytems out there, but we didn't have enough data at the time.</Page>
       <Page>With no other choice, I volunteered to stay here at this outpost with some enclosed terrariums and our seed banks to preserve them, and my clan set out on a journey to find an ideal location for our world.</Page>
       <Page>Unfortunately, it is inevitable that much of our flora will not survive. With each cycle that passes without the right solar conditions, more will wither and die. It is likely that the healthy seeds kept here are now the only remaining specimens of our most vulnerable species.</Page>
     </Dialogue>
+    <RevealFacts>
+      <FactID>WW_TERRARIUM_WORLDSHIP</FactID>
+      <FactID>WW_TERRARIUM_SEEDS</FactID>
+    </RevealFacts>
     <DialogueOptionsList>
       <DialogueOption>
         <Text>I see. So where does the miniaturization system come in?</Text>
@@ -84,6 +91,10 @@
       <Page>I hypothesize that the ideal candidate world they will have eventually settled at is in the stellar catalogue I've been given. If we can find the ideal environmental parameters for the flora I have preserved here, we'll find my clan.</Page>
       <Page>You do not owe me anything, but my clan and I would be immensely greatful for your assistance.</Page>
     </Dialogue>
+    <RevealFacts>
+      <FactID>WW_TERRARIUM_MINI_THEORY</FactID>
+      <FactID>WW_TERRARIUM_COMPUTER_QUERY</FactID>
+    </RevealFacts>
 
     <DialogueOptionsList>
       <DialogueOption>

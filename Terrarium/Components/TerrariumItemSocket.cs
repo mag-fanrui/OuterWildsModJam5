@@ -21,6 +21,7 @@ namespace Terrarium.Components
             {
                 var terrariumItem = item as TerrariumItem;
                 TerrariumController.Instance.SetState(terrariumItem.StateData);
+                Locator.GetShipLogManager().RevealFact("WW_TERRARIUM_ITEM_INSERTED");
                 return true;
             }
             return false;

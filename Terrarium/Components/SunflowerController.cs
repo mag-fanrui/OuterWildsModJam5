@@ -21,7 +21,17 @@ namespace Terrarium.Components
 
             var sunPos = TerrariumController.Instance.GetSunWorldPosition();
             var lookDir = (sunPos - transform.position).normalized;
-            stemMiddle.up = lookDir;
+            var upDir = (transform.position - transform.root.position).normalized;
+
+            if (Vector3.Dot(lookDir, upDir) >= 0f)
+            {
+                stemMiddle.up = lookDir;
+            }
+            else
+            {
+                stemMiddle.up = upDir;
+            }
+
         }
     }
 }

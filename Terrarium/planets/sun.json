@@ -17,6 +17,11 @@
     "primaryBody": "WW_TERRARIUM_Terrarium",
     "semiMajorAxis": 600
   },
+  "ShipLog": {
+    "mapMode": {
+      "remove": true
+    }
+  },
   "Star": {
     "stellarDeathType": "none",
     "size": 50,
