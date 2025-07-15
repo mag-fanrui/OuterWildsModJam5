@@ -10,9 +10,9 @@ namespace Terrarium.Components
     public class VanillaProp : MonoBehaviour
     {
         [SerializeField]
-        string path;
+        protected string path;
         [SerializeField]
-        List<string> childrenToRemove = [];
+        protected List<string> childrenToRemove = [];
 
         protected void Awake()
         {

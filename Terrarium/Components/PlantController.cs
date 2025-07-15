@@ -1,9 +1,11 @@
-﻿using System;
+﻿using OWML.ModHelper.Events;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Terrarium.Data;
+using Terrarium.Enums;
 using UnityEngine;
 
 namespace Terrarium.Components
@@ -26,10 +28,8 @@ namespace Terrarium.Components
 
         protected virtual void Start()
         {
-            TerrariumController.Instance.SunDistance.On(OnEnvironmentChanged);
-            TerrariumController.Instance.SunAngle.On(OnEnvironmentChanged);
-            TerrariumController.Instance.Humidity.On(OnEnvironmentChanged);
-            TerrariumController.Instance.Atmosphere.On(OnEnvironmentChanged);
+            TerrariumController.Instance.OnParameterChanged.AddListener(OnEnvironmentChanged);
+            OnEnvironmentChanged(TerrariumParamType.SunDistance, TerrariumController.Instance.SunDistance.Current);
         }
 
         protected void OnGUI()
@@ -95,7 +95,7 @@ namespace Terrarium.Components
             transform.localScale = initialScale * currentSize;
         }
 
-        protected virtual void OnEnvironmentChanged(float _)
+        protected virtual void OnEnvironmentChanged(TerrariumParamType _, float __)
         {
             var targetSize = CalculateSize();
             Size.Target = targetSize;

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Terrarium.Enums;
 using UnityEngine;
 
 namespace Terrarium.Components
@@ -19,9 +20,9 @@ namespace Terrarium.Components
             animator = GetComponentInChildren<Animator>();
         }
 
-        protected override void OnEnvironmentChanged(float _)
+        protected override void OnEnvironmentChanged(TerrariumParamType _, float __)
         {
-            base.OnEnvironmentChanged(_);
+            base.OnEnvironmentChanged(_, __);
             animator.SetBool("Open", ShouldBloom());
         }
 

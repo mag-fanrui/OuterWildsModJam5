@@ -4,7 +4,7 @@
   "starSystem": "Jam5",
   "Base": {
     "gravityFallOff": "linear",
-    "surfaceSize": 150,
+    "surfaceSize": 50,
     "groundSize": 0,
     "surfaceGravity": 24,
     "hasFluidDetector": false,
@@ -27,7 +27,7 @@
     }
   ],
   "Atmosphere": {
-    "size": 300,
+    "size": 75,
     "atmosphereSunIntensity": 1.0,
     "hasTrees": true,
     "hasOxygen": true,
@@ -37,9 +37,15 @@
     "clouds": {
       "texturePath": "planets/assets/clouds.png",
       "cloudsPrefab": "giantsDeep",
+      "tint": {
+        "r": 255,
+        "g": 255,
+        "b": 255,
+        "a": 255
+      },
       "hasLightning": true,
-      "innerCloudRadius": 280,
-      "outerCloudRadius": 300
+      "innerCloudRadius": 65,
+      "outerCloudRadius": 75
     }
   },
   "ShipLog": {
@@ -121,10 +127,20 @@
     ]
   },
   "Volumes": {
+    "mapRestrictionVolumes": [
+      {
+        "radius": 75
+      }
+    ],
+    "interferenceVolumes": [
+      {
+        "radius": 75
+      }
+    ],
     "rulesets": {
       "thrustRulesets": [
         {
-          "radius": 300,
+          "radius": 75,
           "thrustLimit": 50
         }
       ]

@@ -14,9 +14,9 @@ namespace Terrarium.Components
         public TerrariumParamType Parameter;
 
         [SerializeField]
-        Transform pumpArm;
+        protected Transform pumpArm;
         [SerializeField]
-        Transform fluid;
+        protected Transform fluid;
 
         protected void Start()
         {

@@ -10,11 +10,11 @@ namespace Terrarium.Components
     public class OrreryController : MonoBehaviour
     {
         [SerializeField]
-        Transform arch;
+        protected Transform arch;
         [SerializeField]
-        Transform lampPivot;
+        protected Transform lampPivot;
         [SerializeField]
-        Transform lampArm;
+        protected Transform lampArm;
 
         protected void Start()
         {

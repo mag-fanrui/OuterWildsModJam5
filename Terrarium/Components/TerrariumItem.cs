@@ -15,6 +15,9 @@ namespace Terrarium.Components
 
         public TerrariumStateData StateData;
 
+        [SerializeField]
+        protected Vector3 holdOffset;
+
         string displayName;
 
         public override void Awake()
@@ -30,6 +33,7 @@ namespace Terrarium.Components
         {
             base.PickUpItem(holdTranform);
             Locator.GetPlayerAudioController()._oneShotExternalSource.PlayOneShot(AudioType.ToolItemWarpCorePickUp);
+            transform.localPosition = holdOffset;
         }
 
         public override void DropItem(Vector3 position, Vector3 normal, Transform parent, Sector sector, IItemDropTarget customDropTarget)

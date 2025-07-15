@@ -11,9 +11,9 @@ namespace Terrarium.Data
     public class TerrariumStateData : ScriptableObject
     {
         [SerializeField]
-        float waterMinRadius;
+        protected float waterMinRadius;
         [SerializeField]
-        float waterMaxRadius;
+        protected float waterMaxRadius;
 
         public float WaterMinRadius => waterMinRadius;
         public float WaterMaxRadius => waterMaxRadius;

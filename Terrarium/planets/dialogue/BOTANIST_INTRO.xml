@@ -10,6 +10,7 @@
       <Page>...</Page>
       <Page>Ah, here we are! Testing, testing! Can you understand me, my wonderful four-eyed fellow being?</Page>
     </Dialogue>
+    <SetPersistentCondition>WW_TERRARIUM_MET_BOTANIST</SetPersistentCondition>
 
     <DialogueOptionsList>
       <DialogueOption>
@@ -32,7 +33,6 @@
       <Page>And that imaging device you have... is that an antiquated version of our warp technology embedded in it?</Page>
       <Page>And that third device-- Oh! For translating our language! How specific! Have you encountered other Nomai before, then?</Page>
     </Dialogue>
-    <SetPersistentCondition>WW_TERRARIUM_MET_BOTANIST</SetPersistentCondition>
     <DialogueOptionsList>
       <DialogueOption>
         <RequiredPersistentCondition>MET_SOLANUM</RequiredPersistentCondition>

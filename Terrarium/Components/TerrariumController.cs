@@ -77,14 +77,14 @@ namespace Terrarium.Components
             return transform.root.TransformPoint(sunPos);
         }
 
-        public float GetSunOrbitDistance() => GetTerrariumRadius() + 200f + SunDistance.Current * 200f;
+        public float GetSunOrbitDistance() => GetTerrariumRadius() + 150f + SunDistance.Current * 200f;
 
         public Vector3 GetTerrariumWorldPosition()
         {
             return transform.root.position;
         }
 
-        public float GetTerrariumRadius() => 300f;
+        public float GetTerrariumRadius() => 75f;
 
         public bool IsPlayerInside() =>
             GetState() != null && 
