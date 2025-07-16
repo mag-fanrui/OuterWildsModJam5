@@ -121,7 +121,7 @@
 
     <ExploreFact>
       <ID>WW_TERRARIUM_SUNFLOWER_SUNLIGHT</ID>
-      <Text>Sunflowers turn to follow the position of the sun. They prefer strong sunlight for growth.</Text>
+      <Text>Sunflowers turn to follow the position of the sun. They prefer strong sunlight and can't grow if clouds are overhead.</Text>
     </ExploreFact>
   </Entry>
 
@@ -132,7 +132,7 @@
 
     <ExploreFact>
       <ID>WW_TERRARIUM_TULIP_SUNLIGHT</ID>
-      <Text>These tulips only bloom for brief periods under particularly strong overhead sunlight. They were only found in the northern hemisphere of their native planet.</Text>
+      <Text>These tulips only bloom for brief periods under particularly strong overhead sunlight. They were only found in the northern hemisphere of their native planet, but not at the north pole.</Text>
     </ExploreFact>
   </Entry>
 
