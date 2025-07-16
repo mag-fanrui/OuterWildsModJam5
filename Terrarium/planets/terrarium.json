@@ -63,19 +63,6 @@
     }
   },
   "Props": {
-    "rafts": [
-      {
-        "alignRadial": true,
-        "position": {
-          "x": 0,
-          "y": 50,
-          "z": 0
-        },
-        "pristine": true,
-        "acceleration": 0.0,
-        "isRelativeToParent": true
-      }
-    ],
     "warpReceivers": [
       {
         "rename": "WarpReceiver",
@@ -101,12 +88,6 @@
       {
         "assetBundle": "planets/assetbundles/terrarium",
         "path": "Assets/Terrarium/Objects/TerrariumState_Ring.prefab"
-      },
-      {
-        "rename": "LillypadModel",
-        "assetBundle": "planets/assetbundles/terrarium",
-        "path": "Assets/Terrarium/Objects/LillypadModel.prefab",
-        "keepLoaded": true
       },
       {
         "rename": "Botanist_Intro",

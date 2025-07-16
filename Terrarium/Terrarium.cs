@@ -127,37 +127,6 @@ namespace Terrarium
             Destroy(stopgapCollider.GetComponent<MeshRenderer>());
             Destroy(stopgapCollider.GetComponent<MeshFilter>());
 
-            var lilypadPrefab = body.transform.Find("Sector/LillypadModel").gameObject;
-            var lilypadData = lilypadPrefab.GetComponent<LilypadController>().PlantData;
-            Destroy(lilypadPrefab.GetComponent<LilypadController>());
-            lilypadPrefab.SetActive(false);
-
-            foreach (var raft in body.GetComponentsInChildren<RaftController>())
-            {
-                foreach (Transform child in raft.transform)
-                {
-                    if (child.name is "LightSensorRoot" or "Structure_IP_DreamRaft" or "Proxy_IP_Structure_Raft" or "Effects_IP_SIM_Raft" or "AchievementVolume")
-                    {
-                        child.gameObject.SetActive(false);
-                    }
-                }
-                foreach (Transform child in raft.transform.Find("Colliders"))
-                {
-                    child.gameObject.SetActive(false);
-                    //if (child.name is not "collider_base") child.gameObject.SetActive(false);
-                }
-
-                var lilypad = Instantiate(lilypadPrefab);
-                lilypad.transform.SetParent(raft.transform, false);
-                lilypad.transform.localPosition = Vector3.zero;
-                lilypad.transform.localRotation = Quaternion.identity;
-                lilypad.transform.localScale = Vector3.one;
-                lilypad.gameObject.SetActive(true);
-
-                var lilypadController = raft.gameObject.AddComponent<LilypadController>();
-                lilypadController.PlantData = lilypadData;
-            }
-
             SetUpNomaiCharacter(body);
 
             ReplaceMaterials(body);
