@@ -99,6 +99,10 @@
         "path": "Assets/Terrarium/Objects/TerrariumState_Caves.prefab"
       },
       {
+        "assetBundle": "planets/assetbundles/terrarium",
+        "path": "Assets/Terrarium/Objects/TerrariumState_Ring.prefab"
+      },
+      {
         "rename": "LillypadModel",
         "assetBundle": "planets/assetbundles/terrarium",
         "path": "Assets/Terrarium/Objects/LillypadModel.prefab",

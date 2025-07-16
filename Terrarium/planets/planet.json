@@ -90,6 +90,15 @@
         }
       },
       {
+        "assetBundle": "planets/assetbundles/terrarium",
+        "path": "Assets/Terrarium/Objects/TerrariumItem_Ring.prefab",
+        "position": {
+          "x": 0,
+          "y": 400.5,
+          "z": 9
+        }
+      },
+      {
         "rename": "Botanist_Outside",
         "path": "QuantumMoon_Body/Sector_QuantumMoon/State_EYE/Interactables_EYEState/ConversationPivot/Character_NOM_Solanum/Nomai_ANIM_SkyWatching_Idle",
         "activationCondition": "WW_TERRARIUM_MET_BOTANIST",
