@@ -194,6 +194,7 @@ namespace Terrarium
 
         static readonly string[] MATERIALS_TO_REPLACE = [
             "Terrain_TH_CraterFloor_mat",
+            "Terrain_TH_CraterCliffs_mat",
         ];
 
         void ReplaceMaterials(GameObject body)

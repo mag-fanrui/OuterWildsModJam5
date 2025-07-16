@@ -14,7 +14,7 @@ namespace Terrarium.Components
     {
         const int PARAMETER_COUNT = 5;
         const float TARGET_SUN_ANGLE = 0.75f;
-        const float TARGET_SUN_DISTANCE = 0.25f;
+        const float TARGET_SUN_DISTANCE = 0f;
         const float TARGET_HUMIDITY = 0.25f;
         const float TARGET_ATMOSPHERE = 0.5f;
         const float TARGET_ENCLOSURE_ANGLE = 0.25f;

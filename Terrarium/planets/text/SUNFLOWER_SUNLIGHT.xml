@@ -1,7 +1,7 @@
 ﻿<NomaiObject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/Outer-Wilds-New-Horizons/new-horizons/main/NewHorizons/Schemas/text_schema.xsd">
   <TextBlock>
     <ID>1</ID>
-    <Text>Helianthus titanius is unique in that its stem will bend over the course of the day to maximize the exposure of its petals to sunlight. It prefers to grow under intense sunlight.</Text>
+    <Text>Helianthus titanius is unique in that its stem will bend over the course of the day to maximize the exposure of its petals to sunlight. It prefers to grow under intense sunlight; dense atmospheres with clouds impair its photosynthesis.</Text>
   </TextBlock>
   <ShipLogConditions>
     <RevealFact>

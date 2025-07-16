@@ -116,6 +116,25 @@
         "position": {},
         "rotation": {},
         "isRelativeToParent": true
+      },
+      {
+        "rename": "Ernesto",
+        "parentPath": "Sector/TerrariumState_Ring/ErnestoSpawn",
+        "path": "Anglerfish_Body/Beast_Anglerfish",
+        "scale": 0.04,
+        "removeChildren": [
+          "B_angler_root/B_angler_body01/B_angler_body02/B_angler_antenna01/B_angler_antenna02/B_angler_antenna03/B_angler_antenna04/B_angler_antenna05/B_angler_antenna06/B_angler_antenna07/B_angler_antenna08/B_angler_antenna09/B_angler_antenna10/B_angler_antenna11/B_angler_antenna12_end"
+        ],
+        "isRelativeToParent": true,
+        "position": {},
+        "rotation": {}
+      },
+      {
+        "rename": "ErnestoCollision",
+        "path": "Anglerfish_Body/Beast_Anglerfish_Collision",
+        "parentPath": "Sector/TerrariumState_Ring/ErnestoSpawn/Ernesto",
+        "isRelativeToParent": true,
+        "scale": 0.04
       }
     ],
     "dialogue": [
@@ -126,9 +145,18 @@
         "isRelativeToParent": true,
         "position": {
           "x": 0,
-          "y": 1,
+          "y": 2,
           "z": 0
         }
+      },
+      {
+        "parentPath": "Sector/TerrariumState_Ring/ErnestoSpawn/Ernesto",
+        "xmlFile": "planets/dialogue/ERNESTO.xml",
+        "pathToAnimController": "Sector/TerrariumState_Ring/ErnestoSpawn/Ernesto",
+        "isRelativeToParent": true,
+        "position": {},
+        "radius": 2,
+        "range": 5
       }
     ]
   },
@@ -147,7 +175,9 @@
       "thrustRulesets": [
         {
           "radius": 75,
-          "thrustLimit": 50
+          "thrustLimit": 50,
+          "nerfJetpackBooster": true,
+          "nerfDuration": 0.5
         }
       ]
     }
