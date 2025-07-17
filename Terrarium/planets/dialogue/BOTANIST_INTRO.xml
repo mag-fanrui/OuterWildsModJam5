@@ -17,13 +17,13 @@
 
     <DialogueOptionsList>
       <DialogueOption>
-        <Text>Woah! Your staff can translate my language?</Text>
-        <DialogueTarget>GEEK</DialogueTarget>
-      </DialogueOption>
-      <DialogueOption>
         <RequiredPersistentCondition>WW_TERRARIUM_MET_BOTANIST</RequiredPersistentCondition>
         <Text>Listen, I'm trapped in a time loop and heard all of this already. Let's skip to the part where we save your clan.</Text>
         <DialogueTarget>SKIP</DialogueTarget>
+      </DialogueOption>
+      <DialogueOption>
+        <Text>Woah! Your staff can translate my language?</Text>
+        <DialogueTarget>GEEK</DialogueTarget>
       </DialogueOption>
     </DialogueOptionsList>
   </DialogueNode>

@@ -16,17 +16,21 @@
         <Text>How did you end up trapped in there?</Text>
         <DialogueTarget>TRAPPED</DialogueTarget>
       </DialogueOption>
+      <DialogueOption>
+        <Text>Nothing for now.</Text>
+      </DialogueOption>
     </DialogueOptionsList>
   </DialogueNode>
 
   <DialogueNode>
     <Name>MISSION</Name>
     <Dialogue>
-      <Page>Of course! To condense a lengthy tale to minimal proportions, my clan left on a worldship seeking a solar system with optimal conditions for growing our diverse collection of flora.</Page>
+      <Page>Of course! To condense a lengthy tale to minimal proportions, my clan left on a worldship seeking a solar system with optimal conditions for growing our diverse collection of flora. The same flora can be found here in the terrariums, along with my observation notes.</Page>
       <Page>If we can use the mechanisms here to recreate the same conditions as that theoretical optimal solar system, the computer can pinpoint the worldship's location and set up a warp transit.</Page>
       <Page>The seed vaults I keep here and the potent theoretical applications of the miniaturization technology will allow my clan's botanical collection to be preserved almost indefinitely, if we can warp it all straight to them.</Page>
       <Page>I think that covered all of the key points!</Page>
     </Dialogue>
+    <DialogueTarget>START</DialogueTarget>
   </DialogueNode>
 
   <DialogueNode>

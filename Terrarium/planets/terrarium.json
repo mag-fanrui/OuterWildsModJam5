@@ -102,7 +102,7 @@
         "rename": "Ernesto",
         "parentPath": "Sector/TerrariumState_Ring/ErnestoSpawn",
         "path": "Anglerfish_Body/Beast_Anglerfish",
-        "scale": 0.04,
+        "scale": 0.06,
         "removeChildren": [
           "B_angler_root/B_angler_body01/B_angler_body02/B_angler_antenna01/B_angler_antenna02/B_angler_antenna03/B_angler_antenna04/B_angler_antenna05/B_angler_antenna06/B_angler_antenna07/B_angler_antenna08/B_angler_antenna09/B_angler_antenna10/B_angler_antenna11/B_angler_antenna12_end"
         ],
@@ -115,7 +115,7 @@
         "path": "Anglerfish_Body/Beast_Anglerfish_Collision",
         "parentPath": "Sector/TerrariumState_Ring/ErnestoSpawn/Ernesto",
         "isRelativeToParent": true,
-        "scale": 0.04
+        "scale": 0.06
       }
     ],
     "dialogue": [
@@ -136,8 +136,8 @@
         "pathToAnimController": "Sector/TerrariumState_Ring/ErnestoSpawn/Ernesto",
         "isRelativeToParent": true,
         "position": {},
-        "radius": 2,
-        "range": 5
+        "radius": 5,
+        "range": 10
       }
     ]
   },
