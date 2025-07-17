@@ -12,12 +12,12 @@ namespace Terrarium.Components
 {
     public class TerrariumComputerController : MonoBehaviour
     {
-        const int PARAMETER_COUNT = 5;
+        const int PARAMETER_COUNT = 4;
         const float TARGET_SUN_ANGLE = 0.75f;
         const float TARGET_SUN_DISTANCE = 0f;
         const float TARGET_HUMIDITY = 0.25f;
         const float TARGET_ATMOSPHERE = 0.5f;
-        const float TARGET_ENCLOSURE_ANGLE = 0.25f;
+        //const float TARGET_ENCLOSURE_ANGLE = 0.25f;
 
         static TerrariumComputerController instance;
 
@@ -57,7 +57,7 @@ namespace Terrarium.Components
             if (tc.SunDistance.Target != TARGET_SUN_DISTANCE) count++;
             if (tc.Humidity.Target != TARGET_HUMIDITY) count++;
             if (tc.Atmosphere.Target != TARGET_ATMOSPHERE) count++;
-            if (tc.EnclosureAngle.Target != TARGET_ENCLOSURE_ANGLE) count++;
+            //if (tc.EnclosureAngle.Target != TARGET_ENCLOSURE_ANGLE) count++;
             return count;
         }
 
