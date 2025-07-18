@@ -1,11 +1,11 @@
-﻿<NomaiObject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/Outer-Wilds-New-Horizons/new-horizons/main/NewHorizons/Schemas/text_schema.xsd">
+<NomaiObject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/Outer-Wilds-New-Horizons/new-horizons/main/NewHorizons/Schemas/text_schema.xsd">
   <TextBlock>
     <ID>1</ID>
-    <Text>HAWTHORN: <![CDATA[<i>Coryphantha cinis</i>]]> is a hardy species capable of growing in almost any environment, much like us Nomai, although it is considerably less migratory, naturally.</Text>
+    <Text>WW_TERRARIUM_CACTUS_HUMIDITY_1</Text>
   </TextBlock>
   <TextBlock>
     <ID>2</ID>
-    <Text>HAWTHORN: However, we have observed its difficulty in uptaking nutrients in water-saturated soil. An arid environment with just enough latent moisture is more than sufficient.</Text>
+    <Text>WW_TERRARIUM_CACTUS_HUMIDITY_2</Text>
   </TextBlock>
   <ShipLogConditions>
     <RevealFact>

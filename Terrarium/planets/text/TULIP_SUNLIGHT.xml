@@ -1,17 +1,17 @@
-﻿<NomaiObject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/Outer-Wilds-New-Horizons/new-horizons/main/NewHorizons/Schemas/text_schema.xsd">
+<NomaiObject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/Outer-Wilds-New-Horizons/new-horizons/main/NewHorizons/Schemas/text_schema.xsd">
   <TextBlock>
     <ID>1</ID>
-    <Text>HAWTHORN: <![CDATA[<i>Tulipa nomaii</i>]]> has very particular conditions under which it will bloom. Namely, it requires intense sunlight directly overhead.</Text>
+    <Text>WW_TERRARIUM_TULIP_SUNLIGHT_1</Text>
   </TextBlock>
   <TextBlock>
     <ID>2</ID>
     <ParentID>1</ParentID>
-    <Text>HAWTHORN: Also of note: while adult specimens can be artificially relocated, it was originally exclusive to the upper northern hemisphere of its native planet (but not at the north pole itself, of course).</Text>
+    <Text>WW_TERRARIUM_TULIP_SUNLIGHT_2</Text>
   </TextBlock>
   <TextBlock>
     <ID>3</ID>
     <ParentID>2</ParentID>
-    <Text>HAWTHORN: It is a pity that this particular bed will never get that chance to flourish. Consigned to struggle in the dark while their kin seek a brighter future.</Text>
+    <Text>WW_TERRARIUM_TULIP_SUNLIGHT_3</Text>
   </TextBlock>
   <ShipLogConditions>
     <RevealFact>

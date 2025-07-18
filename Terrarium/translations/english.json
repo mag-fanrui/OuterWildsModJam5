@@ -129,7 +129,20 @@
     "WW_TERRARIUM_PART_PRINTER_START_OPTION_6": "<i>Press the controls at random.</i>",
     "WW_TERRARIUM_PART_PRINTER_START_OPTION_7": "<i>Leave it alone.</i>",
     "WW_TERRARIUM_PART_PRINTER_SUCCESS_1": "<i>The device hums with energy.</i>",
-    "WW_TERRARIUM_PART_PRINTER_ERROR_1": "<i>Nothing happens.</i>"
+    "WW_TERRARIUM_PART_PRINTER_ERROR_1": "<i>Nothing happens.</i>",
+    "WW_TERRARIUM_CACTUS_HUMIDITY_1": "HAWTHORN: <i>Coryphantha cinis</i> is a hardy species capable of growing in almost any environment, much like us Nomai, although it is considerably less migratory, naturally.",
+    "WW_TERRARIUM_CACTUS_HUMIDITY_2": "HAWTHORN: However, we have observed its difficulty in uptaking nutrients in water-saturated soil. An arid environment with just enough latent moisture is more than sufficient.",
+    "WW_TERRARIUM_LONE_WARP_1": "HAWTHORN: Although the gasses we inhale are different, both Nomai and plant life benefit from higher pressure atmospheres.",
+    "WW_TERRARIUM_LONE_WARP_2": "HAWTHORN: If the pressure increases too much, though, a storm will form, casting a dark shadow over the lifeforms that were attempting to grow.",
+    "WW_TERRARIUM_LONE_WARP_3": "HAWTHORN: I propose there is yet another metaphor there.",
+    "WW_TERRARIUM_PLATFORM_1": "Warp passage to Lonely Lump provided for convenience.",
+    "WW_TERRARIUM_SUNFLOWER_SUNLIGHT_1": "HAWTHORN: <i>Helianthus titanius</i> is unique in that its stem will bend over the course of the day to maximize the exposure of its petals to sunlight.",
+    "WW_TERRARIUM_SUNFLOWER_SUNLIGHT_2": "HAWTHORN: It prefers to grow under intense sunlight, so it follows that cloud cover substantially impairs its photosynthesis. A clarity of direction brings clarity of purpose.",
+    "WW_TERRARIUM_TULIP_SUNLIGHT_1": "HAWTHORN: <i>Tulipa nomaii</i> has very particular conditions under which it will bloom. Namely, it requires intense sunlight directly overhead.",
+    "WW_TERRARIUM_TULIP_SUNLIGHT_2": "HAWTHORN: Also of note: while adult specimens can be artificially relocated, it was originally exclusive to the upper northern hemisphere of its native planet (but not at the north pole itself, of course).",
+    "WW_TERRARIUM_TULIP_SUNLIGHT_3": "HAWTHORN: It is a pity that this particular bed will never get that chance to flourish. Consigned to struggle in the dark while their kin seek a brighter future.",
+    "WW_TERRARIUM_WATERLILY_HUMIDITY_1": "HAWTHORN: <i>Nymphaea liberta</i>, unlike most other species of its genus, does not require a stem to affix it to roots or soil. It floats freely on the water's surface. This adaptation allows it to adjust to floods and droughts without concern.",
+    "WW_TERRARIUM_WATERLILY_HUMIDITY_2": "HAWTHORN: How liberating it must be to be untethered, drifting beneath the stars with no great weight affixing you in place."
   },
   "UIDictionary": {
     "WW_TERRARIUM_Planet": "Lonely Lump",
