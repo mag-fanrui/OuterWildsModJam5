@@ -1,0 +1,78 @@
+﻿<DialogueTree xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/Outer-Wilds-New-Horizons/new-horizons/main/NewHorizons/Schemas/dialogue_schema.xsd">
+  <NameField>Strange Device</NameField>
+
+  <DialogueNode>
+    <Name>START</Name>
+    <EntryCondition>DEFAULT</EntryCondition>
+    <Dialogue>
+      <Page><![CDATA[<i>]]>The strange device sits idle. You feel a probing sensation somewhere inside your head.<![CDATA[</i>]]></Page>
+    </Dialogue>
+    <RevealFacts>
+      <FactID>WW_TERRARIUM_PART_PRINTER_FOUND</FactID>
+    </RevealFacts>
+
+    <DialogueOptionsList>
+      <DialogueOption>
+        <RequiredPersistentCondition>WW_TERRARIUM_PART_SunDistance</RequiredPersistentCondition>
+        <CancelledCondition>WW_TERRARIUM_PRINT_PART_SunDistance</CancelledCondition>
+        <Text><![CDATA[<i>]]>Recall the design of the Lamp Distance Gear.<![CDATA[</i>]]></Text>
+        <DialogueTarget>SUCCESS</DialogueTarget>
+        <ConditionToSet>WW_TERRARIUM_PRINT_PART_SunDistance</ConditionToSet>
+      </DialogueOption>
+      <DialogueOption>
+        <RequiredPersistentCondition>WW_TERRARIUM_PART_SunAngle</RequiredPersistentCondition>
+        <CancelledCondition>WW_TERRARIUM_PRINT_PART_SunAngle</CancelledCondition>
+        <Text><![CDATA[<i>]]>Recall the design of the Lamp Angle Gear.<![CDATA[</i>]]></Text>
+        <DialogueTarget>SUCCESS</DialogueTarget>
+        <ConditionToSet>WW_TERRARIUM_PRINT_PART_SunAngle</ConditionToSet>
+      </DialogueOption>
+      <DialogueOption>
+        <RequiredPersistentCondition>WW_TERRARIUM_PART_Humidity</RequiredPersistentCondition>
+        <CancelledCondition>WW_TERRARIUM_PRINT_PART_Humidity</CancelledCondition>
+        <Text><![CDATA[<i>]]>Recall the design of the Humidity Gear.<![CDATA[</i>]]></Text>
+        <DialogueTarget>SUCCESS</DialogueTarget>
+        <ConditionToSet>WW_TERRARIUM_PRINT_PART_Humidity</ConditionToSet>
+      </DialogueOption>
+      <DialogueOption>
+        <RequiredPersistentCondition>WW_TERRARIUM_PART_Atmosphere</RequiredPersistentCondition>
+        <CancelledCondition>WW_TERRARIUM_PRINT_PART_Atmosphere</CancelledCondition>
+        <Text><![CDATA[<i>]]>Recall the design of the Atmospheric Pressure Gear.<![CDATA[</i>]]></Text>
+        <DialogueTarget>SUCCESS</DialogueTarget>
+        <ConditionToSet>WW_TERRARIUM_PRINT_PART_Atmosphere</ConditionToSet>
+      </DialogueOption>
+      <DialogueOption>
+        <RequiredPersistentCondition>WW_TERRARIUM_PART_EnclosureAngle</RequiredPersistentCondition>
+        <CancelledCondition>WW_TERRARIUM_PRINT_PART_EnclosureAngle</CancelledCondition>
+        <Text><![CDATA[<i>]]>Recall the design of the Armature Rotation Gear.<![CDATA[</i>]]></Text>
+        <DialogueTarget>SUCCESS</DialogueTarget>
+        <ConditionToSet>WW_TERRARIUM_PRINT_PART_EnclosureAngle</ConditionToSet>
+      </DialogueOption>
+      <DialogueOption>
+        <Text><![CDATA[<i>]]>Press the controls at random.<![CDATA[</i>]]></Text>
+        <DialogueTarget>ERROR</DialogueTarget>
+      </DialogueOption>
+      <DialogueOption>
+        <Text><![CDATA[<i>]]>Leave it alone.<![CDATA[</i>]]></Text>
+      </DialogueOption>
+    </DialogueOptionsList>
+  </DialogueNode>
+
+  <DialogueNode>
+    <Name>SUCCESS</Name>
+    <Dialogue>
+      <Page><![CDATA[<i>]]>The device hums with energy.<![CDATA[</i>]]></Page>
+    </Dialogue>
+    <RevealFacts>
+      <FactID>WW_TERRARIUM_PART_PRINTER_USED</FactID>
+    </RevealFacts>
+  </DialogueNode>
+
+  <DialogueNode>
+    <Name>ERROR</Name>
+    <Dialogue>
+      <Page><![CDATA[<i>]]>Nothing happens.<![CDATA[</i>]]></Page>
+    </Dialogue>
+    <DialogueTarget>START</DialogueTarget>
+  </DialogueNode>
+
+</DialogueTree>

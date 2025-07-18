@@ -1,0 +1,123 @@
+﻿{
+  "$schema": "https://raw.githubusercontent.com/Outer-Wilds-New-Horizons/new-horizons/main/NewHorizons/Schemas/body_schema.json",
+  "name": "WW_TERRARIUM_WorldShip",
+  "starSystem": "Jam5",
+  "Base": {
+    "gravityFallOff": "linear",
+    "surfaceSize": 200,
+    "groundSize": 0,
+    "surfaceGravity": 12,
+    "hasFluidDetector": false,
+    "hideProxy": true
+  },
+  "Orbit": {
+    "primaryBody": "WW_TERRARIUM_Planet",
+    "semiMajorAxis": 1600,
+    "trueAnomaly": 180,
+    "showOrbitLine": false
+  },
+  "ReferenceFrame": {
+    "enabled": false
+  },
+  "MapMarker": {
+    "enabled": false
+  },
+  "AmbientLights": [
+    {
+      "intensity": 1.4
+    }
+  ],
+  "Atmosphere": {
+    "size": 250,
+    "atmosphereSunIntensity": 1.0,
+    "hasTrees": true,
+    "hasOxygen": true,
+    "hasRain": false,
+    "useAtmosphereShader": true,
+    "hasShockLayer": false,
+    "clouds": {
+      "texturePath": "planets/assets/clouds.png",
+      "cloudsPrefab": "quantumMoon",
+      "tint": {
+        "r": 255,
+        "g": 255,
+        "b": 255,
+        "a": 255
+      },
+      "innerCloudRadius": 250,
+      "outerCloudRadius": 270
+    }
+  },
+  "ShipLog": {
+    "mapMode": {
+      "remove": true
+    }
+  },
+  "Water": {
+    "size": 195,
+    "density": 50.0,
+    "tint": {
+      "r": 0,
+      "g": 47,
+      "b": 63
+    }
+  },
+  "Props": {
+    "details": [
+      {
+        "assetBundle": "planets/assetbundles/terrarium",
+        "path": "Assets/Terrarium/Objects/Worldship.prefab"
+      }
+    ],
+    "scatter": [
+      {
+        "path": "QuantumMoon_Body/Sector_QuantumMoon/State_HT/Interactables_HTState/Interactables_CTState/CTState_Q_Objects/CTState_QYuccaTree/Q_YuccaTree/Prefab_Tree_HT_Yucca",
+        "count": 300
+      }
+    ],
+    "singularities": [
+      {
+        "rename": "EndingWhiteHole",
+        "type": "whiteHole",
+        "horizonRadius": 0.1,
+        "uniqueID": "WW_TERRARIUM_ENDING_WHITE",
+        "pairedSingularity": "WW_TERRARIUM_ENDING_BLACK",
+        "hasWarpEffects": false,
+        "parentPath": "Sector/Worldship/WarpDestination",
+        "isRelativeToParent": true,
+        "position": {
+          "y": 2
+        },
+        "rotation": {}
+      }
+    ]
+  },
+  "Volumes": {
+    "mapRestrictionVolumes": [
+      {
+        "radius": 250
+      }
+    ],
+    "interferenceVolumes": [
+      {
+        "radius": 250
+      }
+    ],
+    "creditsVolume": [
+      {
+        "position": {},
+        "radius": 250,
+        "deathType": "meditation",
+        "gameOver": {
+          "creditsType": "none",
+          "colour": {
+            "r": 0,
+            "g": 255,
+            "b": 63
+          },
+          "text": "WW_TERRARIUM_ENDING_TEXT"
+        }
+      }
+    ]
+  }
+}

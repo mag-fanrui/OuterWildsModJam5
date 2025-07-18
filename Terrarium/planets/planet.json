@@ -86,6 +86,41 @@
           "y": 180,
           "z": 0
         }
+      },
+      {
+        "assetBundle": "planets/assetbundles/terrarium",
+        "path": "Assets/Terrarium/Objects/ReplacementPart_SunDistance.prefab",
+        "activationCondition": "WW_TERRARIUM_PRINT_PART_SunDistance",
+        "parentPath": "Sector/TerrariumInterface/PartPrinter/PartRoot",
+        "isRelativeToParent": true
+      },
+      {
+        "assetBundle": "planets/assetbundles/terrarium",
+        "path": "Assets/Terrarium/Objects/ReplacementPart_SunAngle.prefab",
+        "activationCondition": "WW_TERRARIUM_PRINT_PART_SunAngle",
+        "parentPath": "Sector/TerrariumInterface/PartPrinter/PartRoot",
+        "isRelativeToParent": true
+      },
+      {
+        "assetBundle": "planets/assetbundles/terrarium",
+        "path": "Assets/Terrarium/Objects/ReplacementPart_Humidity.prefab",
+        "activationCondition": "WW_TERRARIUM_PRINT_PART_Humidity",
+        "parentPath": "Sector/TerrariumInterface/PartPrinter/PartRoot",
+        "isRelativeToParent": true
+      },
+      {
+        "assetBundle": "planets/assetbundles/terrarium",
+        "path": "Assets/Terrarium/Objects/ReplacementPart_Atmosphere.prefab",
+        "activationCondition": "WW_TERRARIUM_PRINT_PART_Atmosphere",
+        "parentPath": "Sector/TerrariumInterface/PartPrinter/PartRoot",
+        "isRelativeToParent": true
+      },
+      {
+        "assetBundle": "planets/assetbundles/terrarium",
+        "path": "Assets/Terrarium/Objects/ReplacementPart_EnclosureAngle.prefab",
+        "activationCondition": "WW_TERRARIUM_PRINT_PART_EnclosureAngle",
+        "parentPath": "Sector/TerrariumInterface/PartPrinter/PartRoot",
+        "isRelativeToParent": true
       }
     ],
     "dialogue": [
@@ -96,9 +131,15 @@
         "isRelativeToParent": true,
         "position": {
           "x": 0,
-          "y": 1,
+          "y": 2,
           "z": 0
         }
+      },
+      {
+        "xmlFile": "planets/dialogue/PART_PRINTER.xml",
+        "parentPath": "Sector/TerrariumInterface/PartPrinter/DialogueRoot",
+        "isRelativeToParent": true,
+        "position": {}
       }
     ],
     "translatorText": [
@@ -112,6 +153,17 @@
           "y": 399.7,
           "z": 4.75
         }
+      }
+    ],
+    "singularities": [
+      {
+        "rename": "EndingBlackHole",
+        "type": "blackHole",
+        "horizonRadius": 200,
+        "uniqueID": "WW_TERRARIUM_ENDING_BLACK",
+        "pairedSingularity": "WW_TERRARIUM_ENDING_WHITE",
+        "parentPath": "Sector/TerrariumInterface",
+        "isRelativeToParent": true
       }
     ]
   },

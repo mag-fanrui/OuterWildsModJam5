@@ -5,16 +5,32 @@
     <Name>START</Name>
     <EntryCondition>DEFAULT</EntryCondition>
     <Dialogue>
-      <Page>How can I help, my friend?</Page>
+      <Page>How can I help, friend?</Page>
     </Dialogue>
     <DialogueOptionsList>
+      <DialogueOption>
+        <Text>I'm ready to initiate the warp.</Text>
+        <ConditionToSet>WW_TERRARIUM_START_ENDING</ConditionToSet>
+      </DialogueOption>
       <DialogueOption>
         <Text>Run the plan by me again.</Text>
         <DialogueTarget>MISSION</DialogueTarget>
       </DialogueOption>
       <DialogueOption>
+        <Text>What's the deal with that strange device in the corner?</Text>
+        <DialogueTarget>PART_PRINTER</DialogueTarget>
+      </DialogueOption>
+      <DialogueOption>
         <Text>How did you end up trapped in there?</Text>
         <DialogueTarget>TRAPPED</DialogueTarget>
+      </DialogueOption>
+      <DialogueOption>
+        <Text>Why aren't you with the rest of your clan?</Text>
+        <DialogueTarget>STAYED</DialogueTarget>
+      </DialogueOption>
+      <DialogueOption>
+        <Text>Let me tell you about my species.</Text>
+        <DialogueTarget>HEARTHIANS</DialogueTarget>
       </DialogueOption>
       <DialogueOption>
         <Text>Nothing for now.</Text>
@@ -25,10 +41,20 @@
   <DialogueNode>
     <Name>MISSION</Name>
     <Dialogue>
-      <Page>Of course! To condense a lengthy tale to minimal proportions, my clan left on a worldship seeking a solar system with optimal conditions for growing our diverse collection of flora. The same flora can be found here in the terrariums, along with my observation notes.</Page>
-      <Page>If we can use the mechanisms here to recreate the same conditions as that theoretical optimal solar system, the computer can pinpoint the worldship's location and set up a warp transit.</Page>
-      <Page>The seed vaults I keep here and the potent theoretical applications of the miniaturization technology will allow my clan's botanical collection to be preserved almost indefinitely, if we can warp it all straight to them.</Page>
-      <Page>I think that covered all of the key points!</Page>
+      <Page>Of course! To condense a lengthy tale to minimal proportions, my clan left on a worldship seeking a solar system with optimal conditions for growing our diverse collection of flora. The same flora can be found here in the terrariums, along with my observation notes. I hope you have a good memory!</Page>
+      <Page>If we can use the mechanisms here to recreate the same conditions as that theoretical optimal solar system, the computer can narrow down the list of possible systems, pinpoint the worldship's location, and set up a warp transit.</Page>
+      <Page>The seed vaults I keep here, and the potential applications of the miniaturization technology, will allow my clan's botanical collection to be preserved almost indefinitely-- as long as we can warp it all straight to them!</Page>
+    </Dialogue>
+    <DialogueTarget>START</DialogueTarget>
+  </DialogueNode>
+
+  <DialogueNode>
+    <Name>PART_PRINTER</Name>
+    <Dialogue>
+      <Page>It's a telepathic matter replicator, for synthesizing mechanical parts, among other things! A gift from one of our sister clans.</Page>
+      <Page>You simply picture what you want it to produce, let it view your mind, and the object you want takes form in an instant!</Page>
+      <Page>It does have some shortcomings, unfortunately. There is no interface for uploading schematics into it, only the neural interface, so it can only be as accurate as your own memory of an object's dimensions and makeup.</Page>
+      <Page>I would not attempt to use it for anything electronic or organic, essentially.</Page>
     </Dialogue>
     <DialogueTarget>START</DialogueTarget>
   </DialogueNode>
@@ -37,8 +63,59 @@
     <Name>TRAPPED</Name>
     <Dialogue>
       <Page>An interesting query! I am not entirely certain myself, but I hypothesize that some type of meteor shower impacted the planet, damaging the structure and knocking components out of their intended positions while I was within one of the terrariums.</Page>
-      <Page>I did prepare some replacement parts for the most vulnerable mechanisms as part of my regular duties, but I did not anticipate losing access to the outside world entirely. That was an unfortunate turn of events.</Page>
+      <Page>I did stockpile some replacement parts for the most vulnerable mechanisms as a failsafe, but I did not anticipate losing access to the outside world entirely. That was an unfortunate turn of events.</Page>
       <Page>Fortunately, you came along to rescue me not long after!</Page>
+    </Dialogue>
+    <DialogueTarget>START</DialogueTarget>
+  </DialogueNode>
+
+  <DialogueNode>
+    <Name>STAYED</Name>
+    <Dialogue>
+      <Page>I volunteered to stay behind, here on this rocky planet. It was a safe distance away from the supernova that threatened our world, and a known location in the event that the worldship needed to return.</Page>
+      <Page>To have the highest chance of preserving our lives' work, we needed a backup store of seeds in a secure location, and a botanist to watch over them. I agreed to take that responsibility and allow the rest of my clan to depart.</Page>
+      <Page>...I miss them terribly.</Page>
+    </Dialogue>
+    <DialogueTarget>START</DialogueTarget>
+  </DialogueNode>
+
+  <DialogueNode>
+    <Name>HEARTHIANS</Name>
+    <Dialogue>
+      <Page><![CDATA[<i>]]>You describe your people, the Hearthians. Their four eyes and scaly bodies. Their rustic but fulfilling lifestyles. The care they show to each other.<![CDATA[</i>]]></Page>
+      <Page><![CDATA[<i>]]>You describe your home, Timber Hearth. The spouting geysers, the flowing rivers, the flora and the fauna.<![CDATA[</i>]]></Page>
+      <Page><![CDATA[<i>]]>Hawthorn is especially interested in the giant trees around your village.<![CDATA[</i>]]></Page>
+      <Page><![CDATA[<i>]]>You speak about the technology your friends developed. You explain Outer Wilds Ventures, and how your own adventures through space and time brought you here, to this moment.<![CDATA[</i>]]></Page>
+      <Page>...</Page>
+      <Page>For such a young species, you have accomplished so much in such a short time. To think your fate would be so intertwined with us Nomai! Perhaps it is because we share that same innate curiosity to chase the unknown.</Page>
+      <Page>I am glad to have met you, Hearthian. I hope you do find this "Eye of the Universe" some day.</Page>
+    </Dialogue>
+    <DialogueTarget>START</DialogueTarget>
+  </DialogueNode>
+
+  <DialogueNode>
+    <Name>ENDING</Name>
+    <EntryCondition>WW_TERRARIUM_AllParametersSolved</EntryCondition>
+    <Dialogue>
+      <Page>That's it! You've done it, my friend, you've done it!</Page>
+      <Page>Target coordinates are locked in and seed vaults are tagged for transit. Are you ready?</Page>
+    </Dialogue>
+    <DialogueOptionsList>
+      <DialogueOption>
+        <Text>Here goes nothing!</Text>
+        <ConditionToSet>WW_TERRARIUM_START_ENDING</ConditionToSet>
+      </DialogueOption>
+      <DialogueOption>
+        <Text>Give me a second.</Text>
+        <DialogueTarget>ENDING_ABORT</DialogueTarget>
+      </DialogueOption>
+    </DialogueOptionsList>
+  </DialogueNode>
+
+  <DialogueNode>
+    <Name>ENDING_ABORT</Name>
+    <Dialogue>
+      <Page>I see. Let me know whenever you are ready.</Page>
     </Dialogue>
     <DialogueTarget>START</DialogueTarget>
   </DialogueNode>

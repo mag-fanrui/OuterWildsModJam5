@@ -22,6 +22,7 @@ namespace Terrarium.Components
             if (base.PlaceIntoSocket(item))
             {
                 SetParameterEnable(true);
+                Locator.GetShipLogManager().RevealFact("WW_TERRARIUM_PART_INSERTED");
                 return true;
             }
             return false;

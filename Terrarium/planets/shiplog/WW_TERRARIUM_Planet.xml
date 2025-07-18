@@ -50,12 +50,33 @@
 
     <Entry>
       <ID>WW_TERRARIUM_ORRERY</ID>
-      <Name>Central Device</Name>
+      <Name>Terrarium Device</Name>
       <Curiosity>WW_TERRARIUM_CURIOSITY</Curiosity>
 
       <ExploreFact>
         <ID>WW_TERRARIUM_ITEM_INSERTED</ID>
-        <Text>Miniature terrariums can be inserted into the device, which seems to have controls for changing the environmental conditions of the terrarium. Many of the controls are disabled.</Text>
+        <Text>Miniature terrariums can be inserted into the device. This caused other devices to activate nearby.</Text>
+      </ExploreFact>
+
+      <ExploreFact>
+        <ID>WW_TERRARIUM_PART_INSERTED</ID>
+        <Text>Inserting a gear into the corresponding control unit repaired it, allowing me to change the environmental conditions of the terrarium.</Text>
+      </ExploreFact>
+    </Entry>
+
+    <Entry>
+      <ID>WW_TERRARIUM_PART_PRINTER</ID>
+      <Name>Strange Device</Name>
+      <Curiosity>WW_TERRARIUM_CURIOSITY</Curiosity>
+
+      <ExploreFact>
+        <ID>WW_TERRARIUM_PART_PRINTER_FOUND</ID>
+        <Text>A strange device in the corner of the building. I felt a weird pressure in my head when trying to interact with it.</Text>
+      </ExploreFact>
+
+      <ExploreFact>
+        <ID>WW_TERRARIUM_PART_PRINTER_USED</ID>
+        <Text>When I interacted with the device and pictured a gear I had previously picked up, a copy of the gear appeared.</Text>
       </ExploreFact>
     </Entry>
 
@@ -110,7 +131,7 @@
 
     <ExploreFact>
       <ID>WW_TERRARIUM_CACTUS_HUMIDITY</ID>
-      <Text>Cacti are hardy but cannot handle excess water in the soil.</Text>
+      <Text>Cacti are hardy but cannot handle excess water.</Text>
     </ExploreFact>
   </Entry>
 
@@ -121,7 +142,7 @@
 
     <ExploreFact>
       <ID>WW_TERRARIUM_SUNFLOWER_SUNLIGHT</ID>
-      <Text>Sunflowers turn to follow the position of the sun. They prefer strong sunlight and can't grow if clouds are overhead.</Text>
+      <Text>Sunflowers turn to follow the sun. They prefer strong sunlight and can't grow under cloud cover.</Text>
     </ExploreFact>
   </Entry>
 
@@ -143,7 +164,7 @@
 
     <ExploreFact>
       <ID>WW_TERRARIUM_WATERLILY_HUMIDITY</ID>
-      <Text>These water lilies are unanchored and freely drift along the water's surface, floating up or sinking down as the water level changes.</Text>
+      <Text>These lilies grow in bodies of water, floating up or sinking down as the water level changes.</Text>
     </ExploreFact>
   </Entry>
 

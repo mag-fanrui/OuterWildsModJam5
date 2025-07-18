@@ -38,7 +38,7 @@ namespace Terrarium.Components
             var humidity = TerrariumController.Instance.Humidity.Current;
             var atmosphere = TerrariumController.Instance.Atmosphere.Current;
             var isVisible = TerrariumController.Instance.IsPlayerInside() &&
-                            humidity >= 0.75f &&
+                            humidity >= 0.25f &&
                             atmosphere >= 0.75f;
             gameObject.SetActive(isVisible);
         }

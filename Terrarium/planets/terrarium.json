@@ -122,7 +122,7 @@
       {
         "parentPath": "Sector/TerrariumState_Ring/NomaiSpawn/Botanist_Intro",
         "xmlFile": "planets/dialogue/BOTANIST_INTRO.xml",
-        "pathToAnimController": "Sector/TerrariumState_Cliffs/NomaiSpawn/Botanist_Intro",
+        "pathToAnimController": "Sector/TerrariumState_Ring/NomaiSpawn/Botanist_Intro",
         "isRelativeToParent": true,
         "position": {
           "x": 0,
@@ -156,9 +156,8 @@
       "thrustRulesets": [
         {
           "radius": 75,
-          "thrustLimit": 50,
           "nerfJetpackBooster": true,
-          "nerfDuration": 0.5
+          "nerfDuration": 1
         }
       ]
     }

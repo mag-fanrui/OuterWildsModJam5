@@ -40,14 +40,21 @@
       "id": "WW_TERRARIUM_SEED_BANK",
       "position": {
         "x": 600,
-        "y": -50
+        "y": -100
       }
     },
     {
       "id": "WW_TERRARIUM_ORRERY",
       "position": {
         "x": 600,
-        "y": 50
+        "y": 0
+      }
+    },
+    {
+      "id": "WW_TERRARIUM_PART_PRINTER",
+      "position": {
+        "x": 0,
+        "y": 100
       }
     },
     {

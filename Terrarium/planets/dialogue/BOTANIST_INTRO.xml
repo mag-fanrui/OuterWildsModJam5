@@ -54,8 +54,6 @@
     <Name>MISSION</Name>
     <Dialogue>
       <Page>Then well met, my friend! Well met! Allow me to introduce myself! I am Hawthorn. I have so many questions, but I am afraid I must dampen my curiosity and focus on the matter at hand.</Page>
-      <Page>If you've found your way in here then you've discovered our miniaturization system, yes? At least, I assume you're not some manner of intelligent microscopic life! Although I have yet to actually rule out that hypothesis--</Page>
-      <Page>Ahem. Right. The mission.</Page>
       <Page>You see, my clan's specialization is xenobotany. We cultivate many unique flora that we rescued from extinction and can no longer be found elsewhere in the universe.</Page>
       <Page>A normal vessel would be an insufficient environment for growing so many strains with a need for deep soil, of course! So we converted a barren world into a living one, sending our vessel out on expeditions to gather new specimens to cultivate while most of our clan stayed on world to tend to our collection.</Page>
       <Page>However, two harvests ago, we realized that a neighboring system's star was becoming unstable. It was not a question of if it would go supernova, but when.</Page>
@@ -80,13 +78,13 @@
     <Name>MINI</Name>
     <Dialogue>
       <Page>Ah, yes! That piece of technology changes everything! You see, while the minute spatiotemporal shifting induced by warp drives is common knowledge among the clans, research into warp-based time travel or spatial resizing has long been considered a scientific and literal dead end.</Page>
-      <Page>However, not long before last harvest, I was contacted by a very strange group of Nomai, who claimed to be survivors of Escall's clan!</Page>
+      <Page>However, not long before last harvest, I was contacted by a very strange group of Nomai, who claimed to be survivors of the long-lost clan of Escall!</Page>
       <Page>They had found an exceptional plant which naturally produced pockets of spatiotemporal distortion within itself, and exploited this to create a miniature society which could meet all of its needs with a fraction of the materials and energy normally required.</Page>
-      <Page>For example, by scaling themselves down, an average tree could produce enough oxygen to serve the whole community, rather than a single home.</Page>
+      <Page>For example, by shrinking themselves down, an average tree could produce enough oxygen to serve the whole community, rather than a single home.</Page>
       <Page>What's more, they discovered they no longer experienced time at the same rate as the outside universe! By the time they emerged, tens of thousands of harvests had already passed since Escall's vessel was lost.</Page>
       <Page>But, and this is key, the inverse effect was also achievable! By adjusting the spacetime fields, they could experience hundreds of harvests in the time the outer universe experienced one. They could prolong their lives almost indefinitely!</Page>
       <Page>By applying their research, I was able to develop this miniaturization system to reduce the size of my terrariums and seed banks to a portable size.</Page>
-      <Page>With this technology, my clan can restore our world, and allow it to live and flourish longer than its natural lifespan would normally permit. Nothing would make me happier.</Page>
+      <Page>With this technology, my clan can restore our world, and allow it to live and flourish longer than its natural lifespan would normally permit!</Page>
       <Page>The warp drive here is powerful enough to send the seeds there, thanks to the reduced energy costs. But to lock on to their receiving pad, I need the coordinates for the system they found.</Page>
       <Page>I hypothesize that the ideal candidate world they will have eventually settled at is in the stellar catalogue I've been given. If we can find the ideal environmental parameters for the flora I have preserved here, we'll find my clan.</Page>
       <Page>You do not owe me anything, but my clan and I would be immensely greatful for your assistance.</Page>
@@ -111,7 +109,7 @@
   <DialogueNode>
     <Name>SKIP</Name>
     <Dialogue>
-      <Page>Ah! Time travel, just as I hypothesized! I have so many questions, but I suppose I should not trouble you with them! I will meet you outside!</Page>
+      <Page>Ah! Time travel, just as I hypothesized! I have so many questions, but I suppose I should not trouble you with them a second time! I will meet you outside!</Page>
     </Dialogue>
   </DialogueNode>
 

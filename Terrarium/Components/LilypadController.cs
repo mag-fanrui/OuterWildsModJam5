@@ -11,11 +11,13 @@ namespace Terrarium.Components
     public class LilypadController : PlantController
     {
         Vector3 initialPosition;
+        float initialRadius;
 
         protected override void Awake()
         {
             base.Awake();
-            initialPosition = transform.root.InverseTransformPoint(transform.position);
+            initialPosition = transform.parent.InverseTransformPoint(transform.position);
+            initialRadius = Vector3.Distance(transform.position, transform.parent.position);
         }
 
         protected override void OnEnvironmentChanged(TerrariumParamType _, float __)
@@ -25,7 +27,7 @@ namespace Terrarium.Components
             var state = TerrariumController.Instance.GetState();
             if (!state)
             {
-                transform.position = transform.root.TransformPoint(initialPosition);
+                transform.position = transform.parent.TransformPoint(initialPosition);
                 return;
             }
 
@@ -33,9 +35,11 @@ namespace Terrarium.Components
             var maxRadius = state.WaterMaxRadius;
             var waterRadius = Mathf.Lerp(minRadius, maxRadius, TerrariumController.Instance.Humidity);
 
-            var dynamicPosition = initialPosition.normalized * waterRadius;
+            var placementRadius = Mathf.Max(initialRadius, waterRadius);
 
-            transform.position = transform.root.TransformPoint(dynamicPosition);
+            var dynamicPosition = initialPosition.normalized * placementRadius;
+
+            transform.position = transform.parent.TransformPoint(dynamicPosition);
         }
     }
 }

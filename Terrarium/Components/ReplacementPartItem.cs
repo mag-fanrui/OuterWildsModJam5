@@ -37,6 +37,7 @@ namespace Terrarium.Components
         {
             base.PickUpItem(holdTranform);
             Locator.GetPlayerAudioController()._oneShotExternalSource.PlayOneShot(AudioType.ToolItemWarpCorePickUp);
+            PlayerData.SetPersistentCondition($"WW_TERRARIUM_PART_{Parameter}", true);
         }
 
         public override void DropItem(Vector3 position, Vector3 normal, Transform parent, Sector sector, IItemDropTarget customDropTarget)

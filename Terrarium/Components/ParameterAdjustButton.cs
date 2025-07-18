@@ -35,12 +35,15 @@ namespace Terrarium.Components
         private void OnPressInteract()
         {
             var tc = TerrariumController.Instance;
-            AdjustParameter(tc.GetParameter(Parameter), tc.GetParameterEnabled(Parameter));
-        }
+            var value = tc.GetParameter(Parameter);
+            var enabledValue = tc.GetParameterEnabled(Parameter);
 
-        private void AdjustParameter(ChaseValue value, ToggleValue enabledValue)
-        {
-            var newValue = Mathf.Clamp01(value.Target + Amount);
+            var newValue = value.Target + Amount;
+            if (Parameter != TerrariumParamType.EnclosureAngle)
+            {
+                newValue = Mathf.Clamp01(newValue);
+            }
+
             if (newValue != value.Target && enabledValue.Value)
             {
                 value.Target = newValue;
@@ -50,6 +53,7 @@ namespace Terrarium.Components
             {
                 Locator.GetPlayerAudioController()._oneShotExternalSource.PlayOneShot(AudioType.GearRotate_Fail);
             }
+
             interactReceiver.ResetInteraction();
             interactReceiver.UpdatePromptVisibility();
         }

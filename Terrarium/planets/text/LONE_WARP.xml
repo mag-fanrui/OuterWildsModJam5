@@ -1,10 +1,16 @@
 ﻿<NomaiObject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/Outer-Wilds-New-Horizons/new-horizons/main/NewHorizons/Schemas/text_schema.xsd">
   <TextBlock>
     <ID>1</ID>
-    <Text>Although the gasses we inhale are different, both Nomai and plant life benefit from higher pressure atmospheres.</Text>
+    <Text>HAWTHORN: Although the gasses we inhale are different, both Nomai and plant life benefit from higher pressure atmospheres.</Text>
   </TextBlock>
   <TextBlock>
     <ID>2</ID>
-    <Text>If the pressure increases too much, though, a storm will form, casting a dark shadow. Something else we Nomai have in common, I suppose. Metaphorically.</Text>
+    <ParentID>1</ParentID>
+    <Text>HAWTHORN: If the pressure increases too much, though, a storm will form, casting a dark shadow over the lifeforms that were attempting to grow.</Text>
+  </TextBlock>
+  <TextBlock>
+    <ID>3</ID>
+    <ParentID>2</ParentID>
+    <Text>HAWTHORN: I propose there is yet another metaphor there.</Text>
   </TextBlock>
 </NomaiObject>

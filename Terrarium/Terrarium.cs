@@ -48,6 +48,10 @@ namespace Terrarium
                 {
                     SetUpSunBody(body);
                 }
+                else if (bodyName == "WW_TERRARIUM_WorldShip")
+                {
+                    SetUpWorldShipBody(body);
+                }
             });
 
             new Harmony(ModHelper.Manifest.UniqueName).PatchAll(Assembly.GetExecutingAssembly());
@@ -66,7 +70,7 @@ namespace Terrarium
             GUILayout.Label($"Sun Angle: {tc.SunAngle.Target:F2} {(tc.SunAngleEnabled.Value ? "" : "(Locked)")}");
             GUILayout.Label($"Sun Distance: {tc.SunDistance.Target:F2} {(tc.SunDistanceEnabled.Value ? "" : "(Locked)")}");
             GUILayout.Label($"Humidity: {tc.Humidity.Target:F2} {(tc.HumidityEnabled.Value ? "" : "(Locked)")}");
-            GUILayout.Label($"Atmosphere: {tc.Atmosphere.Target:F2} { (tc.AtmosphereEnabled.Value ? "" : "(Locked)")}");
+            GUILayout.Label($"Atmosphere: {tc.Atmosphere.Target:F2} {(tc.AtmosphereEnabled.Value ? "" : "(Locked)")}");
             GUILayout.Label($"Enclosure Angle: {tc.EnclosureAngle.Target:F2} {(tc.EnclosureAngleEnabled.Value ? "" : "(Locked)")}");
         }
 
@@ -94,6 +98,8 @@ namespace Terrarium
                     //child.gameObject.SetActive(false);
                 }
             }
+
+            body.transform.Find("Sector/TerrariumInterface/EndingBlackHole").gameObject.AddComponent<EndingBlackHoleController>();
 
             SetUpNomaiCharacter(body);
 
@@ -140,6 +146,15 @@ namespace Terrarium
             lightSourceVolume.LinkLightSource(artificialSun);
         }
 
+        void SetUpWorldShipBody(GameObject body)
+        {
+            body.AddComponent<EndingController>();
+
+            SetUpNomaiCharacter(body);
+
+            ReplaceMaterials(body);
+        }
+
         void SetUpNomaiCharacter(GameObject body)
         {
             var jam5Mod = ModHelper.Interaction.TryGetMod("xen-42.ModJam5");
@@ -164,10 +179,13 @@ namespace Terrarium
         static readonly string[] MATERIALS_TO_REPLACE = [
             "Terrain_TH_CraterFloor_mat",
             "Terrain_TH_CraterCliffs_mat",
+            "Terrain_TH_Grass_mat",
+            "Terrain_TH_Cave_mat"
         ];
 
         void ReplaceMaterials(GameObject body)
         {
+            var replacementMats = Resources.FindObjectsOfTypeAll<Material>().Where(m => MATERIALS_TO_REPLACE.Contains(m.name));
             foreach (var renderer in body.GetComponentsInChildren<Renderer>(true))
             {
                 if (renderer.sharedMaterials.Length > 0 && renderer.sharedMaterials.Any(m => m != null && MATERIALS_TO_REPLACE.Contains(m.name)))
@@ -175,7 +193,7 @@ namespace Terrarium
                     renderer.sharedMaterials = [.. renderer.sharedMaterials.Select(m =>
                     {
                         if (m == null) return null;
-                        var originalMat = Resources.FindObjectsOfTypeAll<Material>().FirstOrDefault(o => o.name == m.name);
+                        var originalMat = replacementMats.FirstOrDefault(o => o.name == m.name);
                         if (originalMat != null) return originalMat;
                         return m;
                     })];

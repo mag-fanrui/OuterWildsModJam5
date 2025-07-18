@@ -1,7 +1,12 @@
 ﻿<NomaiObject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/Outer-Wilds-New-Horizons/new-horizons/main/NewHorizons/Schemas/text_schema.xsd">
   <TextBlock>
     <ID>1</ID>
-    <Text>Nymphaea liberta, unlike most other species of its genus, does not require a stem to affix it to roots or soil. This adaptation allows it to adjust to floods and droughts affecting the water it inhabits, where its root-like tendrils extract nutrients from the sediment kicked up by underwater currents.</Text>
+    <Text>HAWTHORN: <![CDATA[<i>Nymphaea liberta</i>]]>, unlike most other species of its genus, does not require a stem to affix it to roots or soil. It floats freely on the water's surface. This adaptation allows it to adjust to floods and droughts without concern.</Text>
+  </TextBlock>
+  <TextBlock>
+    <ID>2</ID>
+    <ParentID>1</ParentID>
+    <Text>HAWTHORN: How liberating it must be to be untethered, drifting beneath the stars with no great weight affixing you in place.</Text>
   </TextBlock>
   <ShipLogConditions>
     <RevealFact>

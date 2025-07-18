@@ -1,12 +1,17 @@
 ﻿<NomaiObject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/Outer-Wilds-New-Horizons/new-horizons/main/NewHorizons/Schemas/text_schema.xsd">
   <TextBlock>
     <ID>1</ID>
-    <Text>Helianthus titanius is unique in that its stem will bend over the course of the day to maximize the exposure of its petals to sunlight. It prefers to grow under intense sunlight; dense atmospheres with clouds impair its photosynthesis.</Text>
+    <Text>HAWTHORN: <![CDATA[<i>Helianthus titanius</i>]]> is unique in that its stem will bend over the course of the day to maximize the exposure of its petals to sunlight.</Text>
+  </TextBlock>
+  <TextBlock>
+    <ID>2</ID>
+    <ParentID>1</ParentID>
+    <Text>HAWTHORN: It prefers to grow under intense sunlight, so it follows that cloud cover substantially impairs its photosynthesis. A clarity of direction brings clarity of purpose.</Text>
   </TextBlock>
   <ShipLogConditions>
     <RevealFact>
       <FactID>WW_TERRARIUM_SUNFLOWER_SUNLIGHT</FactID>
-      <Condition>1</Condition>
+      <Condition>1,2</Condition>
     </RevealFact>
   </ShipLogConditions>
 </NomaiObject>
