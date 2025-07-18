@@ -61,8 +61,9 @@ namespace TranslationExtractor
                         for (int i = 0; i < options.Count; i++)
                         {
                             var optionKey = $"{nodeKey}_OPTION_{i + 1}";
-                            dialogueDictionary[optionKey] = options[i].SelectSingleNode("Text").InnerText;
-                            options[i].InnerText = optionKey;
+                            var textNode = options[i].SelectSingleNode("Text");
+                            dialogueDictionary[optionKey] = textNode.InnerText;
+                            textNode.InnerText = optionKey;
                         }
                     }
                 }
