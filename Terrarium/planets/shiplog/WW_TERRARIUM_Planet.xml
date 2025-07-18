@@ -1,171 +1,139 @@
-﻿<AstroObjectEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                 xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/Outer-Wilds-New-Horizons/new-horizons/main/NewHorizons/Schemas/shiplog_schema.xsd">
+<AstroObjectEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/Outer-Wilds-New-Horizons/new-horizons/main/NewHorizons/Schemas/shiplog_schema.xsd">
   <ID>WW_TERRARIUM_Planet</ID>
-
   <Entry>
     <ID>WW_TERRARIUM_CURIOSITY</ID>
-    <Name>The Petalwake</Name>
+    <Name>WW_TERRARIUM_CURIOSITY</Name>
     <Curiosity>WW_TERRARIUM_CURIOSITY</Curiosity>
-    <IsCuriosity/>
-
+    <IsCuriosity />
     <RumorFact>
       <ID>WW_TERRARIUM_WORLDSHIP</ID>
       <SourceID>WW_TERRARIUM_COMPUTER</SourceID>
       <RumorName>Worldship</RumorName>
-      <Text>The Nomai of Hawthorn's clan terraformed a planet as an incubator for cultivating plants. To avoid an impending supernova, they outfitted it with a warp drive for interstellar travel and went looking for a new solar system to inhabit. Some plant species were not expected to survive the journey. The terrarium computer is searching for the same solar system under the assumption that the worldship will be there.</Text>
+      <Text>WW_TERRARIUM_WORLDSHIP</Text>
     </RumorFact>
-
     <ExploreFact>
       <ID>WW_TERRARIUM_GOOD_ENDING</ID>
-      <Text>Hawthorn and I successfully delivered the seed vaults and miniaturization technology to the world ship, the Petalwake.</Text>
+      <Text>WW_TERRARIUM_GOOD_ENDING</Text>
     </ExploreFact>
   </Entry>
-
   <Entry>
     <ID>WW_TERRARIUM_GREENHOUSE</ID>
-    <Name>The Greenhouse</Name>
+    <Name>WW_TERRARIUM_GREENHOUSE</Name>
     <Curiosity>WW_TERRARIUM_CURIOSITY</Curiosity>
-
     <RumorFact>
       <ID>WW_TERRARIUM_START</ID>
       <RumorName>Point of Interest</RumorName>
-      <Text>There is something to discover on the dwarf planet Lonely Lump.</Text>
+      <Text>WW_TERRARIUM_START</Text>
     </RumorFact>
-
     <ExploreFact>
       <ID>WW_TERRARIUM_DISCOVER</ID>
-      <Text>There is an intact Nomai building on the north pole with several mechanisms inside.</Text>
+      <Text>WW_TERRARIUM_DISCOVER</Text>
     </ExploreFact>
-
     <Entry>
       <ID>WW_TERRARIUM_SEED_BANK</ID>
-      <Name>Seed Vaults</Name>
+      <Name>WW_TERRARIUM_SEED_BANK</Name>
       <Curiosity>WW_TERRARIUM_CURIOSITY</Curiosity>
-
       <ExploreFact>
         <ID>WW_TERRARIUM_SEEDS</ID>
-        <Text>The second floor of the building is storage for climate-controlled seed vaults. These seeds could be used to repopulate the plant species under the right environmental conditions.</Text>
+        <Text>WW_TERRARIUM_SEEDS</Text>
       </ExploreFact>
     </Entry>
-
     <Entry>
       <ID>WW_TERRARIUM_ORRERY</ID>
-      <Name>Terrarium Device</Name>
+      <Name>WW_TERRARIUM_ORRERY</Name>
       <Curiosity>WW_TERRARIUM_CURIOSITY</Curiosity>
-
       <ExploreFact>
         <ID>WW_TERRARIUM_ITEM_INSERTED</ID>
-        <Text>Miniature terrariums can be inserted into the device. This caused other devices to activate nearby.</Text>
+        <Text>WW_TERRARIUM_ITEM_INSERTED</Text>
       </ExploreFact>
-
       <ExploreFact>
         <ID>WW_TERRARIUM_PART_INSERTED</ID>
-        <Text>Inserting a gear into the corresponding control unit repaired it, allowing me to change the environmental conditions of the terrarium.</Text>
+        <Text>WW_TERRARIUM_PART_INSERTED</Text>
       </ExploreFact>
     </Entry>
-
     <Entry>
       <ID>WW_TERRARIUM_PART_PRINTER</ID>
-      <Name>Strange Device</Name>
+      <Name>WW_TERRARIUM_PART_PRINTER</Name>
       <Curiosity>WW_TERRARIUM_CURIOSITY</Curiosity>
-
       <ExploreFact>
         <ID>WW_TERRARIUM_PART_PRINTER_FOUND</ID>
-        <Text>A strange device in the corner of the building. I felt a weird pressure in my head when trying to interact with it.</Text>
+        <Text>WW_TERRARIUM_PART_PRINTER_FOUND</Text>
       </ExploreFact>
-
       <ExploreFact>
         <ID>WW_TERRARIUM_PART_PRINTER_USED</ID>
-        <Text>When I interacted with the device and pictured a gear I had previously picked up, a copy of the gear appeared.</Text>
+        <Text>WW_TERRARIUM_PART_PRINTER_USED</Text>
       </ExploreFact>
     </Entry>
-
     <Entry>
       <ID>WW_TERRARIUM_COMPUTER</ID>
-      <Name>System Computer</Name>
+      <Name>WW_TERRARIUM_COMPUTER</Name>
       <Curiosity>WW_TERRARIUM_CURIOSITY</Curiosity>
-
       <ExploreFact>
         <ID>WW_TERRARIUM_COMPUTER_READ</ID>
-        <Text>A Nomai computer is searching for a solar system among millions of candidate records using some unknown criteria.</Text>
+        <Text>WW_TERRARIUM_COMPUTER_READ</Text>
       </ExploreFact>
-
       <ExploreFact>
         <ID>WW_TERRARIUM_COMPUTER_QUERY</ID>
-        <Text>The computer is searching for an ideal solar system to cultivate the clan's collection of plant species. If an exact match can be found using the terrarium parameter controls, the system can locate and lock onto their worldship if it's present there.</Text>
+        <Text>WW_TERRARIUM_COMPUTER_QUERY</Text>
       </ExploreFact>
     </Entry>
-
     <Entry>
       <ID>WW_TERRARIUM_MINIATURIZER</ID>
-      <Name>Miniaturization Device</Name>
+      <Name>WW_TERRARIUM_MINIATURIZER</Name>
       <Curiosity>WW_TERRARIUM_CURIOSITY</Curiosity>
-      
       <ExploreFact>
         <ID>WW_TERRARIUM_MINI_WARP</ID>
-        <Text>Using the warp platform while a terrium was inserted into the device caused me to shrink down and enter the terrarium.</Text>
+        <Text>WW_TERRARIUM_MINI_WARP</Text>
       </ExploreFact>
-
       <ExploreFact>
         <ID>WW_TERRARIUM_MINI_THEORY</ID>
-        <Text>The miniaturization technology used here has many theoretical applications for extending a society's lifespan, from expanding the size of resources and reducing the mass of cargo to even some form of extreme time dilation.</Text>
+        <Text>WW_TERRARIUM_MINI_THEORY</Text>
       </ExploreFact>
     </Entry>
   </Entry>
-
   <Entry>
     <ID>WW_TERRARIUM_BOTANIST</ID>
-    <Name>Hawthorn</Name>
+    <Name>WW_TERRARIUM_BOTANIST</Name>
     <Curiosity>WW_TERRARIUM_CURIOSITY</Curiosity>
-
     <ExploreFact>
       <ID>WW_TERRARIUM_BOTANIST_MET</ID>
-      <Text>I met a living modern Nomai! He is a botanist and the caretaker of the plants growing in the terrariums. We are able to communicate thanks to his universal translator.</Text>
+      <Text>WW_TERRARIUM_BOTANIST_MET</Text>
     </ExploreFact>
   </Entry>
-
   <Entry>
     <ID>WW_TERRARIUM_CACTUS</ID>
-    <Name>Coryphantha cinis</Name>
+    <Name>WW_TERRARIUM_CACTUS</Name>
     <Curiosity>WW_TERRARIUM_CURIOSITY</Curiosity>
-
     <ExploreFact>
       <ID>WW_TERRARIUM_CACTUS_HUMIDITY</ID>
-      <Text>Cacti are hardy but cannot handle excess water.</Text>
+      <Text>WW_TERRARIUM_CACTUS_HUMIDITY</Text>
     </ExploreFact>
   </Entry>
-
   <Entry>
     <ID>WW_TERRARIUM_SUNFLOWER</ID>
-    <Name>Helianthus titanius</Name>
+    <Name>WW_TERRARIUM_SUNFLOWER</Name>
     <Curiosity>WW_TERRARIUM_CURIOSITY</Curiosity>
-
     <ExploreFact>
       <ID>WW_TERRARIUM_SUNFLOWER_SUNLIGHT</ID>
-      <Text>Sunflowers turn to follow the sun. They prefer strong sunlight and can't grow under cloud cover.</Text>
+      <Text>WW_TERRARIUM_SUNFLOWER_SUNLIGHT</Text>
     </ExploreFact>
   </Entry>
-
   <Entry>
     <ID>WW_TERRARIUM_TULIP</ID>
-    <Name>Tulipa nomaii</Name>
+    <Name>WW_TERRARIUM_TULIP</Name>
     <Curiosity>WW_TERRARIUM_CURIOSITY</Curiosity>
-
     <ExploreFact>
       <ID>WW_TERRARIUM_TULIP_SUNLIGHT</ID>
-      <Text>These tulips only bloom for brief periods under particularly strong overhead sunlight. They were only found in the northern hemisphere of their native planet, but not at the north pole.</Text>
+      <Text>WW_TERRARIUM_TULIP_SUNLIGHT</Text>
     </ExploreFact>
   </Entry>
-
   <Entry>
     <ID>WW_TERRARIUM_WATERLILY</ID>
-    <Name>Nymphaea liberta</Name>
+    <Name>WW_TERRARIUM_WATERLILY</Name>
     <Curiosity>WW_TERRARIUM_CURIOSITY</Curiosity>
-
     <ExploreFact>
       <ID>WW_TERRARIUM_WATERLILY_HUMIDITY</ID>
-      <Text>These lilies grow in bodies of water, floating up or sinking down as the water level changes.</Text>
+      <Text>WW_TERRARIUM_WATERLILY_HUMIDITY</Text>
     </ExploreFact>
   </Entry>
-
 </AstroObjectEntry>
