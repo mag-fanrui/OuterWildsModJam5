@@ -7,11 +7,24 @@
   },
 
   "Props": {
+    "details": [
+      {
+        "assetBundle": "planets/assetbundles/terrarium",
+        "path": "Assets/Terrarium/Objects/Platform.prefab",
+        "isRelativeToParent": true,
+        "position": {
+          "x": 0,
+          "y": 0,
+          "z": 60
+        }
+      }
+    ],
     "warpTransmitters": [
       {
         "rename": "ShortcutWarpTransmitter",
         "alignmentWindow": 360,
         "frequency": "WW_TERRARIUM_SHORTCUT",
+        "isRelativeToParent": true,
         "position": {
           "x": 0,
           "y": 0,

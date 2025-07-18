@@ -2,6 +2,9 @@
   "$schema": "https://raw.githubusercontent.com/Outer-Wilds-New-Horizons/new-horizons/main/NewHorizons/Schemas/body_schema.json",
   "name": "WW_TERRARIUM_WorldShip",
   "starSystem": "Jam5",
+  "removeChildren": [
+    "Sector/Worldship/WarpDestination/EndingWhiteHole/WhiteHoleAmbience"
+  ],
   "Base": {
     "gravityFallOff": "linear",
     "surfaceSize": 200,
@@ -72,7 +75,20 @@
     "scatter": [
       {
         "path": "QuantumMoon_Body/Sector_QuantumMoon/State_HT/Interactables_HTState/Interactables_CTState/CTState_Q_Objects/CTState_QYuccaTree/Q_YuccaTree/Prefab_Tree_HT_Yucca",
-        "count": 300
+        "count": 300,
+        "preventOverlap": false
+      },
+      {
+        "assetBundle": "planets/assetbundles/terrarium",
+        "path": "Assets/Terrarium/Objects/Ending_SproutingFlower.prefab",
+        "count": 300,
+        "preventOverlap": false
+      },
+      {
+        "assetBundle": "planets/assetbundles/terrarium",
+        "path": "Assets/Terrarium/Objects/Ending_Sunflower.prefab",
+        "count": 300,
+        "preventOverlap": false
       }
     ],
     "singularities": [
@@ -103,17 +119,27 @@
         "radius": 250
       }
     ],
+    "audioVolumes": [
+      {
+        "audio": "planets/assets/Ending.ogg",
+        "noFadeFromBeginning": true,
+        "randomizePlayhead": false,
+        "track": "music",
+        "radius": 250
+      }
+    ],
     "creditsVolume": [
       {
         "position": {},
-        "radius": 250,
+        "radius": 20,
         "deathType": "meditation",
         "gameOver": {
           "creditsType": "none",
           "colour": {
             "r": 0,
             "g": 255,
-            "b": 63
+            "b": 63,
+            "a": 255
           },
           "text": "WW_TERRARIUM_ENDING_TEXT"
         }

@@ -9,6 +9,7 @@
     </Dialogue>
     <DialogueOptionsList>
       <DialogueOption>
+        <RequiredCondition>WW_TERRARIUM_AllParametersSolved</RequiredCondition>
         <Text>I'm ready to initiate the warp.</Text>
         <ConditionToSet>WW_TERRARIUM_START_ENDING</ConditionToSet>
       </DialogueOption>

@@ -31,7 +31,6 @@ namespace Terrarium.Components
         protected void Start()
         {
             gameObject.SetActive(false);
-            creditsVolume.SetActive(false);
         }
 
         protected void OnDestroy()
@@ -51,8 +50,8 @@ namespace Terrarium.Components
         IEnumerator DoEnding()
         {
             Locator.GetShipLogManager().RevealFact("WW_TERRARIUM_GOOD_ENDING", true, false);
-            yield return new WaitForSeconds(10f);
-            creditsVolume.SetActive(true);
+            yield return new WaitForSeconds(20f);
+            creditsVolume.transform.position = Locator.GetPlayerTransform().position;
         }
     }
 }
