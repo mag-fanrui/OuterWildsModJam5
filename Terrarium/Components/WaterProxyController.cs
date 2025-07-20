@@ -18,7 +18,7 @@ namespace Terrarium.Components
         protected void Awake()
         {
             item = GetComponentInParent<TerrariumItem>();
-            Size = ChaseValue.Create(this, 0f, OnSizeChanged);
+            Size = ChaseValue.Create(0f, OnSizeChanged);
         }
 
         protected void Start()

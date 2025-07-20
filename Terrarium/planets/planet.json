@@ -142,6 +142,7 @@
         "xmlFile": "planets/dialogue/PART_PRINTER.xml",
         "parentPath": "Sector/TerrariumInterface/PartPrinter/DialogueRoot",
         "isRelativeToParent": true,
+        "radius": 0.4,
         "position": {}
       }
     ],
@@ -152,9 +153,9 @@
         "xmlFile": "planets/text/TERRARIUM_COMPUTER.xml",
         "alignRadial": true,
         "position": {
-          "x": 4,
-          "y": 399.7,
-          "z": 4.75
+          "x": 5,
+          "y": 399.3,
+          "z": 5
         }
       }
     ],
@@ -182,6 +183,16 @@
         ],
         "revealOn": "enter",
         "revealFor": "player"
+      }
+    ],
+    "audioVolumes": [
+
+      {
+        "parentPath": "Sector/TerrariumInterface",
+        "audio": "planets/assets/Ambience_NomaiRuinsEdit.ogg",
+        "track": "environment",
+        "radius": 15,
+        "isRelativeToParent": true
       }
     ]
   }

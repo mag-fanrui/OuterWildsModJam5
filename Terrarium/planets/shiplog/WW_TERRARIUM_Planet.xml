@@ -22,7 +22,7 @@
     <Curiosity>WW_TERRARIUM_CURIOSITY</Curiosity>
     <RumorFact>
       <ID>WW_TERRARIUM_START</ID>
-      <RumorName>Point of Interest</RumorName>
+      <RumorName>WW_TERRARIUM_START_RUMORNAME</RumorName>
       <Text>WW_TERRARIUM_START</Text>
     </RumorFact>
     <ExploreFact>
@@ -74,6 +74,7 @@
       </ExploreFact>
       <ExploreFact>
         <ID>WW_TERRARIUM_COMPUTER_QUERY</ID>
+        <IgnoreMoreToExplore/>
         <Text>WW_TERRARIUM_COMPUTER_QUERY</Text>
       </ExploreFact>
     </Entry>
@@ -87,18 +88,10 @@
       </ExploreFact>
       <ExploreFact>
         <ID>WW_TERRARIUM_MINI_THEORY</ID>
+        <IgnoreMoreToExplore/>
         <Text>WW_TERRARIUM_MINI_THEORY</Text>
       </ExploreFact>
     </Entry>
-  </Entry>
-  <Entry>
-    <ID>WW_TERRARIUM_BOTANIST</ID>
-    <Name>WW_TERRARIUM_BOTANIST</Name>
-    <Curiosity>WW_TERRARIUM_CURIOSITY</Curiosity>
-    <ExploreFact>
-      <ID>WW_TERRARIUM_BOTANIST_MET</ID>
-      <Text>WW_TERRARIUM_BOTANIST_MET</Text>
-    </ExploreFact>
   </Entry>
   <Entry>
     <ID>WW_TERRARIUM_CACTUS</ID>
@@ -128,6 +121,15 @@
     </ExploreFact>
   </Entry>
   <Entry>
+    <ID>WW_TERRARIUM_YUCCA</ID>
+    <Name>WW_TERRARIUM_YUCCA</Name>
+    <Curiosity>WW_TERRARIUM_CURIOSITY</Curiosity>
+    <ExploreFact>
+      <ID>WW_TERRARIUM_YUCCA_ATMOSPHERE</ID>
+      <Text>WW_TERRARIUM_YUCCA_ATMOSPHERE</Text>
+    </ExploreFact>
+  </Entry>
+  <Entry>
     <ID>WW_TERRARIUM_WATERLILY</ID>
     <Name>WW_TERRARIUM_WATERLILY</Name>
     <Curiosity>WW_TERRARIUM_CURIOSITY</Curiosity>
@@ -135,5 +137,119 @@
       <ID>WW_TERRARIUM_WATERLILY_HUMIDITY</ID>
       <Text>WW_TERRARIUM_WATERLILY_HUMIDITY</Text>
     </ExploreFact>
+  </Entry>
+  <Entry>
+    <ID>WW_TERRARIUM_STATE_RING</ID>
+    <Name>WW_TERRARIUM_STATE_RING</Name>
+    <Curiosity>WW_TERRARIUM_CURIOSITY</Curiosity>
+    <ExploreFact>
+      <ID>WW_TERRARIUM_STATE_RING_FOUND</ID>
+      <Text>WW_TERRARIUM_STATE_RING_FOUND</Text>
+    </ExploreFact>
+    <Entry>
+      <ID>WW_TERRARIUM_BOTANIST</ID>
+      <Name>WW_TERRARIUM_BOTANIST</Name>
+      <Curiosity>WW_TERRARIUM_CURIOSITY</Curiosity>
+      <RumorFact>
+        <ID>WW_TERRARIUM_BOTANIST_PUZZLE</ID>
+        <SourceID>WW_TERRARIUM_STATE_RING</SourceID>
+        <RumorName>WW_TERRARIUM_BOTANIST_PUZZLE_RUMORNAME</RumorName>
+        <Text>WW_TERRARIUM_BOTANIST_PUZZLE</Text>
+      </RumorFact>
+      <ExploreFact>
+        <ID>WW_TERRARIUM_BOTANIST_MET</ID>
+        <Text>WW_TERRARIUM_BOTANIST_MET</Text>
+      </ExploreFact>
+    </Entry>
+  </Entry>
+  <Entry>
+    <ID>WW_TERRARIUM_STATE_CLIFFS</ID>
+    <Name>WW_TERRARIUM_STATE_CLIFFS</Name>
+    <Curiosity>WW_TERRARIUM_CURIOSITY</Curiosity>
+    <RumorFact>
+      <ID>WW_TERRARIUM_STATE_CLIFFS_SEARCH</ID>
+      <SourceID>WW_TERRARIUM_STATE_RING</SourceID>
+      <RumorName>WW_TERRARIUM_STATE_CLIFFS_SEARCH_RUMORNAME</RumorName>
+      <Text>WW_TERRARIUM_STATE_CLIFFS_SEARCH</Text>
+    </RumorFact>
+    <ExploreFact>
+      <ID>WW_TERRARIUM_STATE_CLIFFS_FOUND</ID>
+      <Text>WW_TERRARIUM_STATE_CLIFFS_FOUND</Text>
+    </ExploreFact>
+    <Entry>
+      <ID>WW_TERRARIUM_YUCCA_PUZZLE</ID>
+      <Name>WW_TERRARIUM_YUCCA_PUZZLE</Name>
+      <Curiosity>WW_TERRARIUM_CURIOSITY</Curiosity>
+      <ExploreFact>
+        <ID>WW_TERRARIUM_YUCCA_PUZZLE_SOLVED</ID>
+        <Text>WW_TERRARIUM_YUCCA_PUZZLE_SOLVED</Text>
+      </ExploreFact>
+    </Entry>
+    <Entry>
+      <ID>WW_TERRARIUM_TULIP_PUZZLE</ID>
+      <Name>WW_TERRARIUM_TULIP_PUZZLE</Name>
+      <Curiosity>WW_TERRARIUM_CURIOSITY</Curiosity>
+      <ExploreFact>
+        <ID>WW_TERRARIUM_TULIP_PUZZLE_SOLVED</ID>
+        <Text>WW_TERRARIUM_TULIP_PUZZLE_SOLVED</Text>
+      </ExploreFact>
+    </Entry>
+    <Entry>
+      <ID>WW_TERRARIUM_SUNFLOWER_PUZZLE</ID>
+      <Name>WW_TERRARIUM_SUNFLOWER_PUZZLE</Name>
+      <Curiosity>WW_TERRARIUM_CURIOSITY</Curiosity>
+      <RumorFact>
+        <ID>WW_TERRARIUM_SUNFLOWER_PUZZLE_FOUND</ID>
+        <SourceID>WW_TERRARIUM_STATE_CLIFFS</SourceID>
+        <Text>WW_TERRARIUM_SUNFLOWER_PUZZLE_FOUND</Text>        
+      </RumorFact>
+      <ExploreFact>
+        <ID>WW_TERRARIUM_SUNFLOWER_PUZZLE_SOLVED</ID>
+        <Text>WW_TERRARIUM_SUNFLOWER_PUZZLE_SOLVED</Text>
+      </ExploreFact>
+    </Entry>
+  </Entry>
+  <Entry>
+    <ID>WW_TERRARIUM_STATE_CAVES</ID>
+    <Name>WW_TERRARIUM_STATE_CAVES</Name>
+    <Curiosity>WW_TERRARIUM_CURIOSITY</Curiosity>
+    <RumorFact>
+      <ID>WW_TERRARIUM_STATE_CAVES_SEARCH</ID>
+      <SourceID>WW_TERRARIUM_STATE_CLIFFS</SourceID>
+      <RumorName>WW_TERRARIUM_STATE_CAVES_SEARCH_RUMORNAME</RumorName>
+      <Text>WW_TERRARIUM_STATE_CAVES_SEARCH</Text>
+    </RumorFact>
+    <ExploreFact>
+      <ID>WW_TERRARIUM_STATE_CAVES_FOUND</ID>
+      <Text>WW_TERRARIUM_STATE_CAVES_FOUND</Text>
+    </ExploreFact>
+    <Entry>
+      <ID>WW_TERRARIUM_ICEWALL_PUZZLE</ID>
+      <Name>WW_TERRARIUM_ICEWALL_PUZZLE</Name>
+      <Curiosity>WW_TERRARIUM_CURIOSITY</Curiosity>
+      <RumorFact>
+        <ID>WW_TERRARIUM_ICEWALL_PUZZLE_FOUND</ID>
+        <SourceID>WW_TERRARIUM_STATE_CAVES</SourceID>
+        <Text>WW_TERRARIUM_ICEWALL_PUZZLE_FOUND</Text>
+      </RumorFact>
+      <ExploreFact>
+        <ID>WW_TERRARIUM_ICEWALL_PUZZLE_SOLVED</ID>
+        <Text>WW_TERRARIUM_ICEWALL_PUZZLE_SOLVED</Text>
+      </ExploreFact>
+    </Entry>
+    <Entry>
+      <ID>WW_TERRARIUM_WATERLILY_PUZZLE</ID>
+      <Name>WW_TERRARIUM_WATERLILY_PUZZLE</Name>
+      <Curiosity>WW_TERRARIUM_CURIOSITY</Curiosity>
+      <RumorFact>
+        <ID>WW_TERRARIUM_WATERLILY_PUZZLE_FOUND</ID>
+        <SourceID>WW_TERRARIUM_STATE_CAVES</SourceID>
+        <Text>WW_TERRARIUM_WATERLILY_PUZZLE_FOUND</Text>
+      </RumorFact>
+      <ExploreFact>
+        <ID>WW_TERRARIUM_WATERLILY_PUZZLE_SOLVED</ID>
+        <Text>WW_TERRARIUM_WATERLILY_PUZZLE_SOLVED</Text>
+      </ExploreFact>
+    </Entry>
   </Entry>
 </AstroObjectEntry>

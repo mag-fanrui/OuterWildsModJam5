@@ -17,6 +17,8 @@ namespace Terrarium.Components
 
         [SerializeField]
         protected Vector3 holdOffset;
+        [SerializeField]
+        protected string pickupFact;
 
         string displayName;
 
@@ -34,6 +36,7 @@ namespace Terrarium.Components
             base.PickUpItem(holdTranform);
             Locator.GetPlayerAudioController()._oneShotExternalSource.PlayOneShot(AudioType.ToolItemWarpCorePickUp);
             transform.localPosition = holdOffset;
+            Locator.GetShipLogManager().RevealFact(pickupFact);
         }
 
         public override void DropItem(Vector3 position, Vector3 normal, Transform parent, Sector sector, IItemDropTarget customDropTarget)

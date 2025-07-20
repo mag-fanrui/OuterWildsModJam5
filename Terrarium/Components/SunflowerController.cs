@@ -15,6 +15,8 @@ namespace Terrarium.Components
         [SerializeField]
         protected Transform stemEnd;
 
+        public Quaternion GetStemMiddleRotation() => stemMiddle.localRotation;
+
         protected override void OnEnvironmentChanged(TerrariumParamType _, float __)
         {
             base.OnEnvironmentChanged(_, __);

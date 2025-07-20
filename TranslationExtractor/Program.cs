@@ -77,8 +77,9 @@ namespace TranslationExtractor
                 {
                     var id = textBlock.SelectSingleNode("ID").InnerText;
                     var key = $"{fileKey}_{id}";
-                    dialogueDictionary[key] = textBlock.SelectSingleNode("Text").InnerText;
-                    textBlock.SelectSingleNode("Text").InnerText = key;
+                    var textNode = textBlock.SelectSingleNode("Text");
+                    dialogueDictionary[key] = textNode.InnerText;
+                    textNode.InnerText = key;
                 }
             }
             else if (xmlDoc.FirstChild.Name == "AstroObjectEntry")
@@ -97,8 +98,9 @@ namespace TranslationExtractor
                     {
                         var factId = exploreFact.SelectSingleNode("ID").InnerText;
                         var factKey = factId;
-                        shipLogDictionary[factKey] = exploreFact.SelectSingleNode("Text").InnerText;
-                        exploreFact.SelectSingleNode("Text").InnerText = factKey;
+                        var textNode = exploreFact.SelectSingleNode("Text");
+                        shipLogDictionary[factKey] = textNode.InnerText;
+                        textNode.InnerText = factKey;
                     }
 
                     var rumorFacts = entry.SelectNodes("RumorFact");
@@ -106,8 +108,16 @@ namespace TranslationExtractor
                     {
                         var factId = rumorFact.SelectSingleNode("ID").InnerText;
                         var factKey = factId;
-                        shipLogDictionary[factKey] = rumorFact.SelectSingleNode("Text").InnerText;
-                        rumorFact.SelectSingleNode("Text").InnerText = factKey;
+                        var textNode = rumorFact.SelectSingleNode("Text");
+                        shipLogDictionary[factKey] = textNode.InnerText;
+                        textNode.InnerText = factKey;
+                        var rumorNameKey = $"{factKey}_RUMORNAME";
+                        var rumorNameNode = rumorFact.SelectSingleNode("RumorName");
+                        if (rumorNameNode != null)
+                        {
+                            shipLogDictionary[rumorNameKey] = rumorNameNode.InnerText;
+                            rumorNameNode.InnerText = rumorNameKey;
+                        }
                     }
 
                     var subEntries = entry.SelectNodes("Entry");

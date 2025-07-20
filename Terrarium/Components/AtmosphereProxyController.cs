@@ -27,7 +27,7 @@ namespace Terrarium.Components
             renderer = GetComponent<MeshRenderer>();
             material = new Material(renderer.sharedMaterial);
             renderer.sharedMaterial = material;
-            Opacity = ChaseValue.Create(this, 0f, OnOpacityChanged);
+            Opacity = ChaseValue.Create(0f, OnOpacityChanged);
         }
 
         protected void Start()

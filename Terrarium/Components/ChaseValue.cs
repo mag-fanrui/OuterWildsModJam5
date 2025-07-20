@@ -10,6 +10,8 @@ namespace Terrarium.Components
 {
     public class ChaseValue : MonoBehaviour
     {
+        static GameObject managerObj;
+
         public class ChaseValueChangedEvent : UnityEvent<float> { }
 
         [SerializeField]
@@ -21,9 +23,14 @@ namespace Terrarium.Components
         [SerializeField]
         readonly ChaseValueChangedEvent onChanged = new();
 
-        public static ChaseValue Create(MonoBehaviour parent, float value, UnityAction<float> onChange = null, float rate = 0.25f)
+        public static ChaseValue Create(float value, UnityAction<float> onChange = null, float rate = 0.25f)
         {
-            var cv = parent.gameObject.AddComponent<ChaseValue>();
+            if (managerObj == null)
+            {
+                managerObj = new GameObject("Chase Value Manager").gameObject;
+            }
+
+            var cv = managerObj.AddComponent<ChaseValue>();
             cv.current = value;
             cv.target = value;
             cv.rate = rate;

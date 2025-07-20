@@ -13,15 +13,30 @@ namespace Terrarium.Components
         protected string path;
         [SerializeField]
         protected List<string> childrenToRemove = [];
+        [SerializeField]
+        protected bool removeColliders;
 
         protected void Awake()
         {
             var obj = Terrarium.NewHorizons.SpawnObject(Terrarium.Instance, transform.root.gameObject, GetComponentInParent<Sector>(), path, Vector3.zero, Vector3.zero, 1f, false);
-            foreach (Transform child in obj.transform)
+            foreach (string childPath in childrenToRemove)
             {
-                if (childrenToRemove.Contains(child.name))
+                var child = obj.transform.Find(childPath);
+                if (child == null)
                 {
-                    child.gameObject.SetActive(false);
+                    Terrarium.Instance.ModHelper.Console.WriteLine($"Invalid child path: \"{childPath}\" on prop with path \"{path}\"");
+                }
+                Destroy(child.gameObject);
+            }
+            if (removeColliders)
+            {
+                foreach (OWCollider owCollider in obj.GetComponentsInChildren<OWCollider>())
+                {
+                    Destroy(owCollider);
+                }
+                foreach (Collider collider in obj.GetComponentsInChildren<Collider>())
+                {
+                    Destroy(collider);
                 }
             }
             obj.transform.SetParent(transform, false);

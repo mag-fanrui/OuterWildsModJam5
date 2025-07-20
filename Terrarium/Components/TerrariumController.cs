@@ -47,22 +47,23 @@ namespace Terrarium.Components
         public readonly PlayerInsideEvent OnPlayerInside = new();
         public readonly EmergencyWarpEvent OnEmergencyWarp = new();
 
-        TerrariumStateData currentStateData;
-        bool wasInside;
+        protected TerrariumStateData currentStateData;
+        protected bool wasInside;
+        protected List<TerrariumStateController> stateControllers = [];
 
         protected void Awake()
         {
             instance = this;
-            SunDistance = ChaseValue.Create(this, 0.5f, OnSunDistanceChanged);
-            SunAngle = ChaseValue.Create(this, 0.5f, OnSunAngleChanged);
-            Humidity = ChaseValue.Create(this, 0.5f, OnHumidityChanged);
-            Atmosphere = ChaseValue.Create(this, 0.5f, OnAtmosphereChanged);
-            EnclosureAngle = ChaseValue.Create(this, 0.5f, OnEnclosureAngleChanged);
-            SunDistanceEnabled = ToggleValue.Create(this, false);
-            SunAngleEnabled = ToggleValue.Create(this, false);
-            HumidityEnabled = ToggleValue.Create(this, false);
-            AtmosphereEnabled = ToggleValue.Create(this, false);
-            EnclosureAngleEnabled = ToggleValue.Create(this, false);
+            SunDistance = ChaseValue.Create(0.5f, OnSunDistanceChanged);
+            SunAngle = ChaseValue.Create(0.5f, OnSunAngleChanged);
+            Humidity = ChaseValue.Create(0.5f, OnHumidityChanged);
+            Atmosphere = ChaseValue.Create(0.5f, OnAtmosphereChanged);
+            EnclosureAngle = ChaseValue.Create(0.5f, OnEnclosureAngleChanged);
+            SunDistanceEnabled = ToggleValue.Create(false);
+            SunAngleEnabled = ToggleValue.Create(false);
+            HumidityEnabled = ToggleValue.Create(false);
+            AtmosphereEnabled = ToggleValue.Create(false);
+            EnclosureAngleEnabled = ToggleValue.Create(false);
         }
 
         public Vector3 GetSunWorldPosition()
@@ -120,6 +121,12 @@ namespace Terrarium.Components
             TerrariumParamType.EnclosureAngle => EnclosureAngleEnabled,
             _ => throw new ArgumentOutOfRangeException(nameof(paramType)),
         };
+
+        public TerrariumStateController GetStateController(TerrariumStateData stateData)
+            => stateControllers.FirstOrDefault(c => c.StateData == stateData);
+
+        public void RegisterStateController(TerrariumStateController controller)
+            => stateControllers.Add(controller);
 
         protected void Update()
         {

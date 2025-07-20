@@ -44,7 +44,7 @@ namespace Terrarium.Components
             oceanFogMaterial.SetFloat("_Radius2", 0);
             fluidVolume = transform.Find("WaterVolume").GetComponent<RadialFluidVolume>();
             maxRadius = transform.localScale.x;
-            WaterLevel = ChaseValue.Create(this, 0.5f, OnWaterLevelChanged);
+            WaterLevel = ChaseValue.Create(0.5f, OnWaterLevelChanged);
         }
 
         protected void Start()

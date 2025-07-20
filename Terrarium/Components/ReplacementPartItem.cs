@@ -22,6 +22,13 @@ namespace Terrarium.Components
 
         public TerrariumParamType Parameter;
 
+        [SerializeField]
+        protected Renderer lightRenderer;
+        [SerializeField]
+        protected Material insertedMaterial;
+        [SerializeField]
+        protected Material removedMaterial;
+
         string displayName;
 
         public override void Awake()
@@ -29,6 +36,7 @@ namespace Terrarium.Components
             base.Awake();
             _type = PARAM_ITEM_TYPES[Parameter];
             displayName = Terrarium.NewHorizons.GetTranslationForUI($"WW_TERRARIUM_ITEM_ReplacementPart_{Parameter}");
+            lightRenderer.sharedMaterial = removedMaterial;
         }
 
         public override string GetDisplayName() => displayName;
@@ -50,12 +58,14 @@ namespace Terrarium.Components
         {
             base.SocketItem(socketTransform, sector);
             Locator.GetPlayerAudioController()._oneShotExternalSource.PlayOneShot(AudioType.ToolItemWarpCoreInsert);
+            lightRenderer.sharedMaterial = insertedMaterial;
         }
 
         public override void OnCompleteUnsocket()
         {
             base.OnCompleteUnsocket();
             Locator.GetPlayerAudioController()._oneShotExternalSource.PlayOneShot(AudioType.ToolItemWarpCoreRemove);
+            lightRenderer.sharedMaterial = removedMaterial;
         }
     }
 }

@@ -10,20 +10,23 @@ using UnityEngine;
 
 namespace Terrarium.Components
 {
-    public class PlantController : MonoBehaviour
+    public class PlantController : ProxiedObjectController
     {
         public TerrariumPlantData PlantData;
+        
         [HideInInspector]
         public ChaseValue Size;
 
         Vector3 initialScale;
         MeshRenderer[] renderers;
 
+        public Vector3 InitialScale => initialScale;
+
         protected virtual void Awake()
         {
             initialScale = transform.localScale;
             renderers = GetComponentsInChildren<MeshRenderer>();
-            Size = ChaseValue.Create(this, 0.5f, OnSizeChanged, 0.02f);
+            Size = ChaseValue.Create(1f, OnSizeChanged, 0.02f);
         }
 
         protected virtual void Start()

@@ -11,27 +11,27 @@ namespace Terrarium.Data
     public class TerrariumPlantData : ScriptableObject
     {
         [SerializeField]
-        float minScale = 0.1f;
+        protected float minScale = 0.1f;
         [SerializeField]
-        float sunlightPreference = 0.5f;
+        protected float sunlightPreference = 0.5f;
         [SerializeField]
-        float sunlightTolerance = 0.5f;
+        protected float sunlightTolerance = 0.5f;
         [SerializeField]
-        float humidityPreference = 0.5f;
+        protected float humidityPreference = 0.5f;
         [SerializeField]
-        float humidityTolerance = 0.5f;
+        protected float humidityTolerance = 0.5f;
         [SerializeField]
-        float atmospherePreference = 0.5f;
+        protected float atmospherePreference = 0.5f;
         [SerializeField]
-        float atmosphereTolerance = 0.5f;
+        protected float atmosphereTolerance = 0.5f;
         [SerializeField]
-        bool useHealthColors = false;
+        protected bool useHealthColors = false;
         [SerializeField]
-        Color healthyColor = Color.white;
+        protected Color healthyColor = Color.white;
         [SerializeField]
-        Color sickColor = Color.gray;
+        protected Color sickColor = Color.gray;
         [SerializeField]
-        float bloomThreshold = -1f;
+        protected float bloomThreshold = -1f;
 
         public float MinScale => minScale;
         public float SunlightPreference => sunlightPreference;

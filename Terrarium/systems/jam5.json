@@ -72,10 +72,66 @@
       }
     },
     {
+      "id": "WW_TERRARIUM_STATE_RING",
+      "position": {
+        "x": 800,
+        "y": 0
+      }
+    },
+    {
       "id": "WW_TERRARIUM_BOTANIST",
       "position": {
-        "x": 850,
-        "y": 100
+        "x": 800,
+        "y": 150
+      }
+    },
+    {
+      "id": "WW_TERRARIUM_STATE_CLIFFS",
+      "position": {
+        "x": 1100,
+        "y": 0
+      }
+    },
+    {
+      "id": "WW_TERRARIUM_SUNFLOWER_PUZZLE",
+      "position": {
+        "x": 1100,
+        "y": 150
+      }
+    },
+    {
+      "id": "WW_TERRARIUM_TULIP_PUZZLE",
+      "position": {
+        "x": 1100,
+        "y": -150
+      }
+    },
+    {
+      "id": "WW_TERRARIUM_YUCCA_PUZZLE",
+      "position": {
+        "x": 1000,
+        "y": 50
+      }
+    },
+    {
+      "id": "WW_TERRARIUM_STATE_CAVES",
+      "position": {
+        "x": 1400,
+        "y": 0
+      }
+    },
+    {
+      "id": "WW_TERRARIUM_ICEWALL_PUZZLE",
+      "position": {
+        "x": 1400,
+        "y": 150
+      }
+    },
+    {
+      "id": "WW_TERRARIUM_WATERLILY_PUZZLE",
+      "position": {
+        "x": 1400,
+        "y": -150
       }
     },
     {
@@ -100,9 +156,16 @@
       }
     },
     {
-      "id": "WW_TERRARIUM_WATERLILY",
+      "id": "WW_TERRARIUM_YUCCA",
       "position": {
         "x": 750,
+        "y": -300
+      }
+    },
+    {
+      "id": "WW_TERRARIUM_WATERLILY",
+      "position": {
+        "x": 900,
         "y": -300
       }
     }

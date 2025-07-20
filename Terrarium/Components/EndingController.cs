@@ -30,7 +30,7 @@ namespace Terrarium.Components
 
         protected void Start()
         {
-            gameObject.SetActive(false);
+            transform.Find("Sector").gameObject.SetActive(false);
         }
 
         protected void OnDestroy()
@@ -42,7 +42,7 @@ namespace Terrarium.Components
         {
             if (DialogueConditionManager.SharedInstance.GetConditionState("WW_TERRARIUM_START_ENDING"))
             {
-                gameObject.SetActive(true);
+                transform.Find("Sector").gameObject.SetActive(true);
                 OnEndingStart.Invoke();
                 StartCoroutine(DoEnding());
             }

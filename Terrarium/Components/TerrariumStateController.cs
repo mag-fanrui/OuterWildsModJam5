@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,11 +13,13 @@ namespace Terrarium.Components
     {
         public TerrariumStateData StateData;
 
-        protected void Start()
+        protected IEnumerator Start()
         {
+            TerrariumController.Instance.RegisterStateController(this);
             TerrariumController.Instance.EnclosureAngle.On(OnEnclosureAngleChanged);
             TerrariumController.Instance.OnStateChanged.AddListener(OnStateChanged);
             TerrariumController.Instance.OnPlayerInside.AddListener(OnPlayerInside);
+            yield return null;
             gameObject.SetActive(false);
         }
 

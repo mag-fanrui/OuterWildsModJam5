@@ -160,6 +160,35 @@
           "nerfDuration": 1
         }
       ]
-    }
+    },
+    "audioVolumes": [
+      {
+        "parentPath": "Sector/TerrariumState_Cliffs",
+        "audio": "TH_CanyonAmbienceDay_LP",
+        "track": "environment",
+        "radius": 75
+      },
+      {
+        "parentPath": "Sector/TerrariumState_Caves",
+        "audio": "HT_CaveAmbientSmall_LP",
+        "track": "environment",
+        "radius": 75
+      },
+      {
+        "parentPath": "Sector/TerrariumState_Ring",
+        "audio": "HT_SurfaceAmbience_LP",
+        "track": "environment",
+        "radius": 75
+      },
+      {
+        "parentPath": "Sector/TerrariumState_Ring/NomaiSpawn",
+        "audio": "DB_VesselDiscovery",
+        "track": "music",
+        "radius": 15,
+        "volume": 0.5,
+        "loop": false,
+        "isRelativeToParent": true
+      }
+    ]
   }
 }

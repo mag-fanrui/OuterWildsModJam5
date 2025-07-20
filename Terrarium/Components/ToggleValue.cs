@@ -10,6 +10,8 @@ namespace Terrarium.Components
 {
     public class ToggleValue : MonoBehaviour
     {
+        static GameObject managerObj;
+
         public class ToggleValueChangedEvent : UnityEvent<bool> { }
 
         [SerializeField]
@@ -17,9 +19,14 @@ namespace Terrarium.Components
         [SerializeField]
         readonly ToggleValueChangedEvent onChanged = new();
 
-        public static ToggleValue Create(MonoBehaviour parent, bool value, UnityAction<bool> onChange = null)
+        public static ToggleValue Create(bool value, UnityAction<bool> onChange = null)
         {
-            var tv = parent.gameObject.AddComponent<ToggleValue>();
+            if (managerObj == null)
+            {
+                managerObj = new GameObject("Toggle Value Manager").gameObject;
+            }
+
+            var tv = managerObj.AddComponent<ToggleValue>();
             tv.value = value;
             if (onChange != null)
             {

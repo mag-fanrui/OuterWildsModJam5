@@ -12,7 +12,7 @@ namespace Terrarium.Components
     {
         Animator animator;
         
-        bool ShouldBloom() => CalculateSunlightFactor() >= PlantData.BloomThreshold;
+        public bool ShouldBloom() => CalculateSunlightFactor() >= PlantData.BloomThreshold;
 
         protected override void Awake()
         {
