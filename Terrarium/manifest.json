@@ -2,7 +2,7 @@
   "$schema": "https://raw.githubusercontent.com/ow-mods/owml/master/schemas/manifest_schema.json",
   "filename": "Terrarium.dll",
   "author": "Hawkbar",
-  "name": "Terrarium",
+  "name": "Eden's Hope",
   "uniqueName": "Hawkbar.Terrarium",
   "version": "0.2.0",
   "owmlVersion": "2.15.1",
