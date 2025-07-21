@@ -98,6 +98,7 @@ namespace Terrarium
                     //child.gameObject.SetActive(false);
                 }
             }
+            warpGO.AddComponent<TerrariumWarpTransmitterController>();
 
             body.transform.Find("Sector/TerrariumInterface/EndingBlackHole").gameObject.AddComponent<EndingBlackHoleController>();
 
@@ -118,7 +119,7 @@ namespace Terrarium
             body.transform.Find("Sector/Effects/RainEmitter").gameObject.AddComponent<RainLayerController>();
 
             var warpGO = body.transform.Find("Sector/WarpReceiver").gameObject;
-            warpGO.AddComponent<TerrariumWarpController>();
+            warpGO.AddComponent<TerrariumWarpReceiverController>();
             foreach (Transform child in warpGO.transform)
             {
                 if (child.name is not "WarpReceiver_Streaming" and not "BlackHole" and not "WhiteHole" and not "Effects_NOM_ReverseWarpParticles" and not "ReturnActivationTrigger")

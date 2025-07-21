@@ -8,7 +8,7 @@ using UnityEngine;
 
 namespace Terrarium.Components
 {
-    public class TerrariumWarpController : MonoBehaviour
+    public class TerrariumWarpReceiverController : MonoBehaviour
     {
         NomaiWarpReceiver warpReceiver;
         Vector3 initialPosition;
@@ -46,6 +46,9 @@ namespace Terrarium.Components
         private void OnEmergencyWarp(Transform warpOrigin)
         {
             if (emergencyWarp) return;
+
+            if (!warpReceiver._returnOnEntry) warpReceiver._returnOnEntry = true;
+            if (warpReceiver._returnPlatform == null) warpReceiver._returnPlatform = TerrariumWarpTransmitterController.Instance.GetWarpTransmitter();
 
             transform.position = warpOrigin.position;
             transform.rotation = warpOrigin.rotation;

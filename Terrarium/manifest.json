@@ -4,7 +4,7 @@
   "author": "Hawkbar",
   "name": "Eden's Hope",
   "uniqueName": "Hawkbar.Terrarium",
-  "version": "0.2.0",
+  "version": "0.2.2",
   "owmlVersion": "2.15.1",
   "dependencies": [ "xen.NewHorizons", "xen-42.ModJam5" ]
 }
