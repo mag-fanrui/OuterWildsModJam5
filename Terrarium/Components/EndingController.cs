@@ -31,6 +31,7 @@ namespace Terrarium.Components
         protected void Start()
         {
             transform.Find("Sector").gameObject.SetActive(false);
+            transform.Find("GravityWell").gameObject.SetActive(false);
         }
 
         protected void OnDestroy()
@@ -43,6 +44,7 @@ namespace Terrarium.Components
             if (DialogueConditionManager.SharedInstance.GetConditionState("WW_TERRARIUM_START_ENDING"))
             {
                 transform.Find("Sector").gameObject.SetActive(true);
+                transform.Find("GravityWell").gameObject.SetActive(true);
                 OnEndingStart.Invoke();
                 StartCoroutine(DoEnding());
             }

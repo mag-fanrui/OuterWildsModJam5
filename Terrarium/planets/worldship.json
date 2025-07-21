@@ -15,7 +15,7 @@
   },
   "Orbit": {
     "primaryBody": "WW_TERRARIUM_Planet",
-    "semiMajorAxis": 1600,
+    "semiMajorAxis": 1200,
     "trueAnomaly": 180,
     "showOrbitLine": false
   },
@@ -81,18 +81,21 @@
       {
         "path": "QuantumMoon_Body/Sector_QuantumMoon/State_HT/Interactables_HTState/Interactables_CTState/CTState_Q_Objects/CTState_QYuccaTree/Q_YuccaTree/Prefab_Tree_HT_Yucca",
         "count": 300,
+        "seed": 1356,
         "preventOverlap": false
       },
       {
         "assetBundle": "planets/assetbundles/terrarium",
         "path": "Assets/Terrarium/Objects/Ending_SproutingFlower.prefab",
         "count": 300,
+        "seed": 5234,
         "preventOverlap": false
       },
       {
         "assetBundle": "planets/assetbundles/terrarium",
         "path": "Assets/Terrarium/Objects/Ending_Sunflower.prefab",
         "count": 300,
+        "seed": 723,
         "preventOverlap": false
       }
     ],
