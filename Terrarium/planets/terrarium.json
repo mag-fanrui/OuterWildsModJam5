@@ -116,6 +116,11 @@
         "parentPath": "Sector/TerrariumState_Ring/ErnestoSpawn/Ernesto",
         "isRelativeToParent": true,
         "scale": 0.06
+      },
+      {
+        "rename": "TimberHearthBundleHack",
+        "path": "TimberHearth_Body/Sector_TH/Sector_Village/Geometry_Village/OtherComponentsGroup/ControlledByProxy_Base/VillageCraterFloors/BatchedGroup/BatchedMeshRenderers_0",
+        "scale": 0.000001
       }
     ],
     "dialogue": [

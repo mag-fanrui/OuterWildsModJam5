@@ -124,6 +124,11 @@
         "activationCondition": "WW_TERRARIUM_PRINT_PART_EnclosureAngle",
         "parentPath": "Sector/TerrariumInterface/PartPrinter/PartRoot",
         "isRelativeToParent": true
+      },
+      {
+        "rename": "TimberHearthBundleHack",
+        "path": "TimberHearth_Body/Sector_TH/Sector_Village/Geometry_Village/OtherComponentsGroup/ControlledByProxy_Base/VillageCraterFloors/BatchedGroup/BatchedMeshRenderers_0",
+        "scale": 0.000001
       }
     ],
     "dialogue": [
